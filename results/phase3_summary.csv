@@ -1,0 +1,8 @@
+split,model,roc_auc,roc_auc_std,pr_auc_lift,seeds
+scaffold,count-only,0.63,0.003,0.082,3
+scaffold,count-stacked rf,0.662,0.003,0.112,3
+scaffold,atc+rf,0.611,0.001,0.079,3
+scaffold,ind+rf,0.688,0.001,0.142,3
+scaffold,atc+ind+rf,0.714,0.002,0.16,3
+scaffold,morgan+desc+atc+ind+rf,0.677,0.004,0.127,3
+scaffold,structure rf + pharma rf,0.736,0.0,0.175,3
