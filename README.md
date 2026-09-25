@@ -17,6 +17,8 @@ test), 5-fold CV, 3 seeds, same folds for every model. Full tables:
 [`results/REPORT.md`](results/REPORT.md); analyses of the problem itself:
 [`results/ANALYSIS.md`](results/ANALYSIS.md).
 
+![Scaffold-split ROC-AUC of selected models](results/leaderboard.png)
+
 **From structure alone** (what you'd have for a new molecule):
 
 | Model | Phase | Scaffold split |
@@ -87,15 +89,15 @@ scripts/
   run_benchmark.py      run every model x split x seed of a set (resumable)
   make_report.py        results/*.csv -> results/REPORT.md
   analyze.py            label structure, near-identical drugs, learning curves -> ANALYSIS.md
+  plot_results.py       results/*.csv -> results/leaderboard.png
 tests/                  leakage, fold and model sanity checks
 data/
   sider.csv             original DeepChem SIDER file
   sider_clean.csv       cleaned SMILES, scaffold and group per drug (generated)
   splits/               fold assignment per split and seed, reuse these to compare models
-results/                per-run and per-ADR CSVs + REPORT.md
-
-sider.ipynb, we_network.py, models/, data/smiles_embedding.csv, data/pubchem_fetch.csv,
-heatmap_tanimoto.png    2023 autoencoder pipeline, kept for reference (see issues above)
+  pubchem_fetch.csv     PubChem ids, names and properties per drug (used by adr/pharma.py)
+results/                per-run and per-ADR CSVs, REPORT.md, ANALYSIS.md, leaderboard.png
+legacy/                 2023 autoencoder notebook, script and checkpoints, kept for reference
 ```
 
 ## Running
@@ -109,6 +111,7 @@ python scripts/run_benchmark.py --set phase2   # ~1.5 h on 2 cores, mostly Chemp
 python scripts/run_benchmark.py --set phase3   # ~40 min; downloads ATC + indications
 python scripts/make_report.py                   # rerun any benchmark to resume if interrupted
 python scripts/analyze.py                       # ~15 min
+python scripts/plot_results.py
 ```
 
 ## Data cleaning notes
