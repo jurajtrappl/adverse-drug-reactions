@@ -16,7 +16,7 @@ DESCRIPTIONS = {
     "morgan+rf": "Morgan fingerprint, random forest per ADR",
     "desc+rf": "RDKit descriptors, random forest per ADR",
     "morgan+desc+rf": "Morgan + descriptors, random forest per ADR",
-    "morgan+desc+rf-multi": "Morgan + descriptors, one forest for all 27 ADRs",
+    "morgan+desc+rf-multi": "Morgan + descriptors, one forest for all 27 ADRs (no class weights)",
     "morgan+desc+lgbm": "Morgan + descriptors, LightGBM per ADR",
     # Phase 2
     "morgan+desc+mlp": "Morgan + descriptors, multi-task MLP (27 outputs)",

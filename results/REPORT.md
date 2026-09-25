@@ -19,13 +19,13 @@ Regenerate: `python scripts/run_benchmark.py --set phase1`, `--set phase2`, `--s
 | atc+ind+rf | 3 | pharma | ATC + indications, random forest | 0.710 ± 0.000 | +0.062 [+0.058, +0.067] | +0.157 |
 | ind+rf | 3 | pharma | SIDER indications (what the drug treats), random forest | 0.683 ± 0.001 | +0.035 [+0.030, +0.042] | +0.140 |
 | morgan+desc+atc+ind+rf | 3 | structure + pharma | Structure + ATC + indications in one random forest | 0.664 ± 0.006 | +0.016 [+0.013, +0.019] | +0.120 |
+| morgan+desc+rf-multi | 1 | structure | Morgan + descriptors, one forest for all 27 ADRs (no class weights) | 0.650 ± 0.004 | +0.003 [-0.000, +0.004] | +0.108 |
 | count-stacked rf | 3 | structure | Morgan + descriptors + predicted ADR count, random forest | 0.648 ± 0.005 | +0.001 [-0.001, +0.002] | +0.107 |
 | morgan+desc+rf | 1 | structure | Morgan + descriptors, random forest per ADR | 0.648 ± 0.005 | — | +0.106 |
 | mlp + rf ensemble | 2 | structure | Average of the multi-task MLP and the random forest | 0.647 ± 0.005 | -0.000 [-0.001, +0.000] | +0.106 |
 | morgan+rf | 1 | structure | Morgan fingerprint, random forest per ADR | 0.645 ± 0.004 | -0.003 [-0.006, -0.001] | +0.106 |
 | desc+rf | 1 | structure | RDKit descriptors, random forest per ADR | 0.642 ± 0.006 | -0.006 [-0.008, -0.004] | +0.103 |
 | morgan+desc+lgbm | 1 | structure | Morgan + descriptors, LightGBM per ADR | 0.636 ± 0.008 | -0.012 [-0.015, -0.009] | +0.099 |
-| morgan+desc+rf-multi | 1 | structure | Morgan + descriptors, one forest for all 27 ADRs | 0.634 ± 0.005 | -0.014 [-0.018, -0.011] | +0.090 |
 | mol2vec+rf | 2 | structure | Pretrained Mol2vec embedding, random forest per ADR | 0.628 ± 0.006 | -0.020 [-0.021, -0.018] | +0.093 |
 | morgan+desc+mlp | 2 | structure | Morgan + descriptors, multi-task MLP (27 outputs) | 0.624 ± 0.006 | -0.024 [-0.025, -0.023] | +0.090 |
 | mol2vec+logreg | 2 | structure | Pretrained Mol2vec embedding, logistic regression | 0.616 ± 0.003 | -0.032 [-0.035, -0.029] | +0.077 |
@@ -52,7 +52,7 @@ The random split lets near-identical drugs sit on both sides, so it flatters eve
 | morgan+rf | 0.645 | 0.684 |
 | desc+rf | 0.642 | 0.679 |
 | morgan+desc+rf | 0.648 | 0.685 |
-| morgan+desc+rf-multi | 0.634 | 0.665 |
+| morgan+desc+rf-multi | 0.650 | 0.687 |
 | morgan+desc+lgbm | 0.636 | 0.674 |
 
 ## Per ADR, scaffold split
