@@ -67,10 +67,28 @@ def evaluate(make, X, Y, folds):
     return np.nanmean(roc, 0), np.nanmean(pr, 0)
 
 
+def pharma_without_label_terms(df, terms):
+    """ATC + indications, minus indication terms that are also side-effect labels.
+
+    SIDER text mining lists 15% of a drug's indication terms among its side effects too
+    (e.g. an antihypertensive with "Hypertension" in both). An indication column with the
+    same MedDRA term as a label would partly hand the label to the model, so it is dropped.
+    """
+    ind, names = pharma.indications(df)
+    atc, _ = pharma.atc(df)
+    labels = set(terms)
+    cols = [j for j, n in enumerate(names) if n.removeprefix("ind:") not in labels]
+    return np.hstack([atc, ind[:, cols]]), len(names) - len(cols)
+
+
 def main():
     df, _ = data.load()
     keep, Y, terms = fine_labels.load(df)
-    feats = {"all": featurize("morgan+desc+atc+ind", df)[keep],
+    pharma_x, n_dropped = pharma_without_label_terms(df, terms)
+    print(f"dropped {n_dropped} indication columns that share a term with a label", flush=True)
+    structure = featurize("morgan+desc", df)
+    assert structure.shape[1] == N_STRUCTURE
+    feats = {"all": np.hstack([structure, pharma_x])[keep],
              "morgan": featurize("morgan", df)[keep],
              "flags": doc_flags(df)[keep]}
     exps = experiments(N_STRUCTURE, feats["all"].shape[1])
@@ -108,7 +126,8 @@ def write_report(runs, pt, Y, terms, df):
     out = ["# Phase 4: specific side effects", "",
            f"{len(Y)} drugs, {len(terms)} MedDRA preferred terms listed for at least "
            f"{Y.sum(0).min()} drugs (prevalence {prev.min():.1%}-{prev.max():.0%}). Scaffold split, "
-           "5 folds, 3 seeds; ROC-AUC per term and fold, averaged.", "",
+           "5 folds, 3 seeds; ROC-AUC per term and fold, averaged. Indication features that share "
+           "a MedDRA term with any label are removed (see `pharma_without_label_terms`).", "",
            "## Overall", "",
            "| Model | Mean ROC-AUC | PR-AUC lift |", "| --- | --- | --- |"]
     out += [f"| {m} | {r.roc:.3f} ± {r.sd:.3f} | {r.lift:+.3f} |" for m, r in s.iterrows()]
