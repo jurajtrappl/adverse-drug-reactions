@@ -61,11 +61,15 @@ class TanimotoKNN:
 
 
 class MultiOutputRF:
-    """One forest shared by all 27 ADRs: every tree predicts the whole label vector."""
+    """One forest shared by all ADRs: every tree predicts the whole label vector.
+
+    No class weights: for multi-output targets scikit-learn *multiplies* the per-output
+    weights into one sample weight, which with many outputs gives absurd weights
+    (27 outputs: -0.01 ROC-AUC; 579 outputs: below chance).
+    """
 
     def __init__(self, n_jobs: int = -1, seed: int = 0):
         self.rf = RandomForestClassifier(n_estimators=300, min_samples_leaf=3,
-                                         class_weight="balanced_subsample",
                                          n_jobs=n_jobs, random_state=seed)
 
     def fit(self, X, Y):
