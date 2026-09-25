@@ -64,3 +64,34 @@ def test_fine_labels_and_fold_restriction():
     old_rows = np.where(keep)[0]
     for f, g in zip(folds, sub):  # same drugs, re-indexed
         assert set(old_rows[g]) == set(f[keep[f]])
+
+
+def test_multioutput_rf_single_class_output():
+    from adr.models import MultiOutputRF
+    X, Y = _toy(L=2)
+    Y = np.column_stack([np.ones(len(Y), dtype=int), np.zeros(len(Y), dtype=int), Y])
+    P = MultiOutputRF(n_jobs=1).fit(X, Y).predict_proba(X[:5])
+    assert np.allclose(P[:, 0], 1) and np.allclose(P[:, 1], 0)
+
+
+def test_block_average_rejects_bad_split():
+    X, Y = _toy()
+    with pytest.raises(ValueError):
+        BlockAverage(X.shape[1], Prior, Prior).fit(X, Y)
+
+
+@pytest.mark.skipif(not (pharma.CACHE / "sider_meddra_all_se.tsv.gz").exists(),
+                    reason="SIDER side-effect terms not downloaded (run scripts/run_fine.py once)")
+def test_fine_pharma_features_exclude_label_terms():
+    import importlib.util
+    from adr import fine_labels
+    path = Path(__file__).resolve().parents[1] / "scripts" / "run_fine.py"
+    spec = importlib.util.spec_from_file_location("run_fine", path)
+    run_fine = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(run_fine)
+    df, _ = data.load()
+    _, _, terms = fine_labels.load(df)
+    X, dropped = run_fine.pharma_without_label_terms(df, terms)
+    _, names = pharma.indications(df)
+    atc, _ = pharma.atc(df)
+    assert dropped > 0 and X.shape[1] == atc.shape[1] + len(names) - dropped

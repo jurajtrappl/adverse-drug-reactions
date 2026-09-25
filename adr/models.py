@@ -77,8 +77,10 @@ class MultiOutputRF:
         return self
 
     def predict_proba(self, X):
-        return np.column_stack([p[:, 1] if p.shape[1] == 2 else np.zeros(len(X))
-                                for p in self.rf.predict_proba(X)])
+        # An output seen with a single class in training has a one-column probability array;
+        # its prediction is that class (1.0 if the only class was 1), not 0.
+        return np.column_stack([p[:, list(c).index(1)] if 1 in c else np.zeros(len(X))
+                                for p, c in zip(self.rf.predict_proba(X), self.rf.classes_)])
 
 
 def rf(n_jobs=-1, seed=0):
@@ -159,6 +161,9 @@ class BlockAverage:
         self.n_first, self.a, self.b = n_first, make_first(), make_second()
 
     def fit(self, X, Y):
+        if not 0 < self.n_first < X.shape[1]:
+            raise ValueError(f"block split at column {self.n_first} but X has {X.shape[1]} columns "
+                             "(stale feature cache from another RDKit version? clear .cache/)")
         self.a.fit(X[:, :self.n_first], Y)
         self.b.fit(X[:, self.n_first:], Y)
         return self

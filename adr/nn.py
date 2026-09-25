@@ -28,8 +28,8 @@ def _pos_weight(Y: np.ndarray) -> np.ndarray:
 
 def mean_auc(Y, P) -> float:
     """Mean per-ADR ROC-AUC (ADRs with one class in Y are skipped)."""
-    return float(np.mean([roc_auc_score(Y[:, j], P[:, j])
-                          for j in range(Y.shape[1]) if Y[:, j].min() != Y[:, j].max()]))
+    aucs = [roc_auc_score(Y[:, j], P[:, j]) for j in range(Y.shape[1]) if Y[:, j].min() != Y[:, j].max()]
+    return float(np.mean(aucs)) if aucs else float("nan")
 
 
 class MultiTaskMLP:
@@ -79,13 +79,16 @@ class MultiTaskMLP:
             self.net_.eval()
             with torch.no_grad():
                 v = -mean_auc(Y[va], torch.sigmoid(self.net_(Xv)).numpy())
+            if np.isnan(v):  # no ADR has both classes in the validation split
+                continue
             if v < best - 1e-4:
                 best, best_state, bad = v, copy.deepcopy(self.net_.state_dict()), 0
             else:
                 bad += 1
                 if bad >= self.patience:
                     break
-        self.net_.load_state_dict(best_state)
+        if best_state is not None:  # None only if validation AUC was never defined
+            self.net_.load_state_dict(best_state)
         return self
 
     def predict_proba(self, X):
@@ -112,7 +115,7 @@ class _BestByMeanAUC(pl.Callback):
         with torch.no_grad():
             P = torch.cat([pl_module(b.bmg, b.V_d, b.X_d) for b in self.val_loader])
         score = mean_auc(self.Y_val, P.reshape(len(self.Y_val), -1).numpy())
-        if score > self.score:
+        if not np.isnan(score) and score > self.score:
             self.score, self.epoch = score, trainer.current_epoch
             self.state = copy.deepcopy(pl_module.state_dict())
 
@@ -173,7 +176,8 @@ class Chemprop:
                              enable_checkpointing=False, enable_progress_bar=False,
                              enable_model_summary=False, callbacks=[best])
         trainer.fit(self.model_, train_loader, val_loader)
-        self.model_.load_state_dict(best.state)
+        if best.state is not None:
+            self.model_.load_state_dict(best.state)
         self.best_epoch_, self.best_val_auc_ = best.epoch, best.score
         self._trainer = pl.Trainer(accelerator="cpu", devices=1, logger=False,
                                    enable_progress_bar=False, enable_model_summary=False)
