@@ -26,7 +26,26 @@ DESCRIPTIONS = {
     "mlp + rf ensemble": "Average of the multi-task MLP and the random forest",
     "chemprop": "Chemprop D-MPNN graph network, multi-task",
     "chemprop+desc": "Chemprop D-MPNN + RDKit descriptors, multi-task",
+    # Phase 3
+    "count-only": "Predicted ADR count only (from structure), logistic regression per ADR",
+    "count-stacked rf": "Morgan + descriptors + predicted ADR count, random forest",
+    "atc+rf": "WHO ATC class (level 1+2, 45% of drugs matched), random forest",
+    "ind+rf": "SIDER indications (what the drug treats), random forest",
+    "atc+ind+rf": "ATC + indications, random forest",
+    "morgan+desc+atc+ind+rf": "Structure + ATC + indications in one random forest",
+    "structure rf + pharma rf": "Average of a structure forest and a pharmacology forest",
 }
+
+PHARMA_MODELS = {"atc+rf", "ind+rf", "atc+ind+rf", "morgan+desc+atc+ind+rf",
+                 "structure rf + pharma rf"}
+
+
+def uses(model):
+    if model == "prior":
+        return "—"
+    if model in PHARMA_MODELS:
+        return "structure + pharma" if "morgan" in model or "structure" in model else "pharma"
+    return "structure"
 
 
 def load(phase):
@@ -40,7 +59,7 @@ def load(phase):
 
 
 def main():
-    runs, adrs = zip(*[load(p) for p in ("phase1", "phase2")])
+    runs, adrs = zip(*[load(p) for p in ("phase1", "phase2", "phase3")])
     runs = pd.concat([r for r in runs if r is not None], ignore_index=True)
     adrs = pd.concat([a for a in adrs if a is not None], ignore_index=True)
     runs = runs.drop_duplicates(["split", "seed", "model"], keep="first")
@@ -49,9 +68,11 @@ def main():
              "Mean over 27 ADRs of the per-ADR ROC-AUC, averaged over 5 folds and 3 seeds.",
              "PR-AUC lift = PR-AUC minus the ADR's prevalence (0 = no better than guessing).",
              "Scaffold split = no Murcko scaffold is shared between train and test (the honest",
-             "'new drug' setting). All models use the same folds (`data/splits/`).", "",
+             "'new drug' setting). All models use the same folds (`data/splits/`).",
+             "Input 'pharma' = ATC class and/or SIDER indications: known only for marketed drugs,",
+             "so those rows explain ADRs rather than predict them for a new molecule.", "",
              "Regenerate: `python scripts/run_benchmark.py --set phase1`, "
-             "`python scripts/run_benchmark.py --set phase2`, `python scripts/make_report.py`.", ""]
+             "`--set phase2`, `--set phase3`, then `python scripts/make_report.py`.", ""]
 
     # ---- leaderboard on the scaffold split, both phases --------------------------------
     sc = runs[runs.split == "scaffold"]
@@ -61,14 +82,14 @@ def main():
              .agg(roc=("roc_auc", "mean"), roc_sd=("roc_auc", "std"), lift=("pr_auc_lift", "mean"),
                   d=("delta", "mean"), d_lo=("delta", "min"), d_hi=("delta", "max"))
              .reset_index().sort_values("roc", ascending=False))
-    lines += ["## Scaffold-split leaderboard (Phase 1 + 2)", "",
+    lines += ["## Scaffold-split leaderboard (all phases)", "",
               f"Δ vs RF = difference to `{BASELINE}` on the same seed, mean [min, max] over the 3 seeds.",
-              "", "| Model | Phase | What it is | ROC-AUC | Δ vs RF | PR-AUC lift |",
-              "| --- | --- | --- | --- | --- | --- |"]
+              "", "| Model | Phase | Input | What it is | ROC-AUC | Δ vs RF | PR-AUC lift |",
+              "| --- | --- | --- | --- | --- | --- | --- |"]
     for _, r in board.iterrows():
         name = f"**{r.model}**" if r.model == board.iloc[0].model else r.model
         delta = "—" if r.model == BASELINE else f"{r.d:+.3f} [{r.d_lo:+.3f}, {r.d_hi:+.3f}]"
-        lines.append(f"| {name} | {r.phase[-1]} | {DESCRIPTIONS.get(r.model, '')} | "
+        lines.append(f"| {name} | {r.phase[-1]} | {uses(r.model)} | {DESCRIPTIONS.get(r.model, '')} | "
                      f"{r.roc:.3f} ± {r.roc_sd:.3f} | {delta} | {r.lift:+.3f} |")
 
     # ---- Phase 1: scaffold vs random ----------------------------------------------------
