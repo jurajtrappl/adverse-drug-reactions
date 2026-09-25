@@ -5,6 +5,7 @@ lightgbm>=4.0
 pandas>=2.0
 numpy>=1.24
 pytest>=7.0
+matplotlib>=3.7   # scripts/plot_results.py
 # Legacy 2023 notebook / we_network.py additionally need:
 #   tensorflow<2.16 (uses tf.keras.preprocessing), SmilesPE, matplotlib
 # Phase 2 (adr/nn.py, Mol2vec features)
