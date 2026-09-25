@@ -6,14 +6,18 @@ structure alone, on the [SIDER](http://sideeffects.embl.de/) dataset (1,427 drug
 
 Started in 2023 as a NAIL107 (Machine learning in Bioinformatics, MFF UK) term project by
 Julian Krumm and Juraj Trappl. Revisited in 2026: the original evaluation leaked test data,
-so this repo now has an honest evaluation pipeline: classic baselines (Phase 1) and
-neural / pretrained models (Phase 2), all scored on the same scaffold folds.
+so this repo now has an honest evaluation pipeline: classic baselines (Phase 1),
+neural / pretrained models (Phase 2) and pharmacology features plus analyses of the labels
+(Phase 3), all scored on the same scaffold folds.
 
 ## Results
 
 Mean ROC-AUC over the 27 ADRs, scaffold split (no shared Murcko scaffold between train and
 test), 5-fold CV, 3 seeds, same folds for every model. Full tables:
-[`results/REPORT.md`](results/REPORT.md).
+[`results/REPORT.md`](results/REPORT.md); analyses of the problem itself:
+[`results/ANALYSIS.md`](results/ANALYSIS.md).
+
+**From structure alone** (what you'd have for a new molecule):
 
 | Model | Phase | Scaffold split |
 | --- | --- | --- |
@@ -27,13 +31,31 @@ test), 5-fold CV, 3 seeds, same folds for every model. Full tables:
 | Multi-task MLP + random forest, averaged | 2 | 0.647 |
 | **Morgan fingerprint + RDKit descriptors, random forest** | 1 | **0.648** |
 
-No Phase 2 model beats the Phase 1 random forest. With 1,427 drugs, the graph network and
-the MLPs don't have enough data to learn better features than a fingerprint, and the
-pretrained Mol2vec embedding loses a little information compared with the raw bits.
-Published scaffold-split SIDER results with large pretrained models sit around 0.62-0.71,
-so 0.65 is in the expected range; the ceiling seems to come from the labels, not the
-model (near-identical drugs share only ~2/3 of their ADR labels). Phase 3 therefore
-targets the data: label structure and pharmacology features.
+**Adding pharmacology** (known only for marketed drugs, Phase 3):
+
+| Model | Scaffold split |
+| --- | --- |
+| WHO ATC class only (45% of drugs matched by name) | 0.612 |
+| SIDER indications only (what the drug is prescribed for) | 0.683 |
+| ATC + indications | 0.710 |
+| Structure + ATC + indications in one forest | 0.664 |
+| **Structure forest and pharmacology forest, averaged** | **0.728** |
+
+What the three phases show:
+
+- **Structure has a ceiling around 0.65.** No neural or pretrained model beats a fingerprint
+  forest on 1,427 drugs, and the learning curve rises slowly (+0.02 from 456 to 1,142
+  training drugs, see `ANALYSIS.md`).
+- **The labels are mostly one factor.** The first principal component of the 27 labels
+  (33% of variance) is the drug's ADR count, i.e. how long its package insert is. Three
+  "how well documented is this drug" numbers alone score 0.65, as much as any structure model.
+- **What a drug treats predicts its side effects better than what it looks like.**
+  Pharmacology alone reaches 0.71; averaged with the structure forest, 0.73. Mixing both
+  into one forest does worse (0.66): the 2,265 structure columns drown the ~370
+  pharmacology columns at each split.
+- Caveat: indications are text-mined from the same package inserts as the labels, and both
+  sources exist only for approved drugs. They explain ADRs; they don't predict them for a
+  new molecule.
 
 ## What changed vs. the 2023 version
 
@@ -56,12 +78,15 @@ adr/                    pipeline package
   data.py               load SIDER, strip counter-ions, Murcko scaffolds, duplicate groups
   features.py           Morgan fingerprint, RDKit descriptors, Mol2vec, size baseline
   splits.py             scaffold and random k-fold (identical molecules kept together)
-  models.py             baselines, random forest, LightGBM, logistic regression, ensembles
+  models.py             baselines, forests, LightGBM, logistic regression, ensembles,
+                        two-stage ADR-count model, structure/pharma late fusion
+  pharma.py             ATC classes and SIDER indications per drug (Phase 3)
   nn.py                 multi-task MLP and Chemprop D-MPNN (Phase 2, needs torch)
   evaluate.py           cross-validation with per-ADR ROC-AUC / PR-AUC, per-fold caching
 scripts/
   run_benchmark.py      run every model x split x seed of a set (resumable)
   make_report.py        results/*.csv -> results/REPORT.md
+  analyze.py            label structure, near-identical drugs, learning curves -> ANALYSIS.md
 tests/                  leakage, fold and model sanity checks
 data/
   sider.csv             original DeepChem SIDER file
@@ -81,7 +106,9 @@ pip install -r requirements.txt
 pytest -q tests
 python scripts/run_benchmark.py --set phase1   # ~25 min on 4 cores
 python scripts/run_benchmark.py --set phase2   # ~1.5 h on 2 cores, mostly Chemprop
-python scripts/make_report.py                   # rerun either benchmark to resume if interrupted
+python scripts/run_benchmark.py --set phase3   # ~40 min; downloads ATC + indications
+python scripts/make_report.py                   # rerun any benchmark to resume if interrupted
+python scripts/analyze.py                       # ~15 min
 ```
 
 ## Data cleaning notes
@@ -93,9 +120,20 @@ python scripts/make_report.py                   # rerun either benchmark to resu
 - After cleaning, 28 molecules appear more than once (e.g. sodium and calcium acetate),
   and their labels agree only 79% of the time. Such duplicates are always put in the same fold.
 
-## Next (Phase 3)
+## Ideas not done yet
 
-- Label structure: PCA of the 27 labels, predict the drug's ADR count first
-- Pharmacology features (ATC class, protein targets), which structure alone can't capture
-- Error analysis on near-identical drugs with different labels; learning curves
-- ChemBERTa / MoLFormer embeddings (Hugging Face was blocked in the environment used for Phase 2)
+- Finer labels: SIDER has thousands of MedDRA side-effect terms and frequency information;
+  the 27 organ classes are coarse (5 of them are listed for over 80% of drugs)
+- Protein targets (DrugBank, ChEMBL mechanisms) as another pharmacology source
+- Predict "ADR given the drug is well documented": model the count factor explicitly,
+  e.g. a hierarchical model with a per-drug documentation effect
+- ChemBERTa / MoLFormer embeddings (Hugging Face was blocked where Phase 2 ran)
+
+## Data sources and licences
+
+- SIDER via DeepChem (`data/sider.csv`); SIDER is CC BY-NC-SA 4.0.
+- Phase 3 downloads into `.cache/` (not committed): SIDER 4.1 indications from the
+  [dhimmel/SIDER4](https://github.com/dhimmel/SIDER4) mirror, and the WHO ATC index scraped
+  by [fabkury/atcd](https://github.com/fabkury/atcd) (WHO ATC terms of use apply).
+- Mol2vec pretrained model from [samoturk/mol2vec](https://github.com/samoturk/mol2vec).
+
