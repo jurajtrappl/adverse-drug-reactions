@@ -8,9 +8,13 @@ Usage (from the repo root):
 
 Resumable: finished (split, seed, model) runs are saved after each model and each fold's
 predictions are cached in .cache/preds/, so an interrupted run can simply be restarted.
-Use --fresh to start over. Folds come from data/splits/ so every model sees the same folds.
+--fresh recomputes the selected (split, seed, model) runs, ignoring their saved rows and
+cached predictions; other rows in the results files are kept. Caches are keyed by a hash of
+the adr/ package and the RDKit version, so editing the code never reuses stale features or
+predictions. Folds come from data/splits/ so every model sees the same folds.
 """
 import argparse
+import hashlib
 import sys
 import time
 from pathlib import Path
@@ -31,6 +35,18 @@ CACHE = ROOT / ".cache"
 PHARMA = {"atc+ind": ["atc", "ind"], "morgan+desc+atc+ind": ["morgan+desc", "atc", "ind"]}
 
 
+def code_version() -> str:
+    """Short hash of the adr/ sources, the cleaned data and the RDKit version (cache key)."""
+    import rdkit
+    h = hashlib.sha1(rdkit.__version__.encode())
+    for f in sorted((ROOT / "adr").glob("*.py")) + [ROOT / "data" / "sider_clean.csv"]:
+        h.update(f.read_bytes())
+    return h.hexdigest()[:8]
+
+
+VERSION = code_version()
+
+
 def featurize(name, df):
     """Featurize once and cache to .cache/ (RDKit descriptors take a while)."""
     if name is None:
@@ -42,7 +58,7 @@ def featurize(name, df):
         out[:, 0] = df["smiles"].to_numpy()
         out[:, 1] = list(featurize("desc", df))
         return out
-    path = CACHE / f"features_{name.replace('+', '_')}.npy"
+    path = CACHE / VERSION / f"features_{name.replace('+', '_')}.npy"
     if path.exists():
         return np.load(path)
     if name in PHARMA:
@@ -51,7 +67,7 @@ def featurize(name, df):
         x = (pharma.atc if name == "atc" else pharma.indications)(df)[0]
     else:
         x = features.FEATURIZERS[name](list(df["smiles"]))
-    CACHE.mkdir(exist_ok=True)
+    path.parent.mkdir(parents=True, exist_ok=True)
     np.save(path, x)
     return x
 
@@ -64,7 +80,8 @@ def main():
     ap.add_argument("--seeds", nargs="+", type=int, default=[0, 1, 2])
     ap.add_argument("--jobs", type=int, default=-1)
     ap.add_argument("--tag", help="results file prefix, default: the set name")
-    ap.add_argument("--fresh", action="store_true", help="ignore previously saved runs")
+    ap.add_argument("--fresh", action="store_true",
+                    help="recompute the selected runs (ignore their saved rows and cached predictions)")
     args = ap.parse_args()
     experiments = EXPERIMENTS[args.set]
     args.models = args.models or list(experiments)
@@ -79,9 +96,13 @@ def main():
 
     feats = {}
     rows, per_adr = [], []
-    if runs_path.exists() and not args.fresh:
+    if runs_path.exists():
         rows = pd.read_csv(runs_path).to_dict("records")
         per_adr = pd.read_csv(adr_path).to_dict("records")
+    selected = {(sp, sd, m) for sp in args.splits for sd in args.seeds for m in args.models}
+    if args.fresh:  # drop only the runs being recomputed
+        rows = [r for r in rows if (r["split"], r["seed"], r["model"]) not in selected]
+        per_adr = [r for r in per_adr if (r["split"], r["seed"], r["model"]) not in selected]
     done = {(r["split"], r["seed"], r["model"]) for r in rows}
     RESULTS.mkdir(exist_ok=True)
     SPLIT_DIR.mkdir(parents=True, exist_ok=True)
@@ -101,9 +122,13 @@ def main():
                     feats[feat_name] = featurize(feat_name, df)
                 t0 = time.time()
                 safe = name.replace("+", "_").replace(" ", "_")
+                prefix = CACHE / "preds" / VERSION / f"{args.tag}_{split}_s{seed}_{safe}"
+                if args.fresh:
+                    for old in prefix.parent.glob(prefix.name + "_fold*.npy"):
+                        old.unlink()
                 roc, pr, prev = cross_validate(
                     lambda: factory(n_jobs=args.jobs, seed=seed), feats[feat_name], Y, folds,
-                    cache_prefix=CACHE / "preds" / f"{args.tag}_{split}_s{seed}_{safe}")
+                    cache_prefix=prefix)
                 roc_adr, pr_adr = np.nanmean(roc, 0), np.nanmean(pr, 0)
                 lift_adr = pr_adr - np.nanmean(prev, 0)
                 rows.append(dict(split=split, seed=seed, model=name,
@@ -117,9 +142,7 @@ def main():
                 pd.DataFrame(rows).to_csv(runs_path, index=False)
                 pd.DataFrame(per_adr).to_csv(adr_path, index=False)
 
-    runs = pd.DataFrame(rows)
-    runs = runs[runs["split"].isin(args.splits) & runs["seed"].isin(args.seeds)
-                & runs["model"].isin(args.models)]
+    runs = pd.DataFrame(rows)  # every saved run of this set, not only this invocation's
     summary = (runs.groupby(["split", "model"], sort=False)
                .agg(roc_auc=("roc_auc", "mean"), roc_auc_std=("roc_auc", "std"),
                     pr_auc_lift=("pr_auc_lift", "mean"), seeds=("seed", "count"))
