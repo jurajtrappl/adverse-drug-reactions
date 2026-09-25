@@ -1,0 +1,8 @@
+split,model,roc_auc,roc_auc_std,pr_auc_lift,seeds
+scaffold,morgan+desc+mlp,0.624,0.006,0.09,3
+scaffold,mol2vec+logreg,0.616,0.003,0.077,3
+scaffold,mol2vec+rf,0.628,0.006,0.093,3
+scaffold,mol2vec+mlp,0.612,0.013,0.073,3
+scaffold,mlp + rf ensemble,0.647,0.005,0.106,3
+scaffold,chemprop,0.597,0.012,0.059,3
+scaffold,chemprop+desc,0.613,0.001,0.071,3

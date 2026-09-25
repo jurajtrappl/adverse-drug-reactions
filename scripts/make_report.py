@@ -1,13 +1,14 @@
-"""Turn results/phase1_*.csv into results/REPORT.md."""
+"""Turn results/phase*_*.csv into results/REPORT.md."""
 from pathlib import Path
 
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / "results"
-BEST = "morgan+desc+rf"
+BASELINE = "morgan+desc+rf"  # Phase 1 winner: every Phase 2 model is compared against it
 
 DESCRIPTIONS = {
+    # Phase 1
     "prior": "Predict each ADR's training frequency (coin flip by construction)",
     "size+logreg": "Heavy-atom count + SMILES length, logistic regression",
     "knn5 tanimoto": "Copy labels of the 5 most similar training drugs (no training)",
@@ -17,37 +18,82 @@ DESCRIPTIONS = {
     "morgan+desc+rf": "Morgan + descriptors, random forest per ADR",
     "morgan+desc+rf-multi": "Morgan + descriptors, one forest for all 27 ADRs",
     "morgan+desc+lgbm": "Morgan + descriptors, LightGBM per ADR",
+    # Phase 2
+    "morgan+desc+mlp": "Morgan + descriptors, multi-task MLP (27 outputs)",
+    "mol2vec+logreg": "Pretrained Mol2vec embedding, logistic regression",
+    "mol2vec+rf": "Pretrained Mol2vec embedding, random forest per ADR",
+    "mol2vec+mlp": "Pretrained Mol2vec embedding, multi-task MLP",
+    "mlp + rf ensemble": "Average of the multi-task MLP and the random forest",
+    "chemprop": "Chemprop D-MPNN graph network, multi-task",
+    "chemprop+desc": "Chemprop D-MPNN + RDKit descriptors, multi-task",
 }
 
 
+def load(phase):
+    runs = RES / f"{phase}_runs.csv"
+    if not runs.exists():
+        return None, None
+    r = pd.read_csv(runs)
+    r["phase"] = phase
+    a = pd.read_csv(RES / f"{phase}_per_adr.csv")
+    return r, a
+
+
 def main():
-    s = pd.read_csv(RES / "phase1_summary.csv")
-    wide = s.pivot(index="model", columns="split", values=["roc_auc", "roc_auc_std", "pr_auc_lift"])
-    order = [m for m in DESCRIPTIONS if m in wide.index]
-    lines = ["# Phase 1 results", "",
+    runs, adrs = zip(*[load(p) for p in ("phase1", "phase2")])
+    runs = pd.concat([r for r in runs if r is not None], ignore_index=True)
+    adrs = pd.concat([a for a in adrs if a is not None], ignore_index=True)
+    runs = runs.drop_duplicates(["split", "seed", "model"], keep="first")
+
+    lines = ["# Results", "",
              "Mean over 27 ADRs of the per-ADR ROC-AUC, averaged over 5 folds and 3 seeds.",
              "PR-AUC lift = PR-AUC minus the ADR's prevalence (0 = no better than guessing).",
              "Scaffold split = no Murcko scaffold is shared between train and test (the honest",
-             "'new drug' setting). Regenerate with `python scripts/run_phase1.py && "
-             "python scripts/make_report.py`.", "",
-             "| Model | What it is | ROC-AUC scaffold | ROC-AUC random | PR-AUC lift scaffold |",
-             "| --- | --- | --- | --- | --- |"]
-    for m in order:
-        r = wide.loc[m]
-        name = f"**{m}**" if m == BEST else m
-        lines.append(f"| {name} | {DESCRIPTIONS[m]} | {r[('roc_auc', 'scaffold')]:.3f} "
-                     f"± {r[('roc_auc_std', 'scaffold')]:.3f} | {r[('roc_auc', 'random')]:.3f} | "
-                     f"{r[('pr_auc_lift', 'scaffold')]:+.3f} |")
+             "'new drug' setting). All models use the same folds (`data/splits/`).", "",
+             "Regenerate: `python scripts/run_benchmark.py --set phase1`, "
+             "`python scripts/run_benchmark.py --set phase2`, `python scripts/make_report.py`.", ""]
 
-    a = pd.read_csv(RES / "phase1_per_adr.csv")
-    a = (a[(a.model == BEST) & (a.split == "scaffold")]
-         .groupby("adr").agg(roc_auc=("roc_auc", "mean"), pr_auc=("pr_auc", "mean"),
-                             prevalence=("prevalence", "first"))
-         .sort_values("roc_auc", ascending=False))
-    lines += ["", f"## Per ADR: `{BEST}`, scaffold split", "",
-              "| ADR | Positive drugs | ROC-AUC | PR-AUC |", "| --- | --- | --- | --- |"]
-    for adr, r in a.iterrows():
-        lines.append(f"| {adr} | {r.prevalence:.0%} | {r.roc_auc:.3f} | {r.pr_auc:.3f} |")
+    # ---- leaderboard on the scaffold split, both phases --------------------------------
+    sc = runs[runs.split == "scaffold"]
+    base = sc[sc.model == BASELINE].set_index("seed")["roc_auc"]
+    sc = sc.assign(delta=sc.roc_auc - sc.seed.map(base))
+    board = (sc.groupby(["model", "phase"])
+             .agg(roc=("roc_auc", "mean"), roc_sd=("roc_auc", "std"), lift=("pr_auc_lift", "mean"),
+                  d=("delta", "mean"), d_lo=("delta", "min"), d_hi=("delta", "max"))
+             .reset_index().sort_values("roc", ascending=False))
+    lines += ["## Scaffold-split leaderboard (Phase 1 + 2)", "",
+              f"Δ vs RF = difference to `{BASELINE}` on the same seed, mean [min, max] over the 3 seeds.",
+              "", "| Model | Phase | What it is | ROC-AUC | Δ vs RF | PR-AUC lift |",
+              "| --- | --- | --- | --- | --- | --- |"]
+    for _, r in board.iterrows():
+        name = f"**{r.model}**" if r.model == board.iloc[0].model else r.model
+        delta = "—" if r.model == BASELINE else f"{r.d:+.3f} [{r.d_lo:+.3f}, {r.d_hi:+.3f}]"
+        lines.append(f"| {name} | {r.phase[-1]} | {DESCRIPTIONS.get(r.model, '')} | "
+                     f"{r.roc:.3f} ± {r.roc_sd:.3f} | {delta} | {r.lift:+.3f} |")
+
+    # ---- Phase 1: scaffold vs random ----------------------------------------------------
+    p1 = runs[runs.phase == "phase1"]
+    wide = p1.groupby(["model", "split"])["roc_auc"].mean().unstack()
+    lines += ["", "## Scaffold vs random split (Phase 1)", "",
+              "The random split lets near-identical drugs sit on both sides, so it flatters every model.",
+              "", "| Model | ROC-AUC scaffold | ROC-AUC random |", "| --- | --- | --- |"]
+    for m in [m for m in DESCRIPTIONS if m in wide.index]:
+        lines.append(f"| {m} | {wide.loc[m, 'scaffold']:.3f} | {wide.loc[m, 'random']:.3f} |")
+
+    # ---- per ADR: best model vs the RF baseline ------------------------------------------
+    best = board.iloc[0].model
+    per = (adrs[adrs.split == "scaffold"].groupby(["model", "adr"])
+           .agg(roc=("roc_auc", "mean"), pr=("pr_auc", "mean"), prev=("prevalence", "first")))
+    cols = [BASELINE] if best == BASELINE else [best, BASELINE]
+    t = pd.concat({m: per.loc[m] for m in cols}, axis=1).sort_values((cols[0], "roc"), ascending=False)
+    head = " | ".join(f"ROC-AUC `{m}`" for m in cols)
+    lines += ["", f"## Per ADR, scaffold split", "",
+              f"| ADR | Positive drugs | {head} | PR-AUC `{cols[0]}` |",
+              "| --- | --- | " + " | ".join("---" for _ in cols) + " | --- |"]
+    for adr_name, r in t.iterrows():
+        rocs = " | ".join(f"{r[(m, 'roc')]:.3f}" for m in cols)
+        lines.append(f"| {adr_name} | {r[(cols[0], 'prev')]:.0%} | {rocs} | {r[(cols[0], 'pr')]:.3f} |")
+
     (RES / "REPORT.md").write_text("\n".join(lines) + "\n")
     print("\n".join(lines))
 
