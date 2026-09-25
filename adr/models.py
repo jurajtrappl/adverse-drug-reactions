@@ -1,5 +1,6 @@
 """Model zoo. Every model maps X (n x d) and Y (n x 27, binary) to probabilities (n x 27)."""
 import numpy as np
+from rdkit.Chem import Descriptors
 from lightgbm import LGBMClassifier
 from sklearn.base import clone
 from sklearn.ensemble import RandomForestClassifier
@@ -110,6 +111,59 @@ class Average:
         return np.mean([m.predict_proba(X) for m in self.members], axis=0)
 
 
+class CountStacked:
+    """Two stages, exploiting the dominant label factor ("how many ADRs does this drug list").
+
+    1. A random-forest regressor predicts the number of ADRs from X. Its training-set
+       predictions are out-of-fold (inner 5-fold), so stage 2 sees realistic, noisy counts.
+    2. Per ADR: a random forest on [X, predicted count] (use_x=True), or a logistic
+       regression on the predicted count alone (use_x=False) to measure how much of the
+       signal the count carries by itself.
+    """
+
+    def __init__(self, use_x=True, n_jobs=-1, seed=0):
+        from sklearn.ensemble import RandomForestRegressor
+        self.use_x, self.n_jobs, self.seed = use_x, n_jobs, seed
+        self.reg = RandomForestRegressor(n_estimators=200, min_samples_leaf=3, max_features=0.3,
+                                         n_jobs=n_jobs, random_state=seed)
+
+    def _stack(self, X, c):
+        return np.column_stack([X, c]) if self.use_x else c.reshape(-1, 1)
+
+    def fit(self, X, Y):
+        from sklearn.model_selection import KFold, cross_val_predict
+        count = Y.sum(axis=1)
+        oof = cross_val_predict(clone(self.reg), X, count,
+                                cv=KFold(5, shuffle=True, random_state=self.seed))
+        self.reg.fit(X, count)
+        self.clf = (rf if self.use_x else logreg)(n_jobs=self.n_jobs, seed=self.seed)
+        self.clf.fit(self._stack(X, oof), Y)
+        return self
+
+    def predict_proba(self, X):
+        return self.clf.predict_proba(self._stack(X, self.reg.predict(X)))
+
+
+class BlockAverage:
+    """Late fusion: one model per column block, probabilities averaged.
+
+    A single forest over [2,258 structure columns + ~370 pharmacology columns] mostly samples
+    fingerprint bits at each split and drowns the pharmacology signal; separate forests don't.
+    """
+
+    def __init__(self, n_first, make_first, make_second):
+        self.n_first, self.a, self.b = n_first, make_first(), make_second()
+
+    def fit(self, X, Y):
+        self.a.fit(X[:, :self.n_first], Y)
+        self.b.fit(X[:, self.n_first:], Y)
+        return self
+
+    def predict_proba(self, X):
+        return (self.a.predict_proba(X[:, :self.n_first])
+                + self.b.predict_proba(X[:, self.n_first:])) / 2
+
+
 def mlp(n_jobs=-1, seed=0):
     from adr.nn import MultiTaskMLP  # torch is only needed for Phase 2
     return MultiTaskMLP(seed=seed, n_jobs=n_jobs)
@@ -119,6 +173,8 @@ def chemprop(n_jobs=-1, seed=0):
     from adr.nn import Chemprop
     return Chemprop(seed=seed, n_jobs=n_jobs)
 
+
+N_STRUCTURE = 2048 + len(Descriptors.descList)  # width of the morgan+desc block
 
 # name -> (featurizer name, factory)
 PHASE1 = {
@@ -143,4 +199,15 @@ PHASE2 = {
     "chemprop+desc":        ("smiles+desc", chemprop),
 }
 
-EXPERIMENTS = {"phase1": PHASE1, "phase2": PHASE2}
+PHASE3 = {
+    "count-only":              ("morgan+desc",         lambda **kw: CountStacked(use_x=False, **kw)),
+    "count-stacked rf":        ("morgan+desc",         lambda **kw: CountStacked(use_x=True, **kw)),
+    "atc+rf":                  ("atc",                 rf),
+    "ind+rf":                  ("ind",                 rf),
+    "atc+ind+rf":              ("atc+ind",             rf),
+    "morgan+desc+atc+ind+rf":  ("morgan+desc+atc+ind", rf),
+    "structure rf + pharma rf": ("morgan+desc+atc+ind", lambda **kw: BlockAverage(
+        N_STRUCTURE, lambda: rf(**kw), lambda: rf(**kw))),
+}
+
+EXPERIMENTS = {"phase1": PHASE1, "phase2": PHASE2, "phase3": PHASE3}

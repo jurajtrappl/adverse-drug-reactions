@@ -3,6 +3,7 @@
 Usage (from the repo root):
     python scripts/run_benchmark.py --set phase1        # classic ML, scaffold + random split
     python scripts/run_benchmark.py --set phase2        # neural + pretrained, scaffold split
+    python scripts/run_benchmark.py --set phase3        # pharmacology + label-count models
     python scripts/run_benchmark.py --set phase2 --models chemprop --seeds 0
 
 Resumable: finished (split, seed, model) runs are saved after each model and each fold's
@@ -20,13 +21,14 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from adr import data, features, splits  # noqa: E402
+from adr import data, features, pharma, splits  # noqa: E402
 from adr.evaluate import cross_validate  # noqa: E402
 from adr.models import EXPERIMENTS  # noqa: E402
 
 RESULTS = ROOT / "results"
 SPLIT_DIR = ROOT / "data" / "splits"
 CACHE = ROOT / ".cache"
+PHARMA = {"atc+ind": ["atc", "ind"], "morgan+desc+atc+ind": ["morgan+desc", "atc", "ind"]}
 
 
 def featurize(name, df):
@@ -43,7 +45,12 @@ def featurize(name, df):
     path = CACHE / f"features_{name.replace('+', '_')}.npy"
     if path.exists():
         return np.load(path)
-    x = features.FEATURIZERS[name](list(df["smiles"]))
+    if name in PHARMA:
+        x = np.hstack([featurize(part, df) for part in PHARMA[name]])
+    elif name in ("atc", "ind"):
+        x = (pharma.atc if name == "atc" else pharma.indications)(df)[0]
+    else:
+        x = features.FEATURIZERS[name](list(df["smiles"]))
     CACHE.mkdir(exist_ok=True)
     np.save(path, x)
     return x
