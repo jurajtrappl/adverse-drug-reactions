@@ -1,11 +1,13 @@
-"""Phase 1 benchmark: every model x split x seed, results written to results/.
+"""Benchmark: every model x split x seed of an experiment set, results written to results/.
 
 Usage (from the repo root):
-    python scripts/run_phase1.py                      # full run
-    python scripts/run_phase1.py --models prior morgan+rf --seeds 0
+    python scripts/run_benchmark.py --set phase1        # classic ML, scaffold + random split
+    python scripts/run_benchmark.py --set phase2        # neural + pretrained, scaffold split
+    python scripts/run_benchmark.py --set phase2 --models chemprop --seeds 0
 
-Finished (split, seed, model) runs are saved after each model and skipped on the next
-invocation, so an interrupted run can simply be restarted. Use --fresh to start over.
+Resumable: finished (split, seed, model) runs are saved after each model and each fold's
+predictions are cached in .cache/preds/, so an interrupted run can simply be restarted.
+Use --fresh to start over. Folds come from data/splits/ so every model sees the same folds.
 """
 import argparse
 import sys
@@ -24,8 +26,6 @@ from adr.models import EXPERIMENTS  # noqa: E402
 
 RESULTS = ROOT / "results"
 SPLIT_DIR = ROOT / "data" / "splits"
-
-
 CACHE = ROOT / ".cache"
 
 
@@ -33,6 +33,13 @@ def featurize(name, df):
     """Featurize once and cache to .cache/ (RDKit descriptors take a while)."""
     if name is None:
         return np.zeros((len(df), 1))
+    if name == "smiles":  # graph models featurize internally
+        return df["smiles"].to_numpy(dtype=object)
+    if name == "smiles+desc":  # graph model + RDKit descriptors fed to its output layers
+        out = np.empty((len(df), 2), dtype=object)
+        out[:, 0] = df["smiles"].to_numpy()
+        out[:, 1] = list(featurize("desc", df))
+        return out
     path = CACHE / f"features_{name.replace('+', '_')}.npy"
     if path.exists():
         return np.load(path)
@@ -44,13 +51,18 @@ def featurize(name, df):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--models", nargs="+", default=list(EXPERIMENTS))
-    ap.add_argument("--splits", nargs="+", default=["scaffold", "random"])
+    ap.add_argument("--set", choices=list(EXPERIMENTS), default="phase1")
+    ap.add_argument("--models", nargs="+", help="default: every model in the set")
+    ap.add_argument("--splits", nargs="+", help="default: scaffold+random (phase1), scaffold (phase2)")
     ap.add_argument("--seeds", nargs="+", type=int, default=[0, 1, 2])
     ap.add_argument("--jobs", type=int, default=-1)
-    ap.add_argument("--tag", default="phase1")
+    ap.add_argument("--tag", help="results file prefix, default: the set name")
     ap.add_argument("--fresh", action="store_true", help="ignore previously saved runs")
     args = ap.parse_args()
+    experiments = EXPERIMENTS[args.set]
+    args.models = args.models or list(experiments)
+    args.splits = args.splits or (["scaffold", "random"] if args.set == "phase1" else ["scaffold"])
+    args.tag = args.tag or args.set
     runs_path = RESULTS / f"{args.tag}_runs.csv"
     adr_path = RESULTS / f"{args.tag}_per_adr.csv"
 
@@ -68,17 +80,23 @@ def main():
     SPLIT_DIR.mkdir(parents=True, exist_ok=True)
     for split in args.splits:
         for seed in args.seeds:
-            folds = splits.SPLITTERS[split](df["scaffold"], df["group"], k=5, seed=seed)
-            splits.save_folds(folds, SPLIT_DIR / f"{split}_seed{seed}.csv")
+            fold_file = SPLIT_DIR / f"{split}_seed{seed}.csv"
+            if fold_file.exists():
+                folds = splits.load_folds(fold_file)
+            else:
+                folds = splits.SPLITTERS[split](df["scaffold"], df["group"], k=5, seed=seed)
+                splits.save_folds(folds, fold_file)
             for name in args.models:
                 if (split, seed, name) in done:
                     continue
-                feat_name, factory = EXPERIMENTS[name]
+                feat_name, factory = experiments[name]
                 if feat_name not in feats:
                     feats[feat_name] = featurize(feat_name, df)
                 t0 = time.time()
+                safe = name.replace("+", "_").replace(" ", "_")
                 roc, pr, prev = cross_validate(
-                    lambda: factory(n_jobs=args.jobs, seed=seed), feats[feat_name], Y, folds)
+                    lambda: factory(n_jobs=args.jobs, seed=seed), feats[feat_name], Y, folds,
+                    cache_prefix=CACHE / "preds" / f"{args.tag}_{split}_s{seed}_{safe}")
                 roc_adr, pr_adr = np.nanmean(roc, 0), np.nanmean(pr, 0)
                 lift_adr = pr_adr - np.nanmean(prev, 0)
                 rows.append(dict(split=split, seed=seed, model=name,

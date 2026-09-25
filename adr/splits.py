@@ -39,3 +39,8 @@ def save_folds(folds, path) -> None:
     for i, f in enumerate(folds):
         fold[f] = i
     pd.DataFrame({"row": np.arange(len(fold)), "fold": fold}).to_csv(path, index=False)
+
+
+def load_folds(path) -> list[np.ndarray]:
+    fold = pd.read_csv(path).sort_values("row")["fold"].to_numpy()
+    return [np.where(fold == i)[0] for i in range(fold.max() + 1)]
