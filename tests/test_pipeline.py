@@ -45,7 +45,10 @@ def test_folds_partition_and_no_leakage(sider, split, seed):
         # the same parent molecule never sits on both sides (e.g. two salts of one drug)
         assert not set(df["group"].iloc[test]) & set(df["group"].iloc[train])
         if split == "scaffold":
-            assert not set(df["scaffold"].iloc[test]) & set(df["scaffold"].iloc[train])
+            keys = np.array(splits.scaffold_keys(df["scaffold"], df["group"]))
+            assert not set(keys[test]) & set(keys[train])
+            ring = df["scaffold"].to_numpy() != ""  # real ring scaffolds never cross folds
+            assert not set(df["scaffold"].iloc[test][ring[test]]) & set(df["scaffold"].iloc[train][ring[train]])
 
 
 def test_scaffold_folds_deterministic(sider):
@@ -61,3 +64,18 @@ def test_prior_baseline_is_chance(sider):
     folds = splits.random_folds(df["scaffold"], df["group"], seed=0)
     roc, _, _ = cross_validate(Prior, np.zeros((len(Y), 1)), Y, folds)
     assert np.allclose(np.nanmean(roc), 0.5)
+
+
+def test_scaffold_folds_spread_acyclic_and_vary_by_seed(sider):
+    df, _ = sider
+    acyclic = (df["scaffold"] == "").to_numpy()
+    placements = []
+    for seed in (0, 1, 2):
+        folds = splits.scaffold_folds(df["scaffold"], df["group"], seed=seed)
+        per_fold = [int(acyclic[f].sum()) for f in folds]
+        assert max(per_fold) < 0.5 * acyclic.sum()  # not all ring-free drugs in one fold
+        assert max(map(len, folds)) - min(map(len, folds)) <= 0.05 * len(df)
+        benzene = (df["scaffold"] == "c1ccccc1").to_numpy()
+        placements.append(next(i for i, f in enumerate(folds) if benzene[f].any()))
+    assert len(set(placements)) > 1  # the biggest scaffold set doesn't sit in the same fold every seed
+

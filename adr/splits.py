@@ -3,22 +3,36 @@ import numpy as np
 import pandas as pd
 
 
+def scaffold_keys(scaffolds, groups) -> list[str]:
+    """Scaffold per drug; acyclic drugs (empty Murcko scaffold) get one key per molecule.
+
+    Without this, all 156 ring-free drugs share the scaffold '' and land in one test fold,
+    although they have nothing in common structurally.
+    """
+    return [s if s else f"acyclic:{g}" for s, g in zip(scaffolds, groups)]
+
+
 def scaffold_folds(scaffolds, groups, k: int = 5, seed: int = 0) -> list[np.ndarray]:
     """Murcko-scaffold k-fold: a scaffold never appears in two folds.
 
-    Scaffold sets are shuffled (seed), then placed largest-first into the currently
-    smallest fold, which keeps fold sizes balanced. `groups` is accepted for API symmetry;
-    identical molecules share a scaffold, so they are already kept together.
+    Sets holding more than 5% of the drugs are placed first (so folds stay balanced), the
+    rest in random order (seed). Each set goes to the currently smallest fold, ties broken at
+    random, so the big sets don't sit in fold 0 for every seed. Identical molecules share a
+    group and a scaffold, so they always stay together.
     """
+    rng = np.random.RandomState(seed)
     buckets: dict[str, list[int]] = {}
-    for i, s in enumerate(scaffolds):
+    for i, s in enumerate(scaffold_keys(scaffolds, groups)):
         buckets.setdefault(s, []).append(i)
     sets = list(buckets.values())
-    np.random.RandomState(seed).shuffle(sets)
-    sets.sort(key=len, reverse=True)  # stable sort: ties keep the shuffled order
+    rng.shuffle(sets)
+    big = [m for m in sets if len(m) > 0.05 * len(scaffolds)]
+    small = [m for m in sets if len(m) <= 0.05 * len(scaffolds)]
     folds: list[list[int]] = [[] for _ in range(k)]
-    for members in sets:
-        min(folds, key=len).extend(members)
+    for members in sorted(big, key=len, reverse=True) + small:
+        sizes = np.array([len(f) for f in folds])
+        target = rng.choice(np.flatnonzero(sizes == sizes.min()))
+        folds[target].extend(members)
     return [np.sort(np.array(f)) for f in folds]
 
 
