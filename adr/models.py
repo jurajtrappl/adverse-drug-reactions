@@ -1,7 +1,6 @@
 """Model zoo. Every model maps X (n x d) and Y (n x 27, binary) to probabilities (n x 27)."""
 import numpy as np
 from rdkit.Chem import Descriptors
-from lightgbm import LGBMClassifier
 from sklearn.base import clone
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
@@ -96,6 +95,9 @@ def logreg(n_jobs=-1, seed=0):
 
 
 def lgbm(n_jobs=-1, seed=0):
+    # Imported here: on macOS, loading LightGBM's and PyTorch's OpenMP runtimes in the same
+    # process can abort with "OMP: Error #15"; Phase 2 (torch) never needs LightGBM.
+    from lightgbm import LGBMClassifier
     return PerLabel(LGBMClassifier(n_estimators=300, learning_rate=0.03, num_leaves=15,
                                    min_child_samples=10, subsample=0.8, subsample_freq=1,
                                    colsample_bytree=0.3, class_weight="balanced",
