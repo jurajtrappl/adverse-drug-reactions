@@ -48,3 +48,19 @@ def test_block_average_uses_both_blocks():
     X, Y = _toy()
     m = BlockAverage(5, Prior, Prior).fit(X, Y)
     assert np.allclose(m.predict_proba(X[:2]), Y.mean(0))
+
+
+@pytest.mark.skipif(not (pharma.CACHE / "sider_meddra_all_se.tsv.gz").exists(),
+                    reason="SIDER side-effect terms not downloaded (run scripts/run_fine.py once)")
+def test_fine_labels_and_fold_restriction():
+    from adr import fine_labels, splits
+    df, _ = data.load()
+    keep, Y, terms = fine_labels.load(df)
+    assert keep.sum() == len(Y) >= 1400 and Y.shape[1] == len(terms)
+    assert (Y.sum(0) >= fine_labels.MIN_DRUGS).all()
+    folds = splits.scaffold_folds(df["scaffold"], df["group"], seed=0)
+    sub = fine_labels.restrict_folds(folds, keep)
+    assert sorted(np.concatenate(sub).tolist()) == list(range(len(Y)))
+    old_rows = np.where(keep)[0]
+    for f, g in zip(folds, sub):  # same drugs, re-indexed
+        assert set(old_rows[g]) == set(f[keep[f]])
