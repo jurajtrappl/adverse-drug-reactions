@@ -95,8 +95,33 @@ def lgbm(n_jobs=-1, seed=0):
                                    n_jobs=n_jobs, random_state=seed, verbose=-1))
 
 
+class Average:
+    """Ensemble: mean of the members' predicted probabilities."""
+
+    def __init__(self, *members):
+        self.members = members
+
+    def fit(self, X, Y):
+        for m in self.members:
+            m.fit(X, Y)
+        return self
+
+    def predict_proba(self, X):
+        return np.mean([m.predict_proba(X) for m in self.members], axis=0)
+
+
+def mlp(n_jobs=-1, seed=0):
+    from adr.nn import MultiTaskMLP  # torch is only needed for Phase 2
+    return MultiTaskMLP(seed=seed, n_jobs=n_jobs)
+
+
+def chemprop(n_jobs=-1, seed=0):
+    from adr.nn import Chemprop
+    return Chemprop(seed=seed, n_jobs=n_jobs)
+
+
 # name -> (featurizer name, factory)
-EXPERIMENTS = {
+PHASE1 = {
     "prior":                (None,          lambda **kw: Prior()),
     "size+logreg":          ("size",        logreg),
     "knn5 tanimoto":        ("morgan",      lambda **kw: TanimotoKNN(5)),
@@ -107,3 +132,15 @@ EXPERIMENTS = {
     "morgan+desc+rf-multi": ("morgan+desc", lambda **kw: MultiOutputRF(**kw)),
     "morgan+desc+lgbm":     ("morgan+desc", lgbm),
 }
+
+PHASE2 = {
+    "morgan+desc+mlp":      ("morgan+desc", mlp),
+    "mol2vec+logreg":       ("mol2vec",     logreg),
+    "mol2vec+rf":           ("mol2vec",     rf),
+    "mol2vec+mlp":          ("mol2vec",     mlp),
+    "mlp + rf ensemble":    ("morgan+desc", lambda **kw: Average(mlp(**kw), rf(**kw))),
+    "chemprop":             ("smiles",      chemprop),
+    "chemprop+desc":        ("smiles+desc", chemprop),
+}
+
+EXPERIMENTS = {"phase1": PHASE1, "phase2": PHASE2}
