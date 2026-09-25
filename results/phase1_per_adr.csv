@@ -1,0 +1,1459 @@
+split,seed,model,adr,roc_auc,pr_auc,prevalence
+scaffold,0,prior,Hepatobiliary disorders,0.5,0.5207876334192123,0.5206727400140154
+scaffold,0,prior,Metabolism and nutrition disorders,0.5,0.6980395043552938,0.6979677645409951
+scaffold,0,prior,Product issues,0.5,0.0154165133112501,0.0154169586545199
+scaffold,0,prior,Eye disorders,0.5,0.613929579192737,0.613875262789068
+scaffold,0,prior,Investigations,0.5,0.8066347687400318,0.8065872459705676
+scaffold,0,prior,Musculoskeletal and connective tissue disorders,0.5,0.6987363513679303,0.6986685353889278
+scaffold,0,prior,Gastrointestinal disorders,0.5,0.9096159980370506,0.9096005606166784
+scaffold,0,prior,Social circumstances,0.5,0.1759146117040853,0.1758934828311142
+scaffold,0,prior,Immune system disorders,0.5,0.7176763587289903,0.7175893482831114
+scaffold,0,prior,Reproductive system and breast disorders,0.5,0.5095939148570727,0.5094604064470918
+scaffold,0,prior,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5,0.2635406698564593,0.263489838822705
+scaffold,0,prior,General disorders and administration site conditions,0.5,0.9053956569746044,0.905395935529082
+scaffold,0,prior,Endocrine disorders,0.5,0.2264360201202306,0.2263489838822705
+scaffold,0,prior,Surgical and medical procedures,0.5,0.1492724819040608,0.1492641906096706
+scaffold,0,prior,Vascular disorders,0.5,0.7764642375168691,0.7764540995094604
+scaffold,0,prior,Blood and lymphatic system disorders,0.5,0.6202600907864066,0.6201822004204625
+scaffold,0,prior,Skin and subcutaneous tissue disorders,0.5,0.9236609005030058,0.9236159775753328
+scaffold,0,prior,"Congenital, familial and genetic disorders",0.5,0.1773230278493436,0.1772950245269796
+scaffold,0,prior,Infections and infestations,0.5,0.7050521408416146,0.7049754730203224
+scaffold,0,prior,"Respiratory, thoracic and mediastinal disorders",0.5,0.7428168322905163,0.7428170988086895
+scaffold,0,prior,Psychiatric disorders,0.5,0.7120525088946141,0.7119831814996496
+scaffold,0,prior,Renal and urinary disorders,0.5,0.6384639921482027,0.6384022424667134
+scaffold,0,prior,"Pregnancy, puerperium and perinatal conditions",0.5,0.0876236044657097,0.0875963559915907
+scaffold,0,prior,Ear and labyrinth disorders,0.5,0.4618770702981229,0.4618079887876664
+scaffold,0,prior,Cardiac disorders,0.5,0.692373941847626,0.6923615977575333
+scaffold,0,prior,Nervous system disorders,0.5,0.9138363390994972,0.9138051857042748
+scaffold,0,prior,"Injury, poisoning and procedural complications",0.5,0.662971414550362,0.6629292221443588
+scaffold,0,size+logreg,Hepatobiliary disorders,0.4850540659015339,0.5057187525197044,0.5206727400140154
+scaffold,0,size+logreg,Metabolism and nutrition disorders,0.5311840941261124,0.7247809471337899,0.6979677645409951
+scaffold,0,size+logreg,Product issues,0.4970995761633501,0.0248265089077375,0.0154169586545199
+scaffold,0,size+logreg,Eye disorders,0.5199675756224844,0.6118892260545288,0.613875262789068
+scaffold,0,size+logreg,Investigations,0.5896562568919295,0.8472739815216416,0.8065872459705676
+scaffold,0,size+logreg,Musculoskeletal and connective tissue disorders,0.5857089633700371,0.7535972586861173,0.6986685353889278
+scaffold,0,size+logreg,Gastrointestinal disorders,0.5438241148626745,0.92701160520424,0.9096005606166784
+scaffold,0,size+logreg,Social circumstances,0.4906629957975493,0.1867434759986654,0.1758934828311142
+scaffold,0,size+logreg,Immune system disorders,0.590314345225768,0.7830628359317001,0.7175893482831114
+scaffold,0,size+logreg,Reproductive system and breast disorders,0.4738532325958893,0.4812329040087792,0.5094604064470918
+scaffold,0,size+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5315128503163189,0.3045863813597411,0.263489838822705
+scaffold,0,size+logreg,General disorders and administration site conditions,0.5421595154986474,0.9150238687031956,0.905395935529082
+scaffold,0,size+logreg,Endocrine disorders,0.5015100908749025,0.2419854768696123,0.2263489838822705
+scaffold,0,size+logreg,Surgical and medical procedures,0.5240220023423803,0.1567490851129805,0.1492641906096706
+scaffold,0,size+logreg,Vascular disorders,0.5457492537090455,0.8041937391388554,0.7764540995094604
+scaffold,0,size+logreg,Blood and lymphatic system disorders,0.4936571376336841,0.6064413775307111,0.6201822004204625
+scaffold,0,size+logreg,Skin and subcutaneous tissue disorders,0.5679470875341519,0.9398355010932044,0.9236159775753328
+scaffold,0,size+logreg,"Congenital, familial and genetic disorders",0.4975402318405477,0.1775323709424154,0.1772950245269796
+scaffold,0,size+logreg,Infections and infestations,0.6082708507514158,0.7685967463444257,0.7049754730203224
+scaffold,0,size+logreg,"Respiratory, thoracic and mediastinal disorders",0.5810121174467058,0.7910000354340458,0.7428170988086895
+scaffold,0,size+logreg,Psychiatric disorders,0.4736084425024051,0.6940885515609978,0.7119831814996496
+scaffold,0,size+logreg,Renal and urinary disorders,0.5451223125193787,0.6654109357157155,0.6384022424667134
+scaffold,0,size+logreg,"Pregnancy, puerperium and perinatal conditions",0.5286089273182256,0.113128401334941,0.0875963559915907
+scaffold,0,size+logreg,Ear and labyrinth disorders,0.5075062950836313,0.4696082377471198,0.4618079887876664
+scaffold,0,size+logreg,Cardiac disorders,0.5424562179929305,0.7256802770056454,0.6923615977575333
+scaffold,0,size+logreg,Nervous system disorders,0.5993861479764954,0.9450907044207562,0.9138051857042748
+scaffold,0,size+logreg,"Injury, poisoning and procedural complications",0.5446212203712619,0.7020834484644682,0.6629292221443588
+scaffold,0,knn5 tanimoto,Hepatobiliary disorders,0.6774433821287392,0.6594757393571643,0.5206727400140154
+scaffold,0,knn5 tanimoto,Metabolism and nutrition disorders,0.5445379721570245,0.7224749168289273,0.6979677645409951
+scaffold,0,knn5 tanimoto,Product issues,0.5518889174320936,0.021186175854368,0.0154169586545199
+scaffold,0,knn5 tanimoto,Eye disorders,0.6412547557851898,0.7018191039196345,0.613875262789068
+scaffold,0,knn5 tanimoto,Investigations,0.5921446617433082,0.8408900191617485,0.8065872459705676
+scaffold,0,knn5 tanimoto,Musculoskeletal and connective tissue disorders,0.5927004522726407,0.7496346890758242,0.6986685353889278
+scaffold,0,knn5 tanimoto,Gastrointestinal disorders,0.6836422908818578,0.9418022316888224,0.9096005606166784
+scaffold,0,knn5 tanimoto,Social circumstances,0.582336663782866,0.2284465609185877,0.1758934828311142
+scaffold,0,knn5 tanimoto,Immune system disorders,0.5692972561054885,0.7534946522913162,0.7175893482831114
+scaffold,0,knn5 tanimoto,Reproductive system and breast disorders,0.6343788881891962,0.6271925548604154,0.5094604064470918
+scaffold,0,knn5 tanimoto,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6440065332349271,0.3724585694730418,0.263489838822705
+scaffold,0,knn5 tanimoto,General disorders and administration site conditions,0.5724845142858775,0.9184630832870893,0.905395935529082
+scaffold,0,knn5 tanimoto,Endocrine disorders,0.661753752864439,0.380842476750599,0.2263489838822705
+scaffold,0,knn5 tanimoto,Surgical and medical procedures,0.5700997217538106,0.1965018687357134,0.1492641906096706
+scaffold,0,knn5 tanimoto,Vascular disorders,0.6120285312457712,0.8209144115366691,0.7764540995094604
+scaffold,0,knn5 tanimoto,Blood and lymphatic system disorders,0.6900181787969538,0.7519172100477347,0.6201822004204625
+scaffold,0,knn5 tanimoto,Skin and subcutaneous tissue disorders,0.5619813724702262,0.932401652666946,0.9236159775753328
+scaffold,0,knn5 tanimoto,"Congenital, familial and genetic disorders",0.5797255483023154,0.2328642560592587,0.1772950245269796
+scaffold,0,knn5 tanimoto,Infections and infestations,0.5653461898315673,0.7394148164904675,0.7049754730203224
+scaffold,0,knn5 tanimoto,"Respiratory, thoracic and mediastinal disorders",0.5568419459883718,0.7696551930057363,0.7428170988086895
+scaffold,0,knn5 tanimoto,Psychiatric disorders,0.6182319522121957,0.7726812038323667,0.7119831814996496
+scaffold,0,knn5 tanimoto,Renal and urinary disorders,0.6351493601345892,0.7225281845377014,0.6384022424667134
+scaffold,0,knn5 tanimoto,"Pregnancy, puerperium and perinatal conditions",0.5723089240389512,0.1051972682701104,0.0875963559915907
+scaffold,0,knn5 tanimoto,Ear and labyrinth disorders,0.6116421923928408,0.5482380530409885,0.4618079887876664
+scaffold,0,knn5 tanimoto,Cardiac disorders,0.6068600972458639,0.7498996601493761,0.6923615977575333
+scaffold,0,knn5 tanimoto,Nervous system disorders,0.5782981995278765,0.9258838650935074,0.9138051857042748
+scaffold,0,knn5 tanimoto,"Injury, poisoning and procedural complications",0.5702943980380807,0.7015393737690159,0.6629292221443588
+scaffold,0,morgan+logreg,Hepatobiliary disorders,0.6210046762723518,0.6209412971486349,0.5206727400140154
+scaffold,0,morgan+logreg,Metabolism and nutrition disorders,0.5198601640999495,0.7206764264938521,0.6979677645409951
+scaffold,0,morgan+logreg,Product issues,0.4623442729656529,0.021073694063363,0.0154169586545199
+scaffold,0,morgan+logreg,Eye disorders,0.6011667320088654,0.6925323037655359,0.613875262789068
+scaffold,0,morgan+logreg,Investigations,0.5983192439504859,0.8598885280532261,0.8065872459705676
+scaffold,0,morgan+logreg,Musculoskeletal and connective tissue disorders,0.5962571739324801,0.7711194051836286,0.6986685353889278
+scaffold,0,morgan+logreg,Gastrointestinal disorders,0.6991307893671107,0.9535131025483136,0.9096005606166784
+scaffold,0,morgan+logreg,Social circumstances,0.5841327415305323,0.2367059345783489,0.1758934828311142
+scaffold,0,morgan+logreg,Immune system disorders,0.56507129369843,0.7671096240484336,0.7175893482831114
+scaffold,0,morgan+logreg,Reproductive system and breast disorders,0.6282606476518927,0.6350872974805545,0.5094604064470918
+scaffold,0,morgan+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5919218175221002,0.3635161031832489,0.263489838822705
+scaffold,0,morgan+logreg,General disorders and administration site conditions,0.5555401389584979,0.9219544013408808,0.905395935529082
+scaffold,0,morgan+logreg,Endocrine disorders,0.5928923724053885,0.3671043279634826,0.2263489838822705
+scaffold,0,morgan+logreg,Surgical and medical procedures,0.5686679960704929,0.2150580366522475,0.1492641906096706
+scaffold,0,morgan+logreg,Vascular disorders,0.5754778069086057,0.8195389430244644,0.7764540995094604
+scaffold,0,morgan+logreg,Blood and lymphatic system disorders,0.653001793014881,0.7455028116450396,0.6201822004204625
+scaffold,0,morgan+logreg,Skin and subcutaneous tissue disorders,0.5637367639889529,0.9409386863460222,0.9236159775753328
+scaffold,0,morgan+logreg,"Congenital, familial and genetic disorders",0.5609293457004558,0.2294625064782192,0.1772950245269796
+scaffold,0,morgan+logreg,Infections and infestations,0.5737803087407424,0.7621911997630452,0.7049754730203224
+scaffold,0,morgan+logreg,"Respiratory, thoracic and mediastinal disorders",0.6123150540788967,0.8209012930016548,0.7428170988086895
+scaffold,0,morgan+logreg,Psychiatric disorders,0.5839290885585819,0.7679147457825828,0.7119831814996496
+scaffold,0,morgan+logreg,Renal and urinary disorders,0.616548697394679,0.7308485562741834,0.6384022424667134
+scaffold,0,morgan+logreg,"Pregnancy, puerperium and perinatal conditions",0.516544037947329,0.106977921544534,0.0875963559915907
+scaffold,0,morgan+logreg,Ear and labyrinth disorders,0.558494564254433,0.5280722222410524,0.4618079887876664
+scaffold,0,morgan+logreg,Cardiac disorders,0.6095114712610292,0.7723853988542067,0.6923615977575333
+scaffold,0,morgan+logreg,Nervous system disorders,0.6466570784001803,0.9569921080014472,0.9138051857042748
+scaffold,0,morgan+logreg,"Injury, poisoning and procedural complications",0.5363775581788912,0.7002286373280728,0.6629292221443588
+scaffold,0,morgan+rf,Hepatobiliary disorders,0.7053881845000759,0.7155754722326496,0.5206727400140154
+scaffold,0,morgan+rf,Metabolism and nutrition disorders,0.5852186326818724,0.7610172775792071,0.6979677645409951
+scaffold,0,morgan+rf,Product issues,0.6417105442091326,0.0537268221566062,0.0154169586545199
+scaffold,0,morgan+rf,Eye disorders,0.6628709012543477,0.7477851129844012,0.613875262789068
+scaffold,0,morgan+rf,Investigations,0.6354910382741398,0.8750082407601812,0.8065872459705676
+scaffold,0,morgan+rf,Musculoskeletal and connective tissue disorders,0.6437850468681925,0.8045049019885356,0.6986685353889278
+scaffold,0,morgan+rf,Gastrointestinal disorders,0.7557262869397837,0.961957765217125,0.9096005606166784
+scaffold,0,morgan+rf,Social circumstances,0.5919167955790356,0.2783276177116076,0.1758934828311142
+scaffold,0,morgan+rf,Immune system disorders,0.6160215018677562,0.8071914287821345,0.7175893482831114
+scaffold,0,morgan+rf,Reproductive system and breast disorders,0.6607278480051221,0.6988777405226393,0.5094604064470918
+scaffold,0,morgan+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6780094104392616,0.4586977531192922,0.263489838822705
+scaffold,0,morgan+rf,General disorders and administration site conditions,0.5939096732864293,0.9317018030507548,0.905395935529082
+scaffold,0,morgan+rf,Endocrine disorders,0.6742148677366806,0.4351209474298541,0.2263489838822705
+scaffold,0,morgan+rf,Surgical and medical procedures,0.5807266614610194,0.1991391546280103,0.1492641906096706
+scaffold,0,morgan+rf,Vascular disorders,0.6286496619703528,0.8494969275234677,0.7764540995094604
+scaffold,0,morgan+rf,Blood and lymphatic system disorders,0.7096059967978549,0.8001705769314678,0.6201822004204625
+scaffold,0,morgan+rf,Skin and subcutaneous tissue disorders,0.5973296409544314,0.949027328276365,0.9236159775753328
+scaffold,0,morgan+rf,"Congenital, familial and genetic disorders",0.6113617819071384,0.2681972560981522,0.1772950245269796
+scaffold,0,morgan+rf,Infections and infestations,0.6274989400005905,0.7963956669277439,0.7049754730203224
+scaffold,0,morgan+rf,"Respiratory, thoracic and mediastinal disorders",0.6247643841327741,0.8258682056331903,0.7428170988086895
+scaffold,0,morgan+rf,Psychiatric disorders,0.6432284270342711,0.8197985626645854,0.7119831814996496
+scaffold,0,morgan+rf,Renal and urinary disorders,0.6596601146379966,0.7670594694352009,0.6384022424667134
+scaffold,0,morgan+rf,"Pregnancy, puerperium and perinatal conditions",0.5536017067720025,0.1242207682425255,0.0875963559915907
+scaffold,0,morgan+rf,Ear and labyrinth disorders,0.638020651647857,0.6258945608995856,0.4618079887876664
+scaffold,0,morgan+rf,Cardiac disorders,0.6628757649945037,0.8066199903801007,0.6923615977575333
+scaffold,0,morgan+rf,Nervous system disorders,0.7495757403159578,0.9713655623231052,0.9138051857042748
+scaffold,0,morgan+rf,"Injury, poisoning and procedural complications",0.6018980069460605,0.7518021108416699,0.6629292221443588
+scaffold,0,desc+rf,Hepatobiliary disorders,0.7011243345741148,0.6976048909724445,0.5206727400140154
+scaffold,0,desc+rf,Metabolism and nutrition disorders,0.6021740639788916,0.7668086392052796,0.6979677645409951
+scaffold,0,desc+rf,Product issues,0.6095720601646842,0.0377891933775064,0.0154169586545199
+scaffold,0,desc+rf,Eye disorders,0.6619072184363841,0.7494457839399777,0.613875262789068
+scaffold,0,desc+rf,Investigations,0.6309177665154122,0.8779387212706885,0.8065872459705676
+scaffold,0,desc+rf,Musculoskeletal and connective tissue disorders,0.6304497294476799,0.7929257873657726,0.6986685353889278
+scaffold,0,desc+rf,Gastrointestinal disorders,0.7653492185684512,0.9651149382608082,0.9096005606166784
+scaffold,0,desc+rf,Social circumstances,0.6207909167880328,0.256182032585868,0.1758934828311142
+scaffold,0,desc+rf,Immune system disorders,0.614304186689391,0.8099512311389985,0.7175893482831114
+scaffold,0,desc+rf,Reproductive system and breast disorders,0.6598756254387439,0.6734343201731899,0.5094604064470918
+scaffold,0,desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.691859615305357,0.4644219015581366,0.263489838822705
+scaffold,0,desc+rf,General disorders and administration site conditions,0.5105385256624764,0.9124994672523612,0.905395935529082
+scaffold,0,desc+rf,Endocrine disorders,0.6764226279245037,0.4250476974094426,0.2263489838822705
+scaffold,0,desc+rf,Surgical and medical procedures,0.6120398060260598,0.2252468173106364,0.1492641906096706
+scaffold,0,desc+rf,Vascular disorders,0.6048766888387564,0.8355708467358326,0.7764540995094604
+scaffold,0,desc+rf,Blood and lymphatic system disorders,0.7248997296217956,0.8140534226053967,0.6201822004204625
+scaffold,0,desc+rf,Skin and subcutaneous tissue disorders,0.5037994703879544,0.9321074954613447,0.9236159775753328
+scaffold,0,desc+rf,"Congenital, familial and genetic disorders",0.5977878678544611,0.2861843991402358,0.1772950245269796
+scaffold,0,desc+rf,Infections and infestations,0.6239222662168245,0.7900870654507111,0.7049754730203224
+scaffold,0,desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6300738580874669,0.8203601799958576,0.7428170988086895
+scaffold,0,desc+rf,Psychiatric disorders,0.6460313718921746,0.8045249425584176,0.7119831814996496
+scaffold,0,desc+rf,Renal and urinary disorders,0.6566493487939307,0.7635297577017919,0.6384022424667134
+scaffold,0,desc+rf,"Pregnancy, puerperium and perinatal conditions",0.5888541905335453,0.1709388446124473,0.0875963559915907
+scaffold,0,desc+rf,Ear and labyrinth disorders,0.6177906346681729,0.5994073823023774,0.4618079887876664
+scaffold,0,desc+rf,Cardiac disorders,0.6607995046430517,0.8012519123780188,0.6923615977575333
+scaffold,0,desc+rf,Nervous system disorders,0.7195035233724119,0.9645841751410952,0.9138051857042748
+scaffold,0,desc+rf,"Injury, poisoning and procedural complications",0.6013497006669661,0.7515570978125764,0.6629292221443588
+scaffold,0,morgan+desc+rf,Hepatobiliary disorders,0.7059467369224797,0.7025784568385116,0.5206727400140154
+scaffold,0,morgan+desc+rf,Metabolism and nutrition disorders,0.5969347414756653,0.7616868749626711,0.6979677645409951
+scaffold,0,morgan+desc+rf,Product issues,0.6138634525022111,0.0305800485311087,0.0154169586545199
+scaffold,0,morgan+desc+rf,Eye disorders,0.6690373344680398,0.7465319850868022,0.613875262789068
+scaffold,0,morgan+desc+rf,Investigations,0.6408026744472377,0.8808280355758923,0.8065872459705676
+scaffold,0,morgan+desc+rf,Musculoskeletal and connective tissue disorders,0.6404587648446534,0.7995902705290625,0.6986685353889278
+scaffold,0,morgan+desc+rf,Gastrointestinal disorders,0.7724480699509197,0.964048731823075,0.9096005606166784
+scaffold,0,morgan+desc+rf,Social circumstances,0.6292005227999529,0.2591307775026908,0.1758934828311142
+scaffold,0,morgan+desc+rf,Immune system disorders,0.6234720282722954,0.8115740807725313,0.7175893482831114
+scaffold,0,morgan+desc+rf,Reproductive system and breast disorders,0.6617224554256296,0.6894717635575163,0.5094604064470918
+scaffold,0,morgan+desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6869432454689656,0.4753267129115748,0.263489838822705
+scaffold,0,morgan+desc+rf,General disorders and administration site conditions,0.5295140987376461,0.9154395571559846,0.905395935529082
+scaffold,0,morgan+desc+rf,Endocrine disorders,0.6933407934657965,0.4317859409332184,0.2263489838822705
+scaffold,0,morgan+desc+rf,Surgical and medical procedures,0.6042302948224897,0.222977902872866,0.1492641906096706
+scaffold,0,morgan+desc+rf,Vascular disorders,0.6137333008923597,0.8404771994933483,0.7764540995094604
+scaffold,0,morgan+desc+rf,Blood and lymphatic system disorders,0.725870969351902,0.8118266063876917,0.6201822004204625
+scaffold,0,morgan+desc+rf,Skin and subcutaneous tissue disorders,0.5439047560632199,0.9412120568684104,0.9236159775753328
+scaffold,0,morgan+desc+rf,"Congenital, familial and genetic disorders",0.6005216430194049,0.2807222552808439,0.1772950245269796
+scaffold,0,morgan+desc+rf,Infections and infestations,0.6349025976708267,0.7957555227634987,0.7049754730203224
+scaffold,0,morgan+desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6338374168008237,0.8217107577330287,0.7428170988086895
+scaffold,0,morgan+desc+rf,Psychiatric disorders,0.6506288549176847,0.8134847585971844,0.7119831814996496
+scaffold,0,morgan+desc+rf,Renal and urinary disorders,0.6564238411218006,0.7599449315542783,0.6384022424667134
+scaffold,0,morgan+desc+rf,"Pregnancy, puerperium and perinatal conditions",0.5846107921164699,0.1710954441790546,0.0875963559915907
+scaffold,0,morgan+desc+rf,Ear and labyrinth disorders,0.6309324269662531,0.6121300622287371,0.4618079887876664
+scaffold,0,morgan+desc+rf,Cardiac disorders,0.6628699338720656,0.806199952175343,0.6923615977575333
+scaffold,0,morgan+desc+rf,Nervous system disorders,0.728716917236361,0.9680694280981758,0.9138051857042748
+scaffold,0,morgan+desc+rf,"Injury, poisoning and procedural complications",0.6139870237827798,0.7559200393732342,0.6629292221443588
+scaffold,0,morgan+desc+rf-multi,Hepatobiliary disorders,0.671835657436478,0.6711347667144111,0.5206727400140154
+scaffold,0,morgan+desc+rf-multi,Metabolism and nutrition disorders,0.5865982569925375,0.7645356401975661,0.6979677645409951
+scaffold,0,morgan+desc+rf-multi,Product issues,0.5897516570527964,0.030251050346352,0.0154169586545199
+scaffold,0,morgan+desc+rf-multi,Eye disorders,0.6324174571991243,0.715082006545908,0.613875262789068
+scaffold,0,morgan+desc+rf-multi,Investigations,0.6317911451426038,0.8693383292074024,0.8065872459705676
+scaffold,0,morgan+desc+rf-multi,Musculoskeletal and connective tissue disorders,0.6351917869856785,0.7997116091346592,0.6986685353889278
+scaffold,0,morgan+desc+rf-multi,Gastrointestinal disorders,0.7502294641559115,0.9589233345941832,0.9096005606166784
+scaffold,0,morgan+desc+rf-multi,Social circumstances,0.6135925020548362,0.2570247017444772,0.1758934828311142
+scaffold,0,morgan+desc+rf-multi,Immune system disorders,0.6114404142417349,0.8048981883641473,0.7175893482831114
+scaffold,0,morgan+desc+rf-multi,Reproductive system and breast disorders,0.6640470477895408,0.6757893660867811,0.5094604064470918
+scaffold,0,morgan+desc+rf-multi,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6394769996132669,0.4035002386266668,0.263489838822705
+scaffold,0,morgan+desc+rf-multi,General disorders and administration site conditions,0.5143818184657889,0.9085546400593272,0.905395935529082
+scaffold,0,morgan+desc+rf-multi,Endocrine disorders,0.6487669058389931,0.3670503739446403,0.2263489838822705
+scaffold,0,morgan+desc+rf-multi,Surgical and medical procedures,0.6158068534743911,0.2339157388990058,0.1492641906096706
+scaffold,0,morgan+desc+rf-multi,Vascular disorders,0.6147502423610893,0.8356488212509465,0.7764540995094604
+scaffold,0,morgan+desc+rf-multi,Blood and lymphatic system disorders,0.6995542220390351,0.7816896433289237,0.6201822004204625
+scaffold,0,morgan+desc+rf-multi,Skin and subcutaneous tissue disorders,0.5829086034910821,0.9468240107276902,0.9236159775753328
+scaffold,0,morgan+desc+rf-multi,"Congenital, familial and genetic disorders",0.6024304648434675,0.2731499632922342,0.1772950245269796
+scaffold,0,morgan+desc+rf-multi,Infections and infestations,0.6368721789757762,0.7961628834740148,0.7049754730203224
+scaffold,0,morgan+desc+rf-multi,"Respiratory, thoracic and mediastinal disorders",0.6395200077708971,0.8216104553189364,0.7428170988086895
+scaffold,0,morgan+desc+rf-multi,Psychiatric disorders,0.6442222202433172,0.8085023078937287,0.7119831814996496
+scaffold,0,morgan+desc+rf-multi,Renal and urinary disorders,0.6358247660539441,0.7428610813222066,0.6384022424667134
+scaffold,0,morgan+desc+rf-multi,"Pregnancy, puerperium and perinatal conditions",0.6266474100969578,0.1981971284687398,0.0875963559915907
+scaffold,0,morgan+desc+rf-multi,Ear and labyrinth disorders,0.6010618251254212,0.5551146986958726,0.4618079887876664
+scaffold,0,morgan+desc+rf-multi,Cardiac disorders,0.6504751194451285,0.7948239047830128,0.6923615977575333
+scaffold,0,morgan+desc+rf-multi,Nervous system disorders,0.7241246773475823,0.9672784890595616,0.9138051857042748
+scaffold,0,morgan+desc+rf-multi,"Injury, poisoning and procedural complications",0.5817781702679842,0.740682483794538,0.6629292221443588
+scaffold,0,morgan+desc+lgbm,Hepatobiliary disorders,0.6884279170068813,0.6852444572444945,0.5206727400140154
+scaffold,0,morgan+desc+lgbm,Metabolism and nutrition disorders,0.5840529063819891,0.7577086720201447,0.6979677645409951
+scaffold,0,morgan+desc+lgbm,Product issues,0.6303007434806223,0.0393269200755093,0.0154169586545199
+scaffold,0,morgan+desc+lgbm,Eye disorders,0.6459939703839751,0.7324824286537914,0.613875262789068
+scaffold,0,morgan+desc+lgbm,Investigations,0.6175084171434232,0.8742339883721792,0.8065872459705676
+scaffold,0,morgan+desc+lgbm,Musculoskeletal and connective tissue disorders,0.6482496417254079,0.8052929468402905,0.6986685353889278
+scaffold,0,morgan+desc+lgbm,Gastrointestinal disorders,0.7544555077826824,0.9614142223869008,0.9096005606166784
+scaffold,0,morgan+desc+lgbm,Social circumstances,0.6195719939624845,0.2568412647355968,0.1758934828311142
+scaffold,0,morgan+desc+lgbm,Immune system disorders,0.5962542619982644,0.7991537414263415,0.7175893482831114
+scaffold,0,morgan+desc+lgbm,Reproductive system and breast disorders,0.6626236051317336,0.6809043426609023,0.5094604064470918
+scaffold,0,morgan+desc+lgbm,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6906090626014544,0.4737736748539533,0.263489838822705
+scaffold,0,morgan+desc+lgbm,General disorders and administration site conditions,0.5294388649692815,0.9169725039521464,0.905395935529082
+scaffold,0,morgan+desc+lgbm,Endocrine disorders,0.6938839766395057,0.4493543076441699,0.2263489838822705
+scaffold,0,morgan+desc+lgbm,Surgical and medical procedures,0.5880703111509019,0.2079162456655487,0.1492641906096706
+scaffold,0,morgan+desc+lgbm,Vascular disorders,0.594752966710488,0.8322966441077806,0.7764540995094604
+scaffold,0,morgan+desc+lgbm,Blood and lymphatic system disorders,0.7078997297270314,0.8003190520670703,0.6201822004204625
+scaffold,0,morgan+desc+lgbm,Skin and subcutaneous tissue disorders,0.4793165650266869,0.9169439496137728,0.9236159775753328
+scaffold,0,morgan+desc+lgbm,"Congenital, familial and genetic disorders",0.5839127955889932,0.2792454459671701,0.1772950245269796
+scaffold,0,morgan+desc+lgbm,Infections and infestations,0.6232141681603649,0.7921393551503382,0.7049754730203224
+scaffold,0,morgan+desc+lgbm,"Respiratory, thoracic and mediastinal disorders",0.6152390591830248,0.8146983310299392,0.7428170988086895
+scaffold,0,morgan+desc+lgbm,Psychiatric disorders,0.653524077847045,0.8172626993656552,0.7119831814996496
+scaffold,0,morgan+desc+lgbm,Renal and urinary disorders,0.6424511422630059,0.743911132305154,0.6384022424667134
+scaffold,0,morgan+desc+lgbm,"Pregnancy, puerperium and perinatal conditions",0.5499140596805068,0.1486810886115787,0.0875963559915907
+scaffold,0,morgan+desc+lgbm,Ear and labyrinth disorders,0.6266748599496388,0.6072015474982672,0.4618079887876664
+scaffold,0,morgan+desc+lgbm,Cardiac disorders,0.6462822247819077,0.7834637614615911,0.6923615977575333
+scaffold,0,morgan+desc+lgbm,Nervous system disorders,0.6795526661304812,0.9553877227496972,0.9138051857042748
+scaffold,0,morgan+desc+lgbm,"Injury, poisoning and procedural complications",0.5911734274169035,0.7315535370696242,0.6629292221443588
+scaffold,1,prior,Hepatobiliary disorders,0.5,0.5207753649858914,0.5206727400140154
+scaffold,1,prior,Metabolism and nutrition disorders,0.5,0.6980223285486444,0.6979677645409951
+scaffold,1,prior,Product issues,0.5,0.0154238743712427,0.0154169586545199
+scaffold,1,prior,Eye disorders,0.5,0.6139246718194087,0.613875262789068
+scaffold,1,prior,Investigations,0.5,0.8066519445466813,0.8065872459705676
+scaffold,1,prior,Musculoskeletal and connective tissue disorders,0.5,0.6987265366212735,0.6986685353889278
+scaffold,1,prior,Gastrointestinal disorders,0.5,0.909611090663722,0.9096005606166784
+scaffold,1,prior,Social circumstances,0.5,0.1759268801374064,0.1758934828311142
+scaffold,1,prior,Immune system disorders,0.5,0.7176640902956694,0.7175893482831114
+scaffold,1,prior,Reproductive system and breast disorders,0.5,0.5095988222304012,0.5094604064470918
+scaffold,1,prior,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5,0.2635038645564961,0.263489838822705
+scaffold,1,prior,General disorders and administration site conditions,0.5,0.9054054717212612,0.905395935529082
+scaffold,1,prior,Endocrine disorders,0.5,0.2264016685069316,0.2263489838822705
+scaffold,1,prior,Surgical and medical procedures,0.5,0.1492528524107471,0.1492641906096706
+scaffold,1,prior,Vascular disorders,0.5,0.7764961354435038,0.7764540995094604
+scaffold,1,prior,Blood and lymphatic system disorders,0.5,0.620230646546436,0.6201822004204625
+scaffold,1,prior,Skin and subcutaneous tissue disorders,0.5,0.9236780763096551,0.9236159775753328
+scaffold,1,prior,"Congenital, familial and genetic disorders",0.5,0.1772960372960373,0.1772950245269796
+scaffold,1,prior,Infections and infestations,0.5,0.7050496871549503,0.7049754730203224
+scaffold,1,prior,"Respiratory, thoracic and mediastinal disorders",0.5,0.7428389154704944,0.7428170988086895
+scaffold,1,prior,Psychiatric disorders,0.5,0.7120279720279721,0.7119831814996496
+scaffold,1,prior,Renal and urinary disorders,0.5,0.6384590847748741,0.6384022424667134
+scaffold,1,prior,"Pregnancy, puerperium and perinatal conditions",0.5,0.0876309655257023,0.0875963559915907
+scaffold,1,prior,Ear and labyrinth disorders,0.5,0.4618500797448165,0.4618079887876664
+scaffold,1,prior,Cardiac disorders,0.5,0.6923813029076187,0.6923615977575333
+scaffold,1,prior,Nervous system disorders,0.5,0.9138437001594896,0.9138051857042748
+scaffold,1,prior,"Injury, poisoning and procedural complications",0.5,0.6629566924303767,0.6629292221443588
+scaffold,1,size+logreg,Hepatobiliary disorders,0.461830627556176,0.4862371759990796,0.5206727400140154
+scaffold,1,size+logreg,Metabolism and nutrition disorders,0.5386569409933508,0.7288291851673006,0.6979677645409951
+scaffold,1,size+logreg,Product issues,0.5747842821940263,0.0392924709967374,0.0154169586545199
+scaffold,1,size+logreg,Eye disorders,0.5165063489932946,0.6110305156011533,0.613875262789068
+scaffold,1,size+logreg,Investigations,0.585163323545272,0.8471946404696269,0.8065872459705676
+scaffold,1,size+logreg,Musculoskeletal and connective tissue disorders,0.5774398626517495,0.752824278714754,0.6986685353889278
+scaffold,1,size+logreg,Gastrointestinal disorders,0.5562774924962997,0.9248791430167206,0.9096005606166784
+scaffold,1,size+logreg,Social circumstances,0.5125173442663098,0.1860935268548173,0.1758934828311142
+scaffold,1,size+logreg,Immune system disorders,0.5874528525720113,0.7803681856078739,0.7175893482831114
+scaffold,1,size+logreg,Reproductive system and breast disorders,0.4538405305733249,0.4770358941075591,0.5094604064470918
+scaffold,1,size+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.538820778705855,0.3033674150840289,0.263489838822705
+scaffold,1,size+logreg,General disorders and administration site conditions,0.5304467471697756,0.91489180361584,0.905395935529082
+scaffold,1,size+logreg,Endocrine disorders,0.4990146091439694,0.241316009815484,0.2263489838822705
+scaffold,1,size+logreg,Surgical and medical procedures,0.5286691848710999,0.1602165426988274,0.1492641906096706
+scaffold,1,size+logreg,Vascular disorders,0.5342243287079518,0.7999393842739361,0.7764540995094604
+scaffold,1,size+logreg,Blood and lymphatic system disorders,0.4963815015221225,0.6089458585959042,0.6201822004204625
+scaffold,1,size+logreg,Skin and subcutaneous tissue disorders,0.5276850789579705,0.92253507733812,0.9236159775753328
+scaffold,1,size+logreg,"Congenital, familial and genetic disorders",0.489752523863504,0.1779121782203277,0.1772950245269796
+scaffold,1,size+logreg,Infections and infestations,0.6024545141069386,0.7703011201667392,0.7049754730203224
+scaffold,1,size+logreg,"Respiratory, thoracic and mediastinal disorders",0.5793319582826708,0.791347365264539,0.7428170988086895
+scaffold,1,size+logreg,Psychiatric disorders,0.4696466705478519,0.6856856715913195,0.7119831814996496
+scaffold,1,size+logreg,Renal and urinary disorders,0.5403834838647501,0.6676128030593909,0.6384022424667134
+scaffold,1,size+logreg,"Pregnancy, puerperium and perinatal conditions",0.4927623546398595,0.0980061772934267,0.0875963559915907
+scaffold,1,size+logreg,Ear and labyrinth disorders,0.4993886192316547,0.4650800089106499,0.4618079887876664
+scaffold,1,size+logreg,Cardiac disorders,0.5482732223679163,0.7306819344789316,0.6923615977575333
+scaffold,1,size+logreg,Nervous system disorders,0.6025691570427989,0.9430236036560098,0.9138051857042748
+scaffold,1,size+logreg,"Injury, poisoning and procedural complications",0.542373313218414,0.7042017281195421,0.6629292221443588
+scaffold,1,knn5 tanimoto,Hepatobiliary disorders,0.67299002795393,0.6554283580342061,0.5206727400140154
+scaffold,1,knn5 tanimoto,Metabolism and nutrition disorders,0.5516931404691242,0.7244290548232954,0.6979677645409951
+scaffold,1,knn5 tanimoto,Product issues,0.5548404168397832,0.0262993004325956,0.0154169586545199
+scaffold,1,knn5 tanimoto,Eye disorders,0.6182371665937142,0.6859818523536486,0.613875262789068
+scaffold,1,knn5 tanimoto,Investigations,0.6104074498180924,0.843434079468596,0.8065872459705676
+scaffold,1,knn5 tanimoto,Musculoskeletal and connective tissue disorders,0.58313472558939,0.7434321328612643,0.6986685353889278
+scaffold,1,knn5 tanimoto,Gastrointestinal disorders,0.6671356657600798,0.9387187258390396,0.9096005606166784
+scaffold,1,knn5 tanimoto,Social circumstances,0.604358675253715,0.2426516812036817,0.1758934828311142
+scaffold,1,knn5 tanimoto,Immune system disorders,0.5762826281553625,0.7524843818458424,0.7175893482831114
+scaffold,1,knn5 tanimoto,Reproductive system and breast disorders,0.6611356339460175,0.6496543823376181,0.5094604064470918
+scaffold,1,knn5 tanimoto,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6464951229130096,0.4003967576185427,0.263489838822705
+scaffold,1,knn5 tanimoto,General disorders and administration site conditions,0.539844996700678,0.9146333836407706,0.905395935529082
+scaffold,1,knn5 tanimoto,Endocrine disorders,0.6646621620882923,0.3778012254128782,0.2263489838822705
+scaffold,1,knn5 tanimoto,Surgical and medical procedures,0.5969687147226141,0.1951025252641801,0.1492641906096706
+scaffold,1,knn5 tanimoto,Vascular disorders,0.6119771743167084,0.8227571847000554,0.7764540995094604
+scaffold,1,knn5 tanimoto,Blood and lymphatic system disorders,0.6856043861538195,0.7565676118393952,0.6201822004204625
+scaffold,1,knn5 tanimoto,Skin and subcutaneous tissue disorders,0.5656749439855636,0.9325657519804424,0.9236159775753328
+scaffold,1,knn5 tanimoto,"Congenital, familial and genetic disorders",0.5912035649852998,0.2468621660982817,0.1772950245269796
+scaffold,1,knn5 tanimoto,Infections and infestations,0.5771513634270707,0.7463696320411596,0.7049754730203224
+scaffold,1,knn5 tanimoto,"Respiratory, thoracic and mediastinal disorders",0.5452164928785515,0.7626391450900194,0.7428170988086895
+scaffold,1,knn5 tanimoto,Psychiatric disorders,0.6342036196750824,0.7806193030962482,0.7119831814996496
+scaffold,1,knn5 tanimoto,Renal and urinary disorders,0.6321134308205392,0.7205551331607256,0.6384022424667134
+scaffold,1,knn5 tanimoto,"Pregnancy, puerperium and perinatal conditions",0.573849634746668,0.11391133238474,0.0875963559915907
+scaffold,1,knn5 tanimoto,Ear and labyrinth disorders,0.6131619156488259,0.5568285791979046,0.4618079887876664
+scaffold,1,knn5 tanimoto,Cardiac disorders,0.6374815621479595,0.7635675505330448,0.6923615977575333
+scaffold,1,knn5 tanimoto,Nervous system disorders,0.6011847424656803,0.9292927836596796,0.9138051857042748
+scaffold,1,knn5 tanimoto,"Injury, poisoning and procedural complications",0.5669253112894058,0.6999939365014095,0.6629292221443588
+scaffold,1,morgan+logreg,Hepatobiliary disorders,0.6165607011483349,0.631238520367341,0.5206727400140154
+scaffold,1,morgan+logreg,Metabolism and nutrition disorders,0.5321294354730761,0.7288829441146737,0.6979677645409951
+scaffold,1,morgan+logreg,Product issues,0.48938460799399,0.0235549969840566,0.0154169586545199
+scaffold,1,morgan+logreg,Eye disorders,0.6085745824520812,0.7028819693113448,0.613875262789068
+scaffold,1,morgan+logreg,Investigations,0.6387533092073431,0.875334915813157,0.8065872459705676
+scaffold,1,morgan+logreg,Musculoskeletal and connective tissue disorders,0.5949182996504856,0.7760523087047553,0.6986685353889278
+scaffold,1,morgan+logreg,Gastrointestinal disorders,0.7078886328559486,0.9555413557034972,0.9096005606166784
+scaffold,1,morgan+logreg,Social circumstances,0.5725062188291898,0.2276131247315859,0.1758934828311142
+scaffold,1,morgan+logreg,Immune system disorders,0.5814394870652004,0.7750022284547031,0.7175893482831114
+scaffold,1,morgan+logreg,Reproductive system and breast disorders,0.6418971143429772,0.6537581311148568,0.5094604064470918
+scaffold,1,morgan+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5867480684897615,0.389241535799901,0.263489838822705
+scaffold,1,morgan+logreg,General disorders and administration site conditions,0.5739173465602492,0.928923057241675,0.905395935529082
+scaffold,1,morgan+logreg,Endocrine disorders,0.6226983188772279,0.3720695373812687,0.2263489838822705
+scaffold,1,morgan+logreg,Surgical and medical procedures,0.5931531534605845,0.2294373872676381,0.1492641906096706
+scaffold,1,morgan+logreg,Vascular disorders,0.6083759869603673,0.8382606345304108,0.7764540995094604
+scaffold,1,morgan+logreg,Blood and lymphatic system disorders,0.6520104876008612,0.7507695282737628,0.6201822004204625
+scaffold,1,morgan+logreg,Skin and subcutaneous tissue disorders,0.5921970949129245,0.9470348689517176,0.9236159775753328
+scaffold,1,morgan+logreg,"Congenital, familial and genetic disorders",0.5571519662855626,0.2372645669118392,0.1772950245269796
+scaffold,1,morgan+logreg,Infections and infestations,0.5862183780123443,0.7756923063450736,0.7049754730203224
+scaffold,1,morgan+logreg,"Respiratory, thoracic and mediastinal disorders",0.6029789740880448,0.8138642869498487,0.7428170988086895
+scaffold,1,morgan+logreg,Psychiatric disorders,0.6099778898316256,0.7903867315278837,0.7119831814996496
+scaffold,1,morgan+logreg,Renal and urinary disorders,0.6076698739447898,0.7275700568325043,0.6384022424667134
+scaffold,1,morgan+logreg,"Pregnancy, puerperium and perinatal conditions",0.5336916261639798,0.1230169008215344,0.0875963559915907
+scaffold,1,morgan+logreg,Ear and labyrinth disorders,0.5764163229155781,0.5465568685355595,0.4618079887876664
+scaffold,1,morgan+logreg,Cardiac disorders,0.6099694804325646,0.765176990557166,0.6923615977575333
+scaffold,1,morgan+logreg,Nervous system disorders,0.6676235414758126,0.9566027236130904,0.9138051857042748
+scaffold,1,morgan+logreg,"Injury, poisoning and procedural complications",0.5616256890435858,0.7170600605900088,0.6629292221443588
+scaffold,1,morgan+rf,Hepatobiliary disorders,0.7146253991447905,0.7256871070678599,0.5206727400140154
+scaffold,1,morgan+rf,Metabolism and nutrition disorders,0.5666407256585879,0.7533292768874953,0.6979677645409951
+scaffold,1,morgan+rf,Product issues,0.6522368614490726,0.112479448978755,0.0154169586545199
+scaffold,1,morgan+rf,Eye disorders,0.6576409715515774,0.7461150675841246,0.613875262789068
+scaffold,1,morgan+rf,Investigations,0.6537884227954772,0.8826317046597927,0.8065872459705676
+scaffold,1,morgan+rf,Musculoskeletal and connective tissue disorders,0.6305581534459319,0.8003311839500368,0.6986685353889278
+scaffold,1,morgan+rf,Gastrointestinal disorders,0.7506778394701573,0.9613320228030492,0.9096005606166784
+scaffold,1,morgan+rf,Social circumstances,0.6190198416591418,0.3070391675588321,0.1758934828311142
+scaffold,1,morgan+rf,Immune system disorders,0.6195896675565628,0.8032107472961668,0.7175893482831114
+scaffold,1,morgan+rf,Reproductive system and breast disorders,0.7013681361728052,0.7316393893339904,0.5094604064470918
+scaffold,1,morgan+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6729511914902677,0.4652757923112368,0.263489838822705
+scaffold,1,morgan+rf,General disorders and administration site conditions,0.6175326268092267,0.9390998387850512,0.905395935529082
+scaffold,1,morgan+rf,Endocrine disorders,0.6861548084662099,0.4436359129180411,0.2263489838822705
+scaffold,1,morgan+rf,Surgical and medical procedures,0.5971741516203953,0.2058067968107477,0.1492641906096706
+scaffold,1,morgan+rf,Vascular disorders,0.6449255243409534,0.8569839860106441,0.7764540995094604
+scaffold,1,morgan+rf,Blood and lymphatic system disorders,0.710039766875131,0.8068776719891482,0.6201822004204625
+scaffold,1,morgan+rf,Skin and subcutaneous tissue disorders,0.6381430405046399,0.9504586808825286,0.9236159775753328
+scaffold,1,morgan+rf,"Congenital, familial and genetic disorders",0.6149208897716799,0.2822790006099934,0.1772950245269796
+scaffold,1,morgan+rf,Infections and infestations,0.6392079996177025,0.8110821303584064,0.7049754730203224
+scaffold,1,morgan+rf,"Respiratory, thoracic and mediastinal disorders",0.6433714566970945,0.8337952927681718,0.7428170988086895
+scaffold,1,morgan+rf,Psychiatric disorders,0.6585998929350548,0.8215301259124482,0.7119831814996496
+scaffold,1,morgan+rf,Renal and urinary disorders,0.6531190457310585,0.764163291883546,0.6384022424667134
+scaffold,1,morgan+rf,"Pregnancy, puerperium and perinatal conditions",0.5714603692676297,0.148196915288911,0.0875963559915907
+scaffold,1,morgan+rf,Ear and labyrinth disorders,0.6206487099570426,0.6039579360832361,0.4618079887876664
+scaffold,1,morgan+rf,Cardiac disorders,0.6775299574867414,0.8146971406979515,0.6923615977575333
+scaffold,1,morgan+rf,Nervous system disorders,0.7303986905225682,0.9654120173626785,0.9138051857042748
+scaffold,1,morgan+rf,"Injury, poisoning and procedural complications",0.6134092606234043,0.7635520010000783,0.6629292221443588
+scaffold,1,desc+rf,Hepatobiliary disorders,0.7026285835086727,0.7044277630514417,0.5206727400140154
+scaffold,1,desc+rf,Metabolism and nutrition disorders,0.6063402983467021,0.778836278335093,0.6979677645409951
+scaffold,1,desc+rf,Product issues,0.658336228708136,0.0354670676461922,0.0154169586545199
+scaffold,1,desc+rf,Eye disorders,0.6617536692631901,0.7473169121291863,0.613875262789068
+scaffold,1,desc+rf,Investigations,0.6646327585227988,0.8871283679283511,0.8065872459705676
+scaffold,1,desc+rf,Musculoskeletal and connective tissue disorders,0.6431918489597311,0.8103853146737521,0.6986685353889278
+scaffold,1,desc+rf,Gastrointestinal disorders,0.7644311346951412,0.9651214004491604,0.9096005606166784
+scaffold,1,desc+rf,Social circumstances,0.6297934628863753,0.2809652845452369,0.1758934828311142
+scaffold,1,desc+rf,Immune system disorders,0.6278575536396716,0.8163254727888776,0.7175893482831114
+scaffold,1,desc+rf,Reproductive system and breast disorders,0.6851210089158333,0.7106098543805623,0.5094604064470918
+scaffold,1,desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6869354202695639,0.4865544697223941,0.263489838822705
+scaffold,1,desc+rf,General disorders and administration site conditions,0.5441459457804818,0.9280300267648928,0.905395935529082
+scaffold,1,desc+rf,Endocrine disorders,0.6973625096819683,0.4419735889723494,0.2263489838822705
+scaffold,1,desc+rf,Surgical and medical procedures,0.6009665119147651,0.213096245836286,0.1492641906096706
+scaffold,1,desc+rf,Vascular disorders,0.6199993114162721,0.8374551030604026,0.7764540995094604
+scaffold,1,desc+rf,Blood and lymphatic system disorders,0.7134607423156386,0.8087147549388568,0.6201822004204625
+scaffold,1,desc+rf,Skin and subcutaneous tissue disorders,0.535525810754438,0.9271004690101056,0.9236159775753328
+scaffold,1,desc+rf,"Congenital, familial and genetic disorders",0.5983196066481968,0.2955622717012529,0.1772950245269796
+scaffold,1,desc+rf,Infections and infestations,0.651155173085485,0.8185705806763629,0.7049754730203224
+scaffold,1,desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6565903426971162,0.8298616730983273,0.7428170988086895
+scaffold,1,desc+rf,Psychiatric disorders,0.6582997667176709,0.8200046381842814,0.7119831814996496
+scaffold,1,desc+rf,Renal and urinary disorders,0.6582495487679362,0.7616900611492501,0.6384022424667134
+scaffold,1,desc+rf,"Pregnancy, puerperium and perinatal conditions",0.5733680459578012,0.162243653187834,0.0875963559915907
+scaffold,1,desc+rf,Ear and labyrinth disorders,0.612286125386465,0.5942353448797781,0.4618079887876664
+scaffold,1,desc+rf,Cardiac disorders,0.6973389932926148,0.8300283572618081,0.6923615977575333
+scaffold,1,desc+rf,Nervous system disorders,0.7383587211780578,0.9683883754568686,0.9138051857042748
+scaffold,1,desc+rf,"Injury, poisoning and procedural complications",0.6124504589956915,0.7525085202408146,0.6629292221443588
+scaffold,1,morgan+desc+rf,Hepatobiliary disorders,0.703811254472439,0.7056433721961728,0.5206727400140154
+scaffold,1,morgan+desc+rf,Metabolism and nutrition disorders,0.6013643693716844,0.7722572889869201,0.6979677645409951
+scaffold,1,morgan+desc+rf,Product issues,0.5962404354518729,0.0331619374567108,0.0154169586545199
+scaffold,1,morgan+desc+rf,Eye disorders,0.6710186807966529,0.7522564760140258,0.613875262789068
+scaffold,1,morgan+desc+rf,Investigations,0.6684075947247969,0.888057144052205,0.8065872459705676
+scaffold,1,morgan+desc+rf,Musculoskeletal and connective tissue disorders,0.6387441799568627,0.8080580084620713,0.6986685353889278
+scaffold,1,morgan+desc+rf,Gastrointestinal disorders,0.7777807540247261,0.96597651231616,0.9096005606166784
+scaffold,1,morgan+desc+rf,Social circumstances,0.6566623454348098,0.3084651858430176,0.1758934828311142
+scaffold,1,morgan+desc+rf,Immune system disorders,0.636632433729592,0.8212824033205985,0.7175893482831114
+scaffold,1,morgan+desc+rf,Reproductive system and breast disorders,0.6888084934732451,0.7167652220802394,0.5094604064470918
+scaffold,1,morgan+desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6889839997499927,0.4841209548413329,0.263489838822705
+scaffold,1,morgan+desc+rf,General disorders and administration site conditions,0.5638980116186032,0.9296330229018824,0.905395935529082
+scaffold,1,morgan+desc+rf,Endocrine disorders,0.7138659548369566,0.450425480407662,0.2263489838822705
+scaffold,1,morgan+desc+rf,Surgical and medical procedures,0.580105655774733,0.2073570474027679,0.1492641906096706
+scaffold,1,morgan+desc+rf,Vascular disorders,0.6258047505198305,0.8440243530747928,0.7764540995094604
+scaffold,1,morgan+desc+rf,Blood and lymphatic system disorders,0.7123670036198422,0.8098652855461355,0.6201822004204625
+scaffold,1,morgan+desc+rf,Skin and subcutaneous tissue disorders,0.5625069223681837,0.9343825374637356,0.9236159775753328
+scaffold,1,morgan+desc+rf,"Congenital, familial and genetic disorders",0.6144242196137388,0.2958845559226627,0.1772950245269796
+scaffold,1,morgan+desc+rf,Infections and infestations,0.6493807609992108,0.8171293114430128,0.7049754730203224
+scaffold,1,morgan+desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6613975463408053,0.8268464079529009,0.7428170988086895
+scaffold,1,morgan+desc+rf,Psychiatric disorders,0.6532878442916749,0.8147935772663955,0.7119831814996496
+scaffold,1,morgan+desc+rf,Renal and urinary disorders,0.6654517324831,0.7651299677099661,0.6384022424667134
+scaffold,1,morgan+desc+rf,"Pregnancy, puerperium and perinatal conditions",0.5995271872586967,0.1662444954852521,0.0875963559915907
+scaffold,1,morgan+desc+rf,Ear and labyrinth disorders,0.6197649380963878,0.5982504248426654,0.4618079887876664
+scaffold,1,morgan+desc+rf,Cardiac disorders,0.6898601923154455,0.8259003812556085,0.6923615977575333
+scaffold,1,morgan+desc+rf,Nervous system disorders,0.7274181139525513,0.964189569804778,0.9138051857042748
+scaffold,1,morgan+desc+rf,"Injury, poisoning and procedural complications",0.6261539672503745,0.7617246707355516,0.6629292221443588
+scaffold,1,morgan+desc+rf-multi,Hepatobiliary disorders,0.6734584469808299,0.6754923338638553,0.5206727400140154
+scaffold,1,morgan+desc+rf-multi,Metabolism and nutrition disorders,0.59998035648291,0.7684439026284976,0.6979677645409951
+scaffold,1,morgan+desc+rf-multi,Product issues,0.605080251147988,0.0324835427986772,0.0154169586545199
+scaffold,1,morgan+desc+rf-multi,Eye disorders,0.6452898003319723,0.7312166280360685,0.613875262789068
+scaffold,1,morgan+desc+rf-multi,Investigations,0.6569197516553819,0.8792960428140371,0.8065872459705676
+scaffold,1,morgan+desc+rf-multi,Musculoskeletal and connective tissue disorders,0.6330717123471262,0.8022487786599386,0.6986685353889278
+scaffold,1,morgan+desc+rf-multi,Gastrointestinal disorders,0.7527324867897445,0.9568289267991484,0.9096005606166784
+scaffold,1,morgan+desc+rf-multi,Social circumstances,0.6511034308333559,0.2843029644818615,0.1758934828311142
+scaffold,1,morgan+desc+rf-multi,Immune system disorders,0.6039259858339838,0.7982056115872126,0.7175893482831114
+scaffold,1,morgan+desc+rf-multi,Reproductive system and breast disorders,0.6746351705607773,0.6831585908338719,0.5094604064470918
+scaffold,1,morgan+desc+rf-multi,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6467005769374389,0.4214256275005513,0.263489838822705
+scaffold,1,morgan+desc+rf-multi,General disorders and administration site conditions,0.5392682164906564,0.9245005650910396,0.905395935529082
+scaffold,1,morgan+desc+rf-multi,Endocrine disorders,0.6749527688185838,0.3823055784184904,0.2263489838822705
+scaffold,1,morgan+desc+rf-multi,Surgical and medical procedures,0.6099514011203485,0.2274147427445088,0.1492641906096706
+scaffold,1,morgan+desc+rf-multi,Vascular disorders,0.6408300958186153,0.8463709216607125,0.7764540995094604
+scaffold,1,morgan+desc+rf-multi,Blood and lymphatic system disorders,0.6864107858220405,0.7818612460537636,0.6201822004204625
+scaffold,1,morgan+desc+rf-multi,Skin and subcutaneous tissue disorders,0.5994008123985596,0.938322225118944,0.9236159775753328
+scaffold,1,morgan+desc+rf-multi,"Congenital, familial and genetic disorders",0.5890621569427068,0.2546427565220057,0.1772950245269796
+scaffold,1,morgan+desc+rf-multi,Infections and infestations,0.6454848762167797,0.8088611034585114,0.7049754730203224
+scaffold,1,morgan+desc+rf-multi,"Respiratory, thoracic and mediastinal disorders",0.6385322329188738,0.8153270398741176,0.7428170988086895
+scaffold,1,morgan+desc+rf-multi,Psychiatric disorders,0.6607175483538634,0.8110344105622842,0.7119831814996496
+scaffold,1,morgan+desc+rf-multi,Renal and urinary disorders,0.6451112551817723,0.7495762211433691,0.6384022424667134
+scaffold,1,morgan+desc+rf-multi,"Pregnancy, puerperium and perinatal conditions",0.5867607267111108,0.1521887127483008,0.0875963559915907
+scaffold,1,morgan+desc+rf-multi,Ear and labyrinth disorders,0.593844643233562,0.542695523014468,0.4618079887876664
+scaffold,1,morgan+desc+rf-multi,Cardiac disorders,0.678975643997583,0.8098148426606594,0.6923615977575333
+scaffold,1,morgan+desc+rf-multi,Nervous system disorders,0.7385302526526873,0.9676525449227462,0.9138051857042748
+scaffold,1,morgan+desc+rf-multi,"Injury, poisoning and procedural complications",0.5947831442923217,0.7413009486843564,0.6629292221443588
+scaffold,1,morgan+desc+lgbm,Hepatobiliary disorders,0.6885538236489305,0.6911626389169803,0.5206727400140154
+scaffold,1,morgan+desc+lgbm,Metabolism and nutrition disorders,0.5802181704523968,0.7602056269229698,0.6979677645409951
+scaffold,1,morgan+desc+lgbm,Product issues,0.6570126960756275,0.0637890883265358,0.0154169586545199
+scaffold,1,morgan+desc+lgbm,Eye disorders,0.651874743216726,0.7282581042129443,0.613875262789068
+scaffold,1,morgan+desc+lgbm,Investigations,0.6526451327694107,0.8853441370429544,0.8065872459705676
+scaffold,1,morgan+desc+lgbm,Musculoskeletal and connective tissue disorders,0.6510388855905921,0.8070065020050459,0.6986685353889278
+scaffold,1,morgan+desc+lgbm,Gastrointestinal disorders,0.7562972819823808,0.9638623270660072,0.9096005606166784
+scaffold,1,morgan+desc+lgbm,Social circumstances,0.6441270914631001,0.2963889514719912,0.1758934828311142
+scaffold,1,morgan+desc+lgbm,Immune system disorders,0.6261316693619574,0.8136930861524633,0.7175893482831114
+scaffold,1,morgan+desc+lgbm,Reproductive system and breast disorders,0.7009643977811983,0.7305060296742655,0.5094604064470918
+scaffold,1,morgan+desc+lgbm,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.695896137764562,0.4844099493765181,0.263489838822705
+scaffold,1,morgan+desc+lgbm,General disorders and administration site conditions,0.5844960573658844,0.9304443317544376,0.905395935529082
+scaffold,1,morgan+desc+lgbm,Endocrine disorders,0.7044966743101491,0.4432661206141529,0.2263489838822705
+scaffold,1,morgan+desc+lgbm,Surgical and medical procedures,0.5934158683822106,0.198296817517906,0.1492641906096706
+scaffold,1,morgan+desc+lgbm,Vascular disorders,0.6214416946731569,0.8378814170196834,0.7764540995094604
+scaffold,1,morgan+desc+lgbm,Blood and lymphatic system disorders,0.7146429989141094,0.8049805159270831,0.6201822004204625
+scaffold,1,morgan+desc+lgbm,Skin and subcutaneous tissue disorders,0.5303010301686558,0.9260436755221754,0.9236159775753328
+scaffold,1,morgan+desc+lgbm,"Congenital, familial and genetic disorders",0.5962417602444973,0.290675809330896,0.1772950245269796
+scaffold,1,morgan+desc+lgbm,Infections and infestations,0.6334189546713144,0.8090602809802798,0.7049754730203224
+scaffold,1,morgan+desc+lgbm,"Respiratory, thoracic and mediastinal disorders",0.6592038222765597,0.8413669953190851,0.7428170988086895
+scaffold,1,morgan+desc+lgbm,Psychiatric disorders,0.6593344950803803,0.8226229415522806,0.7119831814996496
+scaffold,1,morgan+desc+lgbm,Renal and urinary disorders,0.6578741263307742,0.7560008360579722,0.6384022424667134
+scaffold,1,morgan+desc+lgbm,"Pregnancy, puerperium and perinatal conditions",0.525769805345808,0.1434152956653667,0.0875963559915907
+scaffold,1,morgan+desc+lgbm,Ear and labyrinth disorders,0.6201952800994146,0.5991886983589243,0.4618079887876664
+scaffold,1,morgan+desc+lgbm,Cardiac disorders,0.6856659519476807,0.8148006962728228,0.6923615977575333
+scaffold,1,morgan+desc+lgbm,Nervous system disorders,0.6645848169356141,0.9492409001661029,0.9138051857042748
+scaffold,1,morgan+desc+lgbm,"Injury, poisoning and procedural complications",0.6064382536944799,0.7532501130941011,0.6629292221443588
+scaffold,2,prior,Hepatobiliary disorders,0.5,0.5207851797325482,0.5206727400140154
+scaffold,2,prior,Metabolism and nutrition disorders,0.5,0.6980321432953012,0.6979677645409951
+scaffold,2,prior,Product issues,0.5,0.0154238743712427,0.0154169586545199
+scaffold,2,prior,Eye disorders,0.5,0.6139099496994234,0.613875262789068
+scaffold,2,prior,Investigations,0.5,0.8066396761133603,0.8065872459705676
+scaffold,2,prior,Musculoskeletal and connective tissue disorders,0.5,0.6987510734879157,0.6986685353889278
+scaffold,2,prior,Gastrointestinal disorders,0.5,0.909618451723715,0.9096005606166784
+scaffold,2,prior,Social circumstances,0.5,0.1759317875107348,0.1758934828311142
+scaffold,2,prior,Immune system disorders,0.5,0.7176714513556618,0.7175893482831114
+scaffold,2,prior,Reproductive system and breast disorders,0.5,0.5096110906637222,0.5094604064470918
+scaffold,2,prior,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5,0.2635161329898172,0.263489838822705
+scaffold,2,prior,General disorders and administration site conditions,0.5,0.9054079254079254,0.905395935529082
+scaffold,2,prior,Endocrine disorders,0.5,0.2264311127469022,0.2263489838822705
+scaffold,2,prior,Surgical and medical procedures,0.5,0.1492675745307324,0.1492641906096706
+scaffold,2,prior,Vascular disorders,0.5,0.7764765059501901,0.7764540995094604
+scaffold,2,prior,Blood and lymphatic system disorders,0.5,0.6202600907864065,0.6201822004204625
+scaffold,2,prior,Skin and subcutaneous tissue disorders,0.5,0.9236609005030058,0.9236159775753328
+scaffold,2,prior,"Congenital, familial and genetic disorders",0.5,0.1773230278493436,0.1772950245269796
+scaffold,2,prior,Infections and infestations,0.5,0.7050496871549503,0.7049754730203224
+scaffold,2,prior,"Respiratory, thoracic and mediastinal disorders",0.5,0.742834008097166,0.7428170988086895
+scaffold,2,prior,Psychiatric disorders,0.5,0.7120672310145995,0.7119831814996496
+scaffold,2,prior,Renal and urinary disorders,0.5,0.6384738068948596,0.6384022424667134
+scaffold,2,prior,"Pregnancy, puerperium and perinatal conditions",0.5,0.0876285118390381,0.0875963559915907
+scaffold,2,prior,Ear and labyrinth disorders,0.5,0.4618991534781008,0.4618079887876664
+scaffold,2,prior,Cardiac disorders,0.5,0.6923763955342903,0.6923615977575333
+scaffold,2,prior,Nervous system disorders,0.5,0.9138314317261688,0.9138051857042748
+scaffold,2,prior,"Injury, poisoning and procedural complications",0.5,0.6630008587903324,0.6629292221443588
+scaffold,2,size+logreg,Hepatobiliary disorders,0.4907665617815081,0.508126192387425,0.5206727400140154
+scaffold,2,size+logreg,Metabolism and nutrition disorders,0.5245359120187654,0.7261858422756614,0.6979677645409951
+scaffold,2,size+logreg,Product issues,0.4575789501240861,0.029977788218471,0.0154169586545199
+scaffold,2,size+logreg,Eye disorders,0.515845607989699,0.6139042101381508,0.613875262789068
+scaffold,2,size+logreg,Investigations,0.5728722761690671,0.8455705037028171,0.8065872459705676
+scaffold,2,size+logreg,Musculoskeletal and connective tissue disorders,0.5911909442370202,0.7549411561179342,0.6986685353889278
+scaffold,2,size+logreg,Gastrointestinal disorders,0.5327746768752806,0.9248443402334274,0.9096005606166784
+scaffold,2,size+logreg,Social circumstances,0.5252465076761952,0.1860589334653735,0.1758934828311142
+scaffold,2,size+logreg,Immune system disorders,0.5883921725876882,0.7829704908235071,0.7175893482831114
+scaffold,2,size+logreg,Reproductive system and breast disorders,0.4268708530937142,0.4590925406588238,0.5094604064470918
+scaffold,2,size+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.538145901341037,0.3030221618297113,0.263489838822705
+scaffold,2,size+logreg,General disorders and administration site conditions,0.5133571533224528,0.9139075217719264,0.905395935529082
+scaffold,2,size+logreg,Endocrine disorders,0.4785144272708787,0.21623900510617,0.2263489838822705
+scaffold,2,size+logreg,Surgical and medical procedures,0.5193063303462143,0.1568193980990912,0.1492641906096706
+scaffold,2,size+logreg,Vascular disorders,0.5460411066437167,0.8021219450225285,0.7764540995094604
+scaffold,2,size+logreg,Blood and lymphatic system disorders,0.4941865393696618,0.6070980801961031,0.6201822004204625
+scaffold,2,size+logreg,Skin and subcutaneous tissue disorders,0.5875761042536591,0.9419182142012474,0.9236159775753328
+scaffold,2,size+logreg,"Congenital, familial and genetic disorders",0.494421171035223,0.1799602440265323,0.1772950245269796
+scaffold,2,size+logreg,Infections and infestations,0.6000559434232984,0.7674428615319716,0.7049754730203224
+scaffold,2,size+logreg,"Respiratory, thoracic and mediastinal disorders",0.5810969767606163,0.789185305174598,0.7428170988086895
+scaffold,2,size+logreg,Psychiatric disorders,0.4865179145848319,0.6987138571968952,0.7119831814996496
+scaffold,2,size+logreg,Renal and urinary disorders,0.5451775224583553,0.6688940842084679,0.6384022424667134
+scaffold,2,size+logreg,"Pregnancy, puerperium and perinatal conditions",0.5047607446894361,0.1088023561585455,0.0875963559915907
+scaffold,2,size+logreg,Ear and labyrinth disorders,0.5047106588501226,0.4638972514379549,0.4618079887876664
+scaffold,2,size+logreg,Cardiac disorders,0.5401830767461624,0.7249219007156306,0.6923615977575333
+scaffold,2,size+logreg,Nervous system disorders,0.6027814590621894,0.9436113713053872,0.9138051857042748
+scaffold,2,size+logreg,"Injury, poisoning and procedural complications",0.5354811754854484,0.6990686073804924,0.6629292221443588
+scaffold,2,knn5 tanimoto,Hepatobiliary disorders,0.6687086056601678,0.6547226602307848,0.5206727400140154
+scaffold,2,knn5 tanimoto,Metabolism and nutrition disorders,0.5549287095765415,0.7284657372515894,0.6979677645409951
+scaffold,2,knn5 tanimoto,Product issues,0.5404508507775058,0.0188014154461522,0.0154169586545199
+scaffold,2,knn5 tanimoto,Eye disorders,0.6453014410528103,0.7054750610381431,0.613875262789068
+scaffold,2,knn5 tanimoto,Investigations,0.6159959688816923,0.8459305729761881,0.8065872459705676
+scaffold,2,knn5 tanimoto,Musculoskeletal and connective tissue disorders,0.5936986382342502,0.7469657327664839,0.6986685353889278
+scaffold,2,knn5 tanimoto,Gastrointestinal disorders,0.6651058433939667,0.9384531827627004,0.9096005606166784
+scaffold,2,knn5 tanimoto,Social circumstances,0.58186440887027,0.2361886347023115,0.1758934828311142
+scaffold,2,knn5 tanimoto,Immune system disorders,0.5822324554647335,0.7546520394479581,0.7175893482831114
+scaffold,2,knn5 tanimoto,Reproductive system and breast disorders,0.6595568165200388,0.6441751835619016,0.5094604064470918
+scaffold,2,knn5 tanimoto,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6446905597567969,0.4007428290702821,0.263489838822705
+scaffold,2,knn5 tanimoto,General disorders and administration site conditions,0.5404075554661248,0.9128537876538104,0.905395935529082
+scaffold,2,knn5 tanimoto,Endocrine disorders,0.676343570576497,0.3885558633461127,0.2263489838822705
+scaffold,2,knn5 tanimoto,Surgical and medical procedures,0.5627551806061449,0.1828489879558857,0.1492641906096706
+scaffold,2,knn5 tanimoto,Vascular disorders,0.6083030403775793,0.8191126731308727,0.7764540995094604
+scaffold,2,knn5 tanimoto,Blood and lymphatic system disorders,0.6742944921306228,0.7367751995457793,0.6201822004204625
+scaffold,2,knn5 tanimoto,Skin and subcutaneous tissue disorders,0.579146381273093,0.9349993102716464,0.9236159775753328
+scaffold,2,knn5 tanimoto,"Congenital, familial and genetic disorders",0.5545467306377638,0.224949139945678,0.1772950245269796
+scaffold,2,knn5 tanimoto,Infections and infestations,0.5847957365448638,0.7473822846843825,0.7049754730203224
+scaffold,2,knn5 tanimoto,"Respiratory, thoracic and mediastinal disorders",0.5515805100006068,0.7651345865932575,0.7428170988086895
+scaffold,2,knn5 tanimoto,Psychiatric disorders,0.6386259080864372,0.7844349711471458,0.7119831814996496
+scaffold,2,knn5 tanimoto,Renal and urinary disorders,0.6237377549354932,0.7133026690498895,0.6384022424667134
+scaffold,2,knn5 tanimoto,"Pregnancy, puerperium and perinatal conditions",0.5713605905827518,0.106486083774498,0.0875963559915907
+scaffold,2,knn5 tanimoto,Ear and labyrinth disorders,0.6273031003134668,0.5565983175919742,0.4618079887876664
+scaffold,2,knn5 tanimoto,Cardiac disorders,0.621765983889487,0.7564925455452414,0.6923615977575333
+scaffold,2,knn5 tanimoto,Nervous system disorders,0.5644759922489545,0.9241747750992012,0.9138051857042748
+scaffold,2,knn5 tanimoto,"Injury, poisoning and procedural complications",0.562038540614482,0.696974875835673,0.6629292221443588
+scaffold,2,morgan+logreg,Hepatobiliary disorders,0.6258095491058075,0.6371965750759901,0.5206727400140154
+scaffold,2,morgan+logreg,Metabolism and nutrition disorders,0.5384055179157015,0.7227391472217616,0.6979677645409951
+scaffold,2,morgan+logreg,Product issues,0.4655463006148643,0.030979453304344,0.0154169586545199
+scaffold,2,morgan+logreg,Eye disorders,0.6068577972960864,0.6987242295685396,0.613875262789068
+scaffold,2,morgan+logreg,Investigations,0.6438050411892858,0.8756819414576308,0.8065872459705676
+scaffold,2,morgan+logreg,Musculoskeletal and connective tissue disorders,0.5998038310227002,0.7661163887222854,0.6986685353889278
+scaffold,2,morgan+logreg,Gastrointestinal disorders,0.7066509845214997,0.9561148990479194,0.9096005606166784
+scaffold,2,morgan+logreg,Social circumstances,0.5781831313194192,0.2472953946260114,0.1758934828311142
+scaffold,2,morgan+logreg,Immune system disorders,0.5793288397953626,0.7731013615349586,0.7175893482831114
+scaffold,2,morgan+logreg,Reproductive system and breast disorders,0.6199213812500298,0.6274826361714051,0.5094604064470918
+scaffold,2,morgan+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5689279987584734,0.3464867207189824,0.263489838822705
+scaffold,2,morgan+logreg,General disorders and administration site conditions,0.5072554338659387,0.9107514828980732,0.905395935529082
+scaffold,2,morgan+logreg,Endocrine disorders,0.6027630471605553,0.3705034772461998,0.2263489838822705
+scaffold,2,morgan+logreg,Surgical and medical procedures,0.5948055835306268,0.2312125799537287,0.1492641906096706
+scaffold,2,morgan+logreg,Vascular disorders,0.5826825030591889,0.8164197610695757,0.7764540995094604
+scaffold,2,morgan+logreg,Blood and lymphatic system disorders,0.6449336041241072,0.7341438993125217,0.6201822004204625
+scaffold,2,morgan+logreg,Skin and subcutaneous tissue disorders,0.6078659382520719,0.947523176334496,0.9236159775753328
+scaffold,2,morgan+logreg,"Congenital, familial and genetic disorders",0.5586262897911858,0.2270136890428152,0.1772950245269796
+scaffold,2,morgan+logreg,Infections and infestations,0.5880856545981994,0.7764658190439377,0.7049754730203224
+scaffold,2,morgan+logreg,"Respiratory, thoracic and mediastinal disorders",0.5932699755141898,0.8041964835095206,0.7428170988086895
+scaffold,2,morgan+logreg,Psychiatric disorders,0.5812351110190026,0.7674456842884437,0.7119831814996496
+scaffold,2,morgan+logreg,Renal and urinary disorders,0.6079129187054603,0.7277213571410001,0.6384022424667134
+scaffold,2,morgan+logreg,"Pregnancy, puerperium and perinatal conditions",0.5204040029843287,0.1224646932413808,0.0875963559915907
+scaffold,2,morgan+logreg,Ear and labyrinth disorders,0.5604063919430254,0.523659505152173,0.4618079887876664
+scaffold,2,morgan+logreg,Cardiac disorders,0.6115732591590022,0.7683394615854818,0.6923615977575333
+scaffold,2,morgan+logreg,Nervous system disorders,0.6649062585767614,0.956461884233701,0.9138051857042748
+scaffold,2,morgan+logreg,"Injury, poisoning and procedural complications",0.5339580919602392,0.6956208237266088,0.6629292221443588
+scaffold,2,morgan+rf,Hepatobiliary disorders,0.7112250672846985,0.7131230492980629,0.5206727400140154
+scaffold,2,morgan+rf,Metabolism and nutrition disorders,0.5829875681093276,0.7611108992234767,0.6979677645409951
+scaffold,2,morgan+rf,Product issues,0.5489623989817597,0.0465935081541437,0.0154169586545199
+scaffold,2,morgan+rf,Eye disorders,0.6697113385374044,0.7440823632198867,0.613875262789068
+scaffold,2,morgan+rf,Investigations,0.6567570411074307,0.886668541415893,0.8065872459705676
+scaffold,2,morgan+rf,Musculoskeletal and connective tissue disorders,0.6583946685751434,0.8089356211038334,0.6986685353889278
+scaffold,2,morgan+rf,Gastrointestinal disorders,0.7292575670080002,0.955759169442473,0.9096005606166784
+scaffold,2,morgan+rf,Social circumstances,0.5946219438995458,0.3056223529307252,0.1758934828311142
+scaffold,2,morgan+rf,Immune system disorders,0.6300994226585093,0.8081226941690675,0.7175893482831114
+scaffold,2,morgan+rf,Reproductive system and breast disorders,0.694225633907962,0.7172714351228059,0.5094604064470918
+scaffold,2,morgan+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6804878552752882,0.4666724126420306,0.263489838822705
+scaffold,2,morgan+rf,General disorders and administration site conditions,0.6046692059168002,0.9347655072017792,0.905395935529082
+scaffold,2,morgan+rf,Endocrine disorders,0.681023862241274,0.4402399716538672,0.2263489838822705
+scaffold,2,morgan+rf,Surgical and medical procedures,0.5831522416893775,0.2123057845593978,0.1492641906096706
+scaffold,2,morgan+rf,Vascular disorders,0.6266534741582968,0.8464024349662671,0.7764540995094604
+scaffold,2,morgan+rf,Blood and lymphatic system disorders,0.7164491243343408,0.8028039168697809,0.6201822004204625
+scaffold,2,morgan+rf,Skin and subcutaneous tissue disorders,0.5983899201409827,0.9516719609460622,0.9236159775753328
+scaffold,2,morgan+rf,"Congenital, familial and genetic disorders",0.6005410488079964,0.2767379693802615,0.1772950245269796
+scaffold,2,morgan+rf,Infections and infestations,0.6345925258647753,0.8085958300274761,0.7049754730203224
+scaffold,2,morgan+rf,"Respiratory, thoracic and mediastinal disorders",0.6313399658089239,0.820954981270304,0.7428170988086895
+scaffold,2,morgan+rf,Psychiatric disorders,0.6458757937787096,0.8127294956146202,0.7119831814996496
+scaffold,2,morgan+rf,Renal and urinary disorders,0.6702142073967533,0.7698137415977554,0.6384022424667134
+scaffold,2,morgan+rf,"Pregnancy, puerperium and perinatal conditions",0.5831845568281862,0.1459292557835048,0.0875963559915907
+scaffold,2,morgan+rf,Ear and labyrinth disorders,0.6365756707089846,0.6091453076327127,0.4618079887876664
+scaffold,2,morgan+rf,Cardiac disorders,0.6777197769069836,0.818473112130437,0.6923615977575333
+scaffold,2,morgan+rf,Nervous system disorders,0.7251251334201763,0.9644438291876928,0.9138051857042748
+scaffold,2,morgan+rf,"Injury, poisoning and procedural complications",0.5985760935159594,0.748263023062489,0.6629292221443588
+scaffold,2,desc+rf,Hepatobiliary disorders,0.7011335464303011,0.6975907936418335,0.5206727400140154
+scaffold,2,desc+rf,Metabolism and nutrition disorders,0.6160107818085008,0.7815416341356356,0.6979677645409951
+scaffold,2,desc+rf,Product issues,0.5306515256787977,0.0305943524501428,0.0154169586545199
+scaffold,2,desc+rf,Eye disorders,0.6650124073554398,0.7441869610717055,0.613875262789068
+scaffold,2,desc+rf,Investigations,0.6715969533640509,0.8958500696351634,0.8065872459705676
+scaffold,2,desc+rf,Musculoskeletal and connective tissue disorders,0.647543622850349,0.8052836393133298,0.6986685353889278
+scaffold,2,desc+rf,Gastrointestinal disorders,0.7646483707822553,0.9653853454425608,0.9096005606166784
+scaffold,2,desc+rf,Social circumstances,0.607496440746359,0.2600826156363475,0.1758934828311142
+scaffold,2,desc+rf,Immune system disorders,0.6177930069738052,0.8139507860384754,0.7175893482831114
+scaffold,2,desc+rf,Reproductive system and breast disorders,0.670379324815292,0.6897250618679406,0.5094604064470918
+scaffold,2,desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6998687115725047,0.4943834400603513,0.263489838822705
+scaffold,2,desc+rf,General disorders and administration site conditions,0.5405956913791674,0.921435136410584,0.905395935529082
+scaffold,2,desc+rf,Endocrine disorders,0.6975443536703227,0.4459904384893303,0.2263489838822705
+scaffold,2,desc+rf,Surgical and medical procedures,0.5766306569721765,0.1991386940570235,0.1492641906096706
+scaffold,2,desc+rf,Vascular disorders,0.6328784194278404,0.8453026042902332,0.7764540995094604
+scaffold,2,desc+rf,Blood and lymphatic system disorders,0.7229373238859227,0.80835219765602,0.6201822004204625
+scaffold,2,desc+rf,Skin and subcutaneous tissue disorders,0.5162747700010726,0.9312485243885092,0.9236159775753328
+scaffold,2,desc+rf,"Congenital, familial and genetic disorders",0.574108985692585,0.2695923525112692,0.1772950245269796
+scaffold,2,desc+rf,Infections and infestations,0.6377626234715681,0.8055009985511813,0.7049754730203224
+scaffold,2,desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6573919018023114,0.8301901343385891,0.7428170988086895
+scaffold,2,desc+rf,Psychiatric disorders,0.6583718873466028,0.808206874013554,0.7119831814996496
+scaffold,2,desc+rf,Renal and urinary disorders,0.659922507595424,0.7584043510678117,0.6384022424667134
+scaffold,2,desc+rf,"Pregnancy, puerperium and perinatal conditions",0.599329880894768,0.1449081807292268,0.0875963559915907
+scaffold,2,desc+rf,Ear and labyrinth disorders,0.6216277783918034,0.5948123471109221,0.4618079887876664
+scaffold,2,desc+rf,Cardiac disorders,0.7001684137033425,0.8339173501481753,0.6923615977575333
+scaffold,2,desc+rf,Nervous system disorders,0.7195155516445985,0.9622122301020524,0.9138051857042748
+scaffold,2,desc+rf,"Injury, poisoning and procedural complications",0.6052074686995363,0.7499043160298529,0.6629292221443588
+scaffold,2,morgan+desc+rf,Hepatobiliary disorders,0.7122855729785884,0.705098511175376,0.5206727400140154
+scaffold,2,morgan+desc+rf,Metabolism and nutrition disorders,0.622830718849081,0.7831267333793636,0.6979677645409951
+scaffold,2,morgan+desc+rf,Product issues,0.5662917691552469,0.0387358860656872,0.0154169586545199
+scaffold,2,morgan+desc+rf,Eye disorders,0.67277638947814,0.7501240557102584,0.613875262789068
+scaffold,2,morgan+desc+rf,Investigations,0.6742820152838344,0.8967389238448936,0.8065872459705676
+scaffold,2,morgan+desc+rf,Musculoskeletal and connective tissue disorders,0.6504465494943996,0.8062946454025847,0.6986685353889278
+scaffold,2,morgan+desc+rf,Gastrointestinal disorders,0.7592641404414864,0.964731345557,0.9096005606166784
+scaffold,2,morgan+desc+rf,Social circumstances,0.6135089249495271,0.2721054872901514,0.1758934828311142
+scaffold,2,morgan+desc+rf,Immune system disorders,0.631202088006161,0.8140224435586392,0.7175893482831114
+scaffold,2,morgan+desc+rf,Reproductive system and breast disorders,0.6867824024070766,0.7084508774501865,0.5094604064470918
+scaffold,2,morgan+desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6953600828579255,0.4868559621896297,0.263489838822705
+scaffold,2,morgan+desc+rf,General disorders and administration site conditions,0.5670317467396163,0.9226025995921388,0.905395935529082
+scaffold,2,morgan+desc+rf,Endocrine disorders,0.7003886533818773,0.4535676370830412,0.2263489838822705
+scaffold,2,morgan+desc+rf,Surgical and medical procedures,0.5808336159271528,0.2109722818841914,0.1492641906096706
+scaffold,2,morgan+desc+rf,Vascular disorders,0.627990924776558,0.8450420766357112,0.7764540995094604
+scaffold,2,morgan+desc+rf,Blood and lymphatic system disorders,0.7311203995504743,0.8162455324833194,0.6201822004204625
+scaffold,2,morgan+desc+rf,Skin and subcutaneous tissue disorders,0.5298154358641205,0.934220296937376,0.9236159775753328
+scaffold,2,morgan+desc+rf,"Congenital, familial and genetic disorders",0.6020710051240006,0.2843493320617462,0.1772950245269796
+scaffold,2,morgan+desc+rf,Infections and infestations,0.6474929427423067,0.8113053114003452,0.7049754730203224
+scaffold,2,morgan+desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6456531777048141,0.8238497057798314,0.7428170988086895
+scaffold,2,morgan+desc+rf,Psychiatric disorders,0.6632909800057725,0.8114368298910002,0.7119831814996496
+scaffold,2,morgan+desc+rf,Renal and urinary disorders,0.673368699469087,0.771933209330224,0.6384022424667134
+scaffold,2,morgan+desc+rf,"Pregnancy, puerperium and perinatal conditions",0.6136537131710169,0.1592170609787236,0.0875963559915907
+scaffold,2,morgan+desc+rf,Ear and labyrinth disorders,0.6301768514509046,0.6040340139293134,0.4618079887876664
+scaffold,2,morgan+desc+rf,Cardiac disorders,0.6874083170573368,0.8289512004592241,0.6923615977575333
+scaffold,2,morgan+desc+rf,Nervous system disorders,0.7367332046502495,0.9675520060167844,0.9138051857042748
+scaffold,2,morgan+desc+rf,"Injury, poisoning and procedural complications",0.6107639934674429,0.7513113520422026,0.6629292221443588
+scaffold,2,morgan+desc+rf-multi,Hepatobiliary disorders,0.6736072282013891,0.6796369858450679,0.5206727400140154
+scaffold,2,morgan+desc+rf-multi,Metabolism and nutrition disorders,0.5973002014254142,0.7661273613631735,0.6979677645409951
+scaffold,2,morgan+desc+rf-multi,Product issues,0.5395699008287472,0.0324770546470959,0.0154169586545199
+scaffold,2,morgan+desc+rf-multi,Eye disorders,0.6460464337016905,0.7353589463664172,0.613875262789068
+scaffold,2,morgan+desc+rf-multi,Investigations,0.6564756012885975,0.8816554629905033,0.8065872459705676
+scaffold,2,morgan+desc+rf-multi,Musculoskeletal and connective tissue disorders,0.6382852974073558,0.8023521761253102,0.6986685353889278
+scaffold,2,morgan+desc+rf-multi,Gastrointestinal disorders,0.7390026682999171,0.957442449354298,0.9096005606166784
+scaffold,2,morgan+desc+rf-multi,Social circumstances,0.6320274324992274,0.2676078158583497,0.1758934828311142
+scaffold,2,morgan+desc+rf-multi,Immune system disorders,0.5878422720945582,0.7862513255161417,0.7175893482831114
+scaffold,2,morgan+desc+rf-multi,Reproductive system and breast disorders,0.6818944440983624,0.6873732935277488,0.5094604064470918
+scaffold,2,morgan+desc+rf-multi,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6525076661549567,0.4356920431704184,0.263489838822705
+scaffold,2,morgan+desc+rf-multi,General disorders and administration site conditions,0.5242882267264939,0.9203727038907036,0.905395935529082
+scaffold,2,morgan+desc+rf-multi,Endocrine disorders,0.6657530230685654,0.4060796335702916,0.2263489838822705
+scaffold,2,morgan+desc+rf-multi,Surgical and medical procedures,0.5919224020779684,0.20899318136209,0.1492641906096706
+scaffold,2,morgan+desc+rf-multi,Vascular disorders,0.6421143519599939,0.8491895855317745,0.7764540995094604
+scaffold,2,morgan+desc+rf-multi,Blood and lymphatic system disorders,0.6973328879622656,0.7801754855735497,0.6201822004204625
+scaffold,2,morgan+desc+rf-multi,Skin and subcutaneous tissue disorders,0.5748084609681019,0.9459055619930716,0.9236159775753328
+scaffold,2,morgan+desc+rf-multi,"Congenital, familial and genetic disorders",0.5829493021821964,0.2458450556765673,0.1772950245269796
+scaffold,2,morgan+desc+rf-multi,Infections and infestations,0.6438862685047917,0.8059137458480172,0.7049754730203224
+scaffold,2,morgan+desc+rf-multi,"Respiratory, thoracic and mediastinal disorders",0.6352932990906217,0.8135431778201797,0.7428170988086895
+scaffold,2,morgan+desc+rf-multi,Psychiatric disorders,0.6503807025803345,0.8050694805743742,0.7119831814996496
+scaffold,2,morgan+desc+rf-multi,Renal and urinary disorders,0.6447557000371805,0.7581660696716164,0.6384022424667134
+scaffold,2,morgan+desc+rf-multi,"Pregnancy, puerperium and perinatal conditions",0.6052953536663592,0.147980753824673,0.0875963559915907
+scaffold,2,morgan+desc+rf-multi,Ear and labyrinth disorders,0.6019397972821803,0.5475525807849432,0.4618079887876664
+scaffold,2,morgan+desc+rf-multi,Cardiac disorders,0.6519547316712146,0.7935727291817223,0.6923615977575333
+scaffold,2,morgan+desc+rf-multi,Nervous system disorders,0.7162523282851769,0.9658676438911596,0.9138051857042748
+scaffold,2,morgan+desc+rf-multi,"Injury, poisoning and procedural complications",0.581570273411408,0.7264810036364514,0.6629292221443588
+scaffold,2,morgan+desc+lgbm,Hepatobiliary disorders,0.6968974978451916,0.696572456149768,0.5206727400140154
+scaffold,2,morgan+desc+lgbm,Metabolism and nutrition disorders,0.5966460003642424,0.7630540472549565,0.6979677645409951
+scaffold,2,morgan+desc+lgbm,Product issues,0.6055979299138899,0.0327659084500433,0.0154169586545199
+scaffold,2,morgan+desc+lgbm,Eye disorders,0.6598104777944664,0.7339895500155695,0.613875262789068
+scaffold,2,morgan+desc+lgbm,Investigations,0.6548092080210893,0.8904166583838198,0.8065872459705676
+scaffold,2,morgan+desc+lgbm,Musculoskeletal and connective tissue disorders,0.6507278658377544,0.8042792805238843,0.6986685353889278
+scaffold,2,morgan+desc+lgbm,Gastrointestinal disorders,0.7611068048191877,0.9652023590057148,0.9096005606166784
+scaffold,2,morgan+desc+lgbm,Social circumstances,0.6157636050329203,0.2763926280793827,0.1758934828311142
+scaffold,2,morgan+desc+lgbm,Immune system disorders,0.6019588265188895,0.7991570862192998,0.7175893482831114
+scaffold,2,morgan+desc+lgbm,Reproductive system and breast disorders,0.6878047592693438,0.7033774292298309,0.5094604064470918
+scaffold,2,morgan+desc+lgbm,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6920029565745968,0.4805933584257263,0.263489838822705
+scaffold,2,morgan+desc+lgbm,General disorders and administration site conditions,0.5511217131734005,0.9237284579263404,0.905395935529082
+scaffold,2,morgan+desc+lgbm,Endocrine disorders,0.698169849981588,0.4395586375177098,0.2263489838822705
+scaffold,2,morgan+desc+lgbm,Surgical and medical procedures,0.5710395367262912,0.1994422885674421,0.1492641906096706
+scaffold,2,morgan+desc+lgbm,Vascular disorders,0.6222624490476625,0.8378038138325923,0.7764540995094604
+scaffold,2,morgan+desc+lgbm,Blood and lymphatic system disorders,0.7136610579435608,0.7989272223582782,0.6201822004204625
+scaffold,2,morgan+desc+lgbm,Skin and subcutaneous tissue disorders,0.4992992662603773,0.9221863776736232,0.9236159775753328
+scaffold,2,morgan+desc+lgbm,"Congenital, familial and genetic disorders",0.5941112185440695,0.264177430937346,0.1772950245269796
+scaffold,2,morgan+desc+lgbm,Infections and infestations,0.6357639176429494,0.8059288427331669,0.7049754730203224
+scaffold,2,morgan+desc+lgbm,"Respiratory, thoracic and mediastinal disorders",0.6369713141079248,0.8291630765045553,0.7428170988086895
+scaffold,2,morgan+desc+lgbm,Psychiatric disorders,0.6512157727717689,0.8083409707407722,0.7119831814996496
+scaffold,2,morgan+desc+lgbm,Renal and urinary disorders,0.6611216402663174,0.7601338627164493,0.6384022424667134
+scaffold,2,morgan+desc+lgbm,"Pregnancy, puerperium and perinatal conditions",0.5578691845832922,0.13629505566138,0.0875963559915907
+scaffold,2,morgan+desc+lgbm,Ear and labyrinth disorders,0.6266677956187013,0.6034041214450958,0.4618079887876664
+scaffold,2,morgan+desc+lgbm,Cardiac disorders,0.6827308764927948,0.8138182577771479,0.6923615977575333
+scaffold,2,morgan+desc+lgbm,Nervous system disorders,0.6703148268352432,0.9495267060713888,0.9138051857042748
+scaffold,2,morgan+desc+lgbm,"Injury, poisoning and procedural complications",0.5954801477928153,0.7475742060464813,0.6629292221443588
+random,0,prior,Hepatobiliary disorders,0.5,0.5206251958234441,0.5206727400140154
+random,0,prior,Metabolism and nutrition disorders,0.5,0.6979476072794927,0.6979677645409951
+random,0,prior,Product issues,0.5,0.0154023948262819,0.0154169586545199
+random,0,prior,Eye disorders,0.5,0.6138885094930563,0.613875262789068
+random,0,prior,Investigations,0.5,0.8064730986232771,0.8065872459705676
+random,0,prior,Musculoskeletal and connective tissue disorders,0.5,0.6984910484611998,0.6986685353889278
+random,0,prior,Gastrointestinal disorders,0.5,0.909661991365298,0.9096005606166784
+random,0,prior,Social circumstances,0.5,0.1759863215435115,0.1758934828311142
+random,0,prior,Immune system disorders,0.5,0.717787035160362,0.7175893482831114
+random,0,prior,Reproductive system and breast disorders,0.5,0.5093085679573403,0.5094604064470918
+random,0,prior,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5,0.2634731441879316,0.263489838822705
+random,0,prior,General disorders and administration site conditions,0.5,0.9054167842101484,0.905395935529082
+random,0,prior,Endocrine disorders,0.5,0.2264697441336099,0.2263489838822705
+random,0,prior,Surgical and medical procedures,0.5,0.1493609387326716,0.1492641906096706
+random,0,prior,Vascular disorders,0.5,0.7763585269496678,0.7764540995094604
+random,0,prior,Blood and lymphatic system disorders,0.5,0.6200534855126384,0.6201822004204625
+random,0,prior,Skin and subcutaneous tissue disorders,0.5,0.923557785132165,0.9236159775753328
+random,0,prior,"Congenital, familial and genetic disorders",0.5,0.1773887662098256,0.1772950245269796
+random,0,prior,Infections and infestations,0.5,0.7050945187788116,0.7049754730203224
+random,0,prior,"Respiratory, thoracic and mediastinal disorders",0.5,0.7428625365539535,0.7428170988086895
+random,0,prior,Psychiatric disorders,0.5,0.7120121708513433,0.7119831814996496
+random,0,prior,Renal and urinary disorders,0.5,0.6383208464119962,0.6384022424667134
+random,0,prior,"Pregnancy, puerperium and perinatal conditions",0.5,0.0875620406242412,0.0875963559915907
+random,0,prior,Ear and labyrinth disorders,0.5,0.4619501279957659,0.4618079887876664
+random,0,prior,Cardiac disorders,0.5,0.6923137352593102,0.6923615977575333
+random,0,prior,Nervous system disorders,0.5,0.91395227270389,0.9138051857042748
+random,0,prior,"Injury, poisoning and procedural complications",0.5,0.6631551316328863,0.6629292221443588
+random,0,size+logreg,Hepatobiliary disorders,0.4629191797342308,0.4709165554058668,0.5206727400140154
+random,0,size+logreg,Metabolism and nutrition disorders,0.5436764856569481,0.7287488404803943,0.6979677645409951
+random,0,size+logreg,Product issues,0.6029896829396413,0.0411045933127075,0.0154169586545199
+random,0,size+logreg,Eye disorders,0.496618861739253,0.5866020956059501,0.613875262789068
+random,0,size+logreg,Investigations,0.6077647730770069,0.8521576544052738,0.8065872459705676
+random,0,size+logreg,Musculoskeletal and connective tissue disorders,0.6027423094228765,0.7553875505190981,0.6986685353889278
+random,0,size+logreg,Gastrointestinal disorders,0.5758320562229693,0.92690019895723,0.9096005606166784
+random,0,size+logreg,Social circumstances,0.5296774567532463,0.1861514223922359,0.1758934828311142
+random,0,size+logreg,Immune system disorders,0.6069639654900615,0.7866012771841472,0.7175893482831114
+random,0,size+logreg,Reproductive system and breast disorders,0.4611630891810677,0.4704716862847471,0.5094604064470918
+random,0,size+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5340476990964731,0.3036797163655776,0.263489838822705
+random,0,size+logreg,General disorders and administration site conditions,0.5501015164550622,0.915647271715916,0.905395935529082
+random,0,size+logreg,Endocrine disorders,0.4884608498297249,0.2247365005810223,0.2263489838822705
+random,0,size+logreg,Surgical and medical procedures,0.520814564068977,0.1520265095055999,0.1492641906096706
+random,0,size+logreg,Vascular disorders,0.554631414358254,0.8056668214270009,0.7764540995094604
+random,0,size+logreg,Blood and lymphatic system disorders,0.4819500200856933,0.5970135862751811,0.6201822004204625
+random,0,size+logreg,Skin and subcutaneous tissue disorders,0.6476137337718224,0.949799949266398,0.9236159775753328
+random,0,size+logreg,"Congenital, familial and genetic disorders",0.4918053710272708,0.1754933361548168,0.1772950245269796
+random,0,size+logreg,Infections and infestations,0.6192900526879312,0.7744389595592794,0.7049754730203224
+random,0,size+logreg,"Respiratory, thoracic and mediastinal disorders",0.5847655049899905,0.7866459979110916,0.7428170988086895
+random,0,size+logreg,Psychiatric disorders,0.5356734262497822,0.7252201514741299,0.7119831814996496
+random,0,size+logreg,Renal and urinary disorders,0.5470593647605598,0.6649724701626971,0.6384022424667134
+random,0,size+logreg,"Pregnancy, puerperium and perinatal conditions",0.5319308926775127,0.1118236995319969,0.0875963559915907
+random,0,size+logreg,Ear and labyrinth disorders,0.5065070874109925,0.4613775722902845,0.4618079887876664
+random,0,size+logreg,Cardiac disorders,0.5543378573067269,0.7326084974834461,0.6923615977575333
+random,0,size+logreg,Nervous system disorders,0.653476692872584,0.9443104301649008,0.9138051857042748
+random,0,size+logreg,"Injury, poisoning and procedural complications",0.5581308387458676,0.7075552626312327,0.6629292221443588
+random,0,knn5 tanimoto,Hepatobiliary disorders,0.7093601560347448,0.6942282695362515,0.5206727400140154
+random,0,knn5 tanimoto,Metabolism and nutrition disorders,0.593020672285096,0.741985708200527,0.6979677645409951
+random,0,knn5 tanimoto,Product issues,0.5515269950623706,0.0247792176136361,0.0154169586545199
+random,0,knn5 tanimoto,Eye disorders,0.643074882329975,0.7096887590015095,0.613875262789068
+random,0,knn5 tanimoto,Investigations,0.6652417563093123,0.8689714470530691,0.8065872459705676
+random,0,knn5 tanimoto,Musculoskeletal and connective tissue disorders,0.6188393309408808,0.7678763877379847,0.6986685353889278
+random,0,knn5 tanimoto,Gastrointestinal disorders,0.6872222277090135,0.9422525618574956,0.9096005606166784
+random,0,knn5 tanimoto,Social circumstances,0.5997444545230707,0.2514189172581855,0.1758934828311142
+random,0,knn5 tanimoto,Immune system disorders,0.6123147798417189,0.7733790636673458,0.7175893482831114
+random,0,knn5 tanimoto,Reproductive system and breast disorders,0.7118424705634718,0.6972936321864427,0.5094604064470918
+random,0,knn5 tanimoto,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7062335204400197,0.4447530531233344,0.263489838822705
+random,0,knn5 tanimoto,General disorders and administration site conditions,0.5972802416519267,0.9236859430160724,0.905395935529082
+random,0,knn5 tanimoto,Endocrine disorders,0.6997190613959721,0.4324253762033002,0.2263489838822705
+random,0,knn5 tanimoto,Surgical and medical procedures,0.6019425002078221,0.199408589420539,0.1492641906096706
+random,0,knn5 tanimoto,Vascular disorders,0.636004632729278,0.8336302940099133,0.7764540995094604
+random,0,knn5 tanimoto,Blood and lymphatic system disorders,0.6919017423011211,0.7571995345032321,0.6201822004204625
+random,0,knn5 tanimoto,Skin and subcutaneous tissue disorders,0.5997621034847759,0.9389088175393148,0.9236159775753328
+random,0,knn5 tanimoto,"Congenital, familial and genetic disorders",0.5924158270065838,0.2459179222193976,0.1772950245269796
+random,0,knn5 tanimoto,Infections and infestations,0.6186625567401247,0.7671436033345852,0.7049754730203224
+random,0,knn5 tanimoto,"Respiratory, thoracic and mediastinal disorders",0.581018112918976,0.7814869769687826,0.7428170988086895
+random,0,knn5 tanimoto,Psychiatric disorders,0.6534851806023363,0.7941116843214473,0.7119831814996496
+random,0,knn5 tanimoto,Renal and urinary disorders,0.6649609844859042,0.7418418745174121,0.6384022424667134
+random,0,knn5 tanimoto,"Pregnancy, puerperium and perinatal conditions",0.6009245090846014,0.1192636206972861,0.0875963559915907
+random,0,knn5 tanimoto,Ear and labyrinth disorders,0.6375523711016051,0.5714086481488831,0.4618079887876664
+random,0,knn5 tanimoto,Cardiac disorders,0.6522289136082442,0.7727314751931338,0.6923615977575333
+random,0,knn5 tanimoto,Nervous system disorders,0.6060731321527143,0.9325173708990888,0.9138051857042748
+random,0,knn5 tanimoto,"Injury, poisoning and procedural complications",0.5756780111216576,0.7075599659636891,0.6629292221443588
+random,0,morgan+logreg,Hepatobiliary disorders,0.6664133558729943,0.6698121347519114,0.5206727400140154
+random,0,morgan+logreg,Metabolism and nutrition disorders,0.5812013832939102,0.7533305765213416,0.6979677645409951
+random,0,morgan+logreg,Product issues,0.4369497143208817,0.0252299439615673,0.0154169586545199
+random,0,morgan+logreg,Eye disorders,0.6293920328413973,0.7170591389144632,0.613875262789068
+random,0,morgan+logreg,Investigations,0.6916771569113516,0.8942993141634797,0.8065872459705676
+random,0,morgan+logreg,Musculoskeletal and connective tissue disorders,0.6321455218456495,0.7870565485799987,0.6986685353889278
+random,0,morgan+logreg,Gastrointestinal disorders,0.7390121336960915,0.9574950281666624,0.9096005606166784
+random,0,morgan+logreg,Social circumstances,0.6094322374623783,0.2744149794203918,0.1758934828311142
+random,0,morgan+logreg,Immune system disorders,0.5925032505077544,0.7788684927715488,0.7175893482831114
+random,0,morgan+logreg,Reproductive system and breast disorders,0.6839655525399503,0.6930109013593634,0.5094604064470918
+random,0,morgan+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6474468374326873,0.4187617356611509,0.263489838822705
+random,0,morgan+logreg,General disorders and administration site conditions,0.6349136589190377,0.9352161554882504,0.905395935529082
+random,0,morgan+logreg,Endocrine disorders,0.6609306522666178,0.4184239866652941,0.2263489838822705
+random,0,morgan+logreg,Surgical and medical procedures,0.6299014620800893,0.2640181209471549,0.1492641906096706
+random,0,morgan+logreg,Vascular disorders,0.6247346804057446,0.8408733329226935,0.7764540995094604
+random,0,morgan+logreg,Blood and lymphatic system disorders,0.6872479198079035,0.7695045906377341,0.6201822004204625
+random,0,morgan+logreg,Skin and subcutaneous tissue disorders,0.6241603447043496,0.94866010764874,0.9236159775753328
+random,0,morgan+logreg,"Congenital, familial and genetic disorders",0.5767687559037908,0.2500089024076998,0.1772950245269796
+random,0,morgan+logreg,Infections and infestations,0.6349069510026061,0.8035447306670443,0.7049754730203224
+random,0,morgan+logreg,"Respiratory, thoracic and mediastinal disorders",0.6248550129631343,0.8229875707660914,0.7428170988086895
+random,0,morgan+logreg,Psychiatric disorders,0.6228753340520632,0.7936481526623484,0.7119831814996496
+random,0,morgan+logreg,Renal and urinary disorders,0.6477271346979384,0.7520233822065812,0.6384022424667134
+random,0,morgan+logreg,"Pregnancy, puerperium and perinatal conditions",0.5811745193843483,0.1642272330049507,0.0875963559915907
+random,0,morgan+logreg,Ear and labyrinth disorders,0.6001353079183359,0.5625971709364689,0.4618079887876664
+random,0,morgan+logreg,Cardiac disorders,0.6664949160704033,0.8064388534792727,0.6923615977575333
+random,0,morgan+logreg,Nervous system disorders,0.7325122904081056,0.9613274119425878,0.9138051857042748
+random,0,morgan+logreg,"Injury, poisoning and procedural complications",0.5776428482028692,0.7203898434025665,0.6629292221443588
+random,0,morgan+rf,Hepatobiliary disorders,0.751689294156016,0.7553068621807221,0.5206727400140154
+random,0,morgan+rf,Metabolism and nutrition disorders,0.6245873201190595,0.7798593324384498,0.6979677645409951
+random,0,morgan+rf,Product issues,0.6191838888774098,0.0854627072133899,0.0154169586545199
+random,0,morgan+rf,Eye disorders,0.6784259654635196,0.7639841479006231,0.613875262789068
+random,0,morgan+rf,Investigations,0.7275320553481605,0.9121922154968262,0.8065872459705676
+random,0,morgan+rf,Musculoskeletal and connective tissue disorders,0.6713626457969426,0.817003382166439,0.6986685353889278
+random,0,morgan+rf,Gastrointestinal disorders,0.7760988569899372,0.966438258955948,0.9096005606166784
+random,0,morgan+rf,Social circumstances,0.6678407512973681,0.3496744926337395,0.1758934828311142
+random,0,morgan+rf,Immune system disorders,0.6595653074242317,0.8296062781664777,0.7175893482831114
+random,0,morgan+rf,Reproductive system and breast disorders,0.738742407548888,0.7613787000091359,0.5094604064470918
+random,0,morgan+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7073736880599528,0.503266294797359,0.263489838822705
+random,0,morgan+rf,General disorders and administration site conditions,0.6618880956350468,0.946570893515516,0.905395935529082
+random,0,morgan+rf,Endocrine disorders,0.713041288855953,0.5079010080704214,0.2263489838822705
+random,0,morgan+rf,Surgical and medical procedures,0.6236847596264795,0.2378846406624902,0.1492641906096706
+random,0,morgan+rf,Vascular disorders,0.6700589481489512,0.8690607581074904,0.7764540995094604
+random,0,morgan+rf,Blood and lymphatic system disorders,0.7389788164693473,0.8315785370828239,0.6201822004204625
+random,0,morgan+rf,Skin and subcutaneous tissue disorders,0.68752655707159,0.958731712585106,0.9236159775753328
+random,0,morgan+rf,"Congenital, familial and genetic disorders",0.608657369961627,0.2721035877906224,0.1772950245269796
+random,0,morgan+rf,Infections and infestations,0.6720903116248876,0.8285326267184182,0.7049754730203224
+random,0,morgan+rf,"Respiratory, thoracic and mediastinal disorders",0.6592446993418098,0.8405334000938872,0.7428170988086895
+random,0,morgan+rf,Psychiatric disorders,0.677114410207263,0.8299226962426015,0.7119831814996496
+random,0,morgan+rf,Renal and urinary disorders,0.7002684002525763,0.8006521731853482,0.6384022424667134
+random,0,morgan+rf,"Pregnancy, puerperium and perinatal conditions",0.620711214431176,0.1984195349131025,0.0875963559915907
+random,0,morgan+rf,Ear and labyrinth disorders,0.6612306694495587,0.646439012048196,0.4618079887876664
+random,0,morgan+rf,Cardiac disorders,0.7140908798528033,0.8450814444881771,0.6923615977575333
+random,0,morgan+rf,Nervous system disorders,0.7822910457518255,0.9730581728435702,0.9138051857042748
+random,0,morgan+rf,"Injury, poisoning and procedural complications",0.6332584442884351,0.7735763117726273,0.6629292221443588
+random,0,desc+rf,Hepatobiliary disorders,0.7476329717744175,0.734851445827005,0.5206727400140154
+random,0,desc+rf,Metabolism and nutrition disorders,0.6493638198693854,0.805396335638496,0.6979677645409951
+random,0,desc+rf,Product issues,0.601142835334249,0.0268280572702357,0.0154169586545199
+random,0,desc+rf,Eye disorders,0.6693366194549643,0.7643824155455332,0.613875262789068
+random,0,desc+rf,Investigations,0.7143296759654723,0.905581553603047,0.8065872459705676
+random,0,desc+rf,Musculoskeletal and connective tissue disorders,0.6675783210944101,0.8202026516086672,0.6986685353889278
+random,0,desc+rf,Gastrointestinal disorders,0.7945377332703734,0.9701622971152724,0.9096005606166784
+random,0,desc+rf,Social circumstances,0.6508336523337903,0.3201106453425231,0.1758934828311142
+random,0,desc+rf,Immune system disorders,0.6499050056593448,0.8230402549662216,0.7175893482831114
+random,0,desc+rf,Reproductive system and breast disorders,0.7229450399225886,0.74649049631723,0.5094604064470918
+random,0,desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7435499874067873,0.5362708320832157,0.263489838822705
+random,0,desc+rf,General disorders and administration site conditions,0.608762732288214,0.9353140898464988,0.905395935529082
+random,0,desc+rf,Endocrine disorders,0.7056762170462141,0.4783523224005989,0.2263489838822705
+random,0,desc+rf,Surgical and medical procedures,0.6384322582801246,0.2589474964510551,0.1492641906096706
+random,0,desc+rf,Vascular disorders,0.6692640478041865,0.8663764434815711,0.7764540995094604
+random,0,desc+rf,Blood and lymphatic system disorders,0.7367451156382949,0.8280974586051164,0.6201822004204625
+random,0,desc+rf,Skin and subcutaneous tissue disorders,0.6162691897747254,0.9443156105491816,0.9236159775753328
+random,0,desc+rf,"Congenital, familial and genetic disorders",0.601076664719618,0.2918261580261949,0.1772950245269796
+random,0,desc+rf,Infections and infestations,0.6797808826629624,0.8370905094115436,0.7049754730203224
+random,0,desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6574793597513454,0.8340262343285882,0.7428170988086895
+random,0,desc+rf,Psychiatric disorders,0.6856274094324005,0.8375442535927252,0.7119831814996496
+random,0,desc+rf,Renal and urinary disorders,0.6916340852550035,0.7924929610517075,0.6384022424667134
+random,0,desc+rf,"Pregnancy, puerperium and perinatal conditions",0.6173641489057775,0.2055565468318363,0.0875963559915907
+random,0,desc+rf,Ear and labyrinth disorders,0.6559685523180707,0.63675686125423,0.4618079887876664
+random,0,desc+rf,Cardiac disorders,0.7109112909860161,0.8371634093214253,0.6923615977575333
+random,0,desc+rf,Nervous system disorders,0.7664049528380671,0.9680223916202284,0.9138051857042748
+random,0,desc+rf,"Injury, poisoning and procedural complications",0.6159780246052616,0.7584394062627966,0.6629292221443588
+random,0,morgan+desc+rf,Hepatobiliary disorders,0.7505197266726492,0.7405917678063052,0.5206727400140154
+random,0,morgan+desc+rf,Metabolism and nutrition disorders,0.6473422778876322,0.8005323692050321,0.6979677645409951
+random,0,morgan+desc+rf,Product issues,0.5983976036505213,0.0295931191701962,0.0154169586545199
+random,0,morgan+desc+rf,Eye disorders,0.6696461506030251,0.7612242363374115,0.613875262789068
+random,0,morgan+desc+rf,Investigations,0.718163965552184,0.9081656284196908,0.8065872459705676
+random,0,morgan+desc+rf,Musculoskeletal and connective tissue disorders,0.667184334143615,0.8165536438925134,0.6986685353889278
+random,0,morgan+desc+rf,Gastrointestinal disorders,0.7960392664247823,0.968410067985352,0.9096005606166784
+random,0,morgan+desc+rf,Social circumstances,0.6581834265727646,0.3191249176272225,0.1758934828311142
+random,0,morgan+desc+rf,Immune system disorders,0.6593224562226168,0.8293626008389172,0.7175893482831114
+random,0,morgan+desc+rf,Reproductive system and breast disorders,0.7245852745472371,0.7480209684667082,0.5094604064470918
+random,0,morgan+desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.742546340693633,0.537230344147742,0.263489838822705
+random,0,morgan+desc+rf,General disorders and administration site conditions,0.6268378605508257,0.9378459995837268,0.905395935529082
+random,0,morgan+desc+rf,Endocrine disorders,0.7144257775637761,0.4940665196766575,0.2263489838822705
+random,0,morgan+desc+rf,Surgical and medical procedures,0.6425965949089132,0.2597874737759162,0.1492641906096706
+random,0,morgan+desc+rf,Vascular disorders,0.6741420270460514,0.8731782477032833,0.7764540995094604
+random,0,morgan+desc+rf,Blood and lymphatic system disorders,0.7440599624760209,0.8323459963507288,0.6201822004204625
+random,0,morgan+desc+rf,Skin and subcutaneous tissue disorders,0.6563842485045054,0.9517513834750948,0.9236159775753328
+random,0,morgan+desc+rf,"Congenital, familial and genetic disorders",0.6006451679345691,0.2870943820920577,0.1772950245269796
+random,0,morgan+desc+rf,Infections and infestations,0.6787824651254799,0.8379505156989462,0.7049754730203224
+random,0,morgan+desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6675108343255476,0.8375239890139264,0.7428170988086895
+random,0,morgan+desc+rf,Psychiatric disorders,0.6920930763612201,0.8385414425261507,0.7119831814996496
+random,0,morgan+desc+rf,Renal and urinary disorders,0.7000886268155256,0.7986817059940308,0.6384022424667134
+random,0,morgan+desc+rf,"Pregnancy, puerperium and perinatal conditions",0.635410186721783,0.2020557627938729,0.0875963559915907
+random,0,morgan+desc+rf,Ear and labyrinth disorders,0.6625825743798778,0.6438644408288724,0.4618079887876664
+random,0,morgan+desc+rf,Cardiac disorders,0.714668706753996,0.8383294455768044,0.6923615977575333
+random,0,morgan+desc+rf,Nervous system disorders,0.7838685371943851,0.971099020509448,0.9138051857042748
+random,0,morgan+desc+rf,"Injury, poisoning and procedural complications",0.6249274768908929,0.7631421744167705,0.6629292221443588
+random,0,morgan+desc+rf-multi,Hepatobiliary disorders,0.7094939816202006,0.6967374843103695,0.5206727400140154
+random,0,morgan+desc+rf-multi,Metabolism and nutrition disorders,0.6283780448196811,0.7815089294955742,0.6979677645409951
+random,0,morgan+desc+rf-multi,Product issues,0.5020749608818266,0.0230028652350986,0.0154169586545199
+random,0,morgan+desc+rf-multi,Eye disorders,0.6604547989466181,0.7509600752923064,0.613875262789068
+random,0,morgan+desc+rf-multi,Investigations,0.697768447605346,0.8978212997210212,0.8065872459705676
+random,0,morgan+desc+rf-multi,Musculoskeletal and connective tissue disorders,0.6553051990712335,0.8110431703492003,0.6986685353889278
+random,0,morgan+desc+rf-multi,Gastrointestinal disorders,0.7767249685515808,0.9655971257613964,0.9096005606166784
+random,0,morgan+desc+rf-multi,Social circumstances,0.646063152417711,0.3079213073213346,0.1758934828311142
+random,0,morgan+desc+rf-multi,Immune system disorders,0.6348664872083578,0.8127983703906205,0.7175893482831114
+random,0,morgan+desc+rf-multi,Reproductive system and breast disorders,0.7141543069636578,0.7343561159542269,0.5094604064470918
+random,0,morgan+desc+rf-multi,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6702787548985532,0.4551413865127734,0.263489838822705
+random,0,morgan+desc+rf-multi,General disorders and administration site conditions,0.597646326638348,0.924992841497742,0.905395935529082
+random,0,morgan+desc+rf-multi,Endocrine disorders,0.6876353610113315,0.448676847423948,0.2263489838822705
+random,0,morgan+desc+rf-multi,Surgical and medical procedures,0.6340023278522071,0.2590517133817775,0.1492641906096706
+random,0,morgan+desc+rf-multi,Vascular disorders,0.6752763275008343,0.8665781665096493,0.7764540995094604
+random,0,morgan+desc+rf-multi,Blood and lymphatic system disorders,0.7002523905798841,0.7925216650263559,0.6201822004204625
+random,0,morgan+desc+rf-multi,Skin and subcutaneous tissue disorders,0.6651412665225184,0.9563426146972466,0.9236159775753328
+random,0,morgan+desc+rf-multi,"Congenital, familial and genetic disorders",0.595485346978645,0.2741493109584841,0.1772950245269796
+random,0,morgan+desc+rf-multi,Infections and infestations,0.6653878384040685,0.8262667091098613,0.7049754730203224
+random,0,morgan+desc+rf-multi,"Respiratory, thoracic and mediastinal disorders",0.6457798923838864,0.8198823829340247,0.7428170988086895
+random,0,morgan+desc+rf-multi,Psychiatric disorders,0.6847584248050436,0.8290760171507465,0.7119831814996496
+random,0,morgan+desc+rf-multi,Renal and urinary disorders,0.6689654966585362,0.7691211232113633,0.6384022424667134
+random,0,morgan+desc+rf-multi,"Pregnancy, puerperium and perinatal conditions",0.6507869361098289,0.2040373987827362,0.0875963559915907
+random,0,morgan+desc+rf-multi,Ear and labyrinth disorders,0.6238737748748575,0.5842973191386581,0.4618079887876664
+random,0,morgan+desc+rf-multi,Cardiac disorders,0.6919038280158509,0.8248441744836116,0.6923615977575333
+random,0,morgan+desc+rf-multi,Nervous system disorders,0.7704538063808798,0.9704681533408566,0.9138051857042748
+random,0,morgan+desc+rf-multi,"Injury, poisoning and procedural complications",0.5954331488623009,0.7391980242324003,0.6629292221443588
+random,0,morgan+desc+lgbm,Hepatobiliary disorders,0.7359743572922859,0.7208829878909747,0.5206727400140154
+random,0,morgan+desc+lgbm,Metabolism and nutrition disorders,0.621953532499725,0.777750369806872,0.6979677645409951
+random,0,morgan+desc+lgbm,Product issues,0.6017997079935731,0.0308277651551959,0.0154169586545199
+random,0,morgan+desc+lgbm,Eye disorders,0.6555750628636693,0.7402996525182454,0.613875262789068
+random,0,morgan+desc+lgbm,Investigations,0.7076284942159874,0.9046911282335568,0.8065872459705676
+random,0,morgan+desc+lgbm,Musculoskeletal and connective tissue disorders,0.6650863225880965,0.8081513633741502,0.6986685353889278
+random,0,morgan+desc+lgbm,Gastrointestinal disorders,0.7947955575721944,0.9678811079347768,0.9096005606166784
+random,0,morgan+desc+lgbm,Social circumstances,0.6505899885597153,0.3275208596588111,0.1758934828311142
+random,0,morgan+desc+lgbm,Immune system disorders,0.643022182756552,0.8187334869776504,0.7175893482831114
+random,0,morgan+desc+lgbm,Reproductive system and breast disorders,0.732797323112226,0.7571125861240743,0.5094604064470918
+random,0,morgan+desc+lgbm,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7441682568893154,0.5303487391385474,0.263489838822705
+random,0,morgan+desc+lgbm,General disorders and administration site conditions,0.6286723452942324,0.9412699715607477,0.905395935529082
+random,0,morgan+desc+lgbm,Endocrine disorders,0.7222483202826624,0.5027018636935858,0.2263489838822705
+random,0,morgan+desc+lgbm,Surgical and medical procedures,0.6216522117348994,0.2469982153207016,0.1492641906096706
+random,0,morgan+desc+lgbm,Vascular disorders,0.6634960544719957,0.8611082457988092,0.7764540995094604
+random,0,morgan+desc+lgbm,Blood and lymphatic system disorders,0.73074827381448,0.8244086021232802,0.6201822004204625
+random,0,morgan+desc+lgbm,Skin and subcutaneous tissue disorders,0.612657873933714,0.946541016716464,0.9236159775753328
+random,0,morgan+desc+lgbm,"Congenital, familial and genetic disorders",0.594355295379051,0.2873425859452162,0.1772950245269796
+random,0,morgan+desc+lgbm,Infections and infestations,0.6795602222681051,0.8341547330313401,0.7049754730203224
+random,0,morgan+desc+lgbm,"Respiratory, thoracic and mediastinal disorders",0.653931744753088,0.8333915327273071,0.7428170988086895
+random,0,morgan+desc+lgbm,Psychiatric disorders,0.6903854432627996,0.8411402161521755,0.7119831814996496
+random,0,morgan+desc+lgbm,Renal and urinary disorders,0.6892555312692299,0.7911729768123428,0.6384022424667134
+random,0,morgan+desc+lgbm,"Pregnancy, puerperium and perinatal conditions",0.5899019571500184,0.1757900613784566,0.0875963559915907
+random,0,morgan+desc+lgbm,Ear and labyrinth disorders,0.6515137998185481,0.639328874386037,0.4618079887876664
+random,0,morgan+desc+lgbm,Cardiac disorders,0.7049171622247383,0.8262676498395619,0.6923615977575333
+random,0,morgan+desc+lgbm,Nervous system disorders,0.7613328545219208,0.9688138952079708,0.9138051857042748
+random,0,morgan+desc+lgbm,"Injury, poisoning and procedural complications",0.6247041848460276,0.7624900906088158,0.6629292221443588
+random,1,prior,Hepatobiliary disorders,0.5,0.5208185710630586,0.5206727400140154
+random,1,prior,Metabolism and nutrition disorders,0.5,0.6980456388323721,0.6979677645409951
+random,1,prior,Product issues,0.5,0.0153832100478946,0.0154169586545199
+random,1,prior,Eye disorders,0.5,0.6140296178589517,0.613875262789068
+random,1,prior,Investigations,0.5,0.8065814665271709,0.8065872459705676
+random,1,prior,Musculoskeletal and connective tissue disorders,0.5,0.6986580682302098,0.6986685353889278
+random,1,prior,Gastrointestinal disorders,0.5,0.9097141236744845,0.9096005606166784
+random,1,prior,Social circumstances,0.5,0.1759694949590538,0.1758934828311142
+random,1,prior,Immune system disorders,0.5,0.7176638811342612,0.7175893482831114
+random,1,prior,Reproductive system and breast disorders,0.5,0.50951235877377,0.5094604064470918
+random,1,prior,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5,0.2635429361036193,0.263489838822705
+random,1,prior,General disorders and administration site conditions,0.5,0.9054509250350932,0.905395935529082
+random,1,prior,Endocrine disorders,0.5,0.2262687534939636,0.2263489838822705
+random,1,prior,Surgical and medical procedures,0.5,0.1492575206746263,0.1492641906096706
+random,1,prior,Vascular disorders,0.5,0.7764258876639205,0.7764540995094604
+random,1,prior,Blood and lymphatic system disorders,0.5,0.6202811731656581,0.6201822004204625
+random,1,prior,Skin and subcutaneous tissue disorders,0.5,0.923731754718932,0.9236159775753328
+random,1,prior,"Congenital, familial and genetic disorders",0.5,0.1772458497407238,0.1772950245269796
+random,1,prior,Infections and infestations,0.5,0.7049593889703782,0.7049754730203224
+random,1,prior,"Respiratory, thoracic and mediastinal disorders",0.5,0.7428152781939865,0.7428170988086895
+random,1,prior,Psychiatric disorders,0.5,0.7121579551966521,0.7119831814996496
+random,1,prior,Renal and urinary disorders,0.5,0.6384880753977642,0.6384022424667134
+random,1,prior,"Pregnancy, puerperium and perinatal conditions",0.5,0.087648645700256,0.0875963559915907
+random,1,prior,Ear and labyrinth disorders,0.5,0.461873090915782,0.4618079887876664
+random,1,prior,Cardiac disorders,0.5,0.6923597332408035,0.6923615977575333
+random,1,prior,Nervous system disorders,0.5,0.9137875595616752,0.9138051857042748
+random,1,prior,"Injury, poisoning and procedural complications",0.5,0.6629283007989457,0.6629292221443588
+random,1,size+logreg,Hepatobiliary disorders,0.4637381284000146,0.4705251110598295,0.5206727400140154
+random,1,size+logreg,Metabolism and nutrition disorders,0.5481025410413821,0.7290292977680979,0.6979677645409951
+random,1,size+logreg,Product issues,0.5187545848919365,0.0226181143507901,0.0154169586545199
+random,1,size+logreg,Eye disorders,0.4975783812808411,0.5880914867877061,0.613875262789068
+random,1,size+logreg,Investigations,0.608785582699341,0.8508774095564204,0.8065872459705676
+random,1,size+logreg,Musculoskeletal and connective tissue disorders,0.6078074977680796,0.7605928891317817,0.6986685353889278
+random,1,size+logreg,Gastrointestinal disorders,0.585321694186055,0.9291478457493924,0.9096005606166784
+random,1,size+logreg,Social circumstances,0.5394133116594892,0.1899592677515505,0.1758934828311142
+random,1,size+logreg,Immune system disorders,0.6070592352747982,0.786303231779107,0.7175893482831114
+random,1,size+logreg,Reproductive system and breast disorders,0.4725914237525579,0.4836412705975877,0.5094604064470918
+random,1,size+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5362803119397411,0.3103523435174898,0.263489838822705
+random,1,size+logreg,General disorders and administration site conditions,0.5553990101879934,0.91718108617937,0.905395935529082
+random,1,size+logreg,Endocrine disorders,0.4829305919864033,0.2156507233152237,0.2263489838822705
+random,1,size+logreg,Surgical and medical procedures,0.521655566014154,0.1512037186550976,0.1492641906096706
+random,1,size+logreg,Vascular disorders,0.5553217228024406,0.8060155054553821,0.7764540995094604
+random,1,size+logreg,Blood and lymphatic system disorders,0.4795045812499264,0.5931004963785426,0.6201822004204625
+random,1,size+logreg,Skin and subcutaneous tissue disorders,0.6667790102204618,0.9497615597437544,0.9236159775753328
+random,1,size+logreg,"Congenital, familial and genetic disorders",0.4981865587267537,0.1737335483192267,0.1772950245269796
+random,1,size+logreg,Infections and infestations,0.6204688531972213,0.7735361541825673,0.7049754730203224
+random,1,size+logreg,"Respiratory, thoracic and mediastinal disorders",0.5879256913698938,0.7893442848751586,0.7428170988086895
+random,1,size+logreg,Psychiatric disorders,0.5004708363134076,0.6989854040992797,0.7119831814996496
+random,1,size+logreg,Renal and urinary disorders,0.5622332037680382,0.6734601613951637,0.6384022424667134
+random,1,size+logreg,"Pregnancy, puerperium and perinatal conditions",0.5362464012203796,0.1141028557428314,0.0875963559915907
+random,1,size+logreg,Ear and labyrinth disorders,0.4915000775087501,0.4427356881435637,0.4618079887876664
+random,1,size+logreg,Cardiac disorders,0.5609202517126718,0.7325822733236185,0.6923615977575333
+random,1,size+logreg,Nervous system disorders,0.6453537686189686,0.94553496824191,0.9138051857042748
+random,1,size+logreg,"Injury, poisoning and procedural complications",0.5584558446269179,0.7073955575344768,0.6629292221443588
+random,1,knn5 tanimoto,Hepatobiliary disorders,0.6999687792729183,0.6812505605689696,0.5206727400140154
+random,1,knn5 tanimoto,Metabolism and nutrition disorders,0.5942939810397236,0.7464154178869554,0.6979677645409951
+random,1,knn5 tanimoto,Product issues,0.4722709743163769,0.0156411465558311,0.0154169586545199
+random,1,knn5 tanimoto,Eye disorders,0.6546974518442646,0.7131700887046799,0.613875262789068
+random,1,knn5 tanimoto,Investigations,0.6409634592711823,0.8575568325215546,0.8065872459705676
+random,1,knn5 tanimoto,Musculoskeletal and connective tissue disorders,0.6430574015347243,0.7811706543713364,0.6986685353889278
+random,1,knn5 tanimoto,Gastrointestinal disorders,0.7055798697829466,0.9451256362971088,0.9096005606166784
+random,1,knn5 tanimoto,Social circumstances,0.6211986350898584,0.2627837033679133,0.1758934828311142
+random,1,knn5 tanimoto,Immune system disorders,0.6214339866111859,0.7775201269662848,0.7175893482831114
+random,1,knn5 tanimoto,Reproductive system and breast disorders,0.7286008713962795,0.705604931876819,0.5094604064470918
+random,1,knn5 tanimoto,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.704050389369209,0.4520935340273843,0.263489838822705
+random,1,knn5 tanimoto,General disorders and administration site conditions,0.5984256361884747,0.9241762857357864,0.905395935529082
+random,1,knn5 tanimoto,Endocrine disorders,0.7036030824276528,0.4351911045351102,0.2263489838822705
+random,1,knn5 tanimoto,Surgical and medical procedures,0.6349012177060084,0.2503509078354039,0.1492641906096706
+random,1,knn5 tanimoto,Vascular disorders,0.6465188617360969,0.8377991091505619,0.7764540995094604
+random,1,knn5 tanimoto,Blood and lymphatic system disorders,0.6846540633607181,0.7514630776048986,0.6201822004204625
+random,1,knn5 tanimoto,Skin and subcutaneous tissue disorders,0.5996494740684037,0.9396168035665048,0.9236159775753328
+random,1,knn5 tanimoto,"Congenital, familial and genetic disorders",0.595652072412781,0.2748625598352372,0.1772950245269796
+random,1,knn5 tanimoto,Infections and infestations,0.623004159470217,0.7727008572552199,0.7049754730203224
+random,1,knn5 tanimoto,"Respiratory, thoracic and mediastinal disorders",0.5976398079121321,0.7875503188371191,0.7428170988086895
+random,1,knn5 tanimoto,Psychiatric disorders,0.6589330165757972,0.7939656868516408,0.7119831814996496
+random,1,knn5 tanimoto,Renal and urinary disorders,0.6489128817092035,0.7351283012012874,0.6384022424667134
+random,1,knn5 tanimoto,"Pregnancy, puerperium and perinatal conditions",0.6097464176976976,0.1268032435191073,0.0875963559915907
+random,1,knn5 tanimoto,Ear and labyrinth disorders,0.65374372806642,0.5899852721254032,0.4618079887876664
+random,1,knn5 tanimoto,Cardiac disorders,0.6603927548331615,0.7799375576729308,0.6923615977575333
+random,1,knn5 tanimoto,Nervous system disorders,0.6175639396914164,0.9330811302621492,0.9138051857042748
+random,1,knn5 tanimoto,"Injury, poisoning and procedural complications",0.5949725388841287,0.7203720943551511,0.6629292221443588
+random,1,morgan+logreg,Hepatobiliary disorders,0.6658929290484524,0.660061755754547,0.5206727400140154
+random,1,morgan+logreg,Metabolism and nutrition disorders,0.5905057175040185,0.7602932185577804,0.6979677645409951
+random,1,morgan+logreg,Product issues,0.4354738415612402,0.0200101890716766,0.0154169586545199
+random,1,morgan+logreg,Eye disorders,0.6388689849433026,0.7250256613673367,0.613875262789068
+random,1,morgan+logreg,Investigations,0.6580314272004645,0.880437572278191,0.8065872459705676
+random,1,morgan+logreg,Musculoskeletal and connective tissue disorders,0.6365417163715168,0.7883014344017513,0.6986685353889278
+random,1,morgan+logreg,Gastrointestinal disorders,0.745584830417157,0.958268649361112,0.9096005606166784
+random,1,morgan+logreg,Social circumstances,0.608954896030631,0.2650891011694485,0.1758934828311142
+random,1,morgan+logreg,Immune system disorders,0.6034871034924654,0.7809798984465546,0.7175893482831114
+random,1,morgan+logreg,Reproductive system and breast disorders,0.6788898330728419,0.695467381650133,0.5094604064470918
+random,1,morgan+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6463584225492768,0.4148496647818409,0.263489838822705
+random,1,morgan+logreg,General disorders and administration site conditions,0.6100463073091875,0.9325874170027678,0.905395935529082
+random,1,morgan+logreg,Endocrine disorders,0.6552104042130802,0.3942230503902297,0.2263489838822705
+random,1,morgan+logreg,Surgical and medical procedures,0.6004046820104382,0.2356531681058524,0.1492641906096706
+random,1,morgan+logreg,Vascular disorders,0.6122622366025999,0.8288731040710319,0.7764540995094604
+random,1,morgan+logreg,Blood and lymphatic system disorders,0.6826356009815772,0.767019606886417,0.6201822004204625
+random,1,morgan+logreg,Skin and subcutaneous tissue disorders,0.6437129091761304,0.9506126756784756,0.9236159775753328
+random,1,morgan+logreg,"Congenital, familial and genetic disorders",0.605525600076545,0.2761217071522651,0.1772950245269796
+random,1,morgan+logreg,Infections and infestations,0.6286867531124525,0.7956648216603804,0.7049754730203224
+random,1,morgan+logreg,"Respiratory, thoracic and mediastinal disorders",0.6159304447249474,0.8112785263626892,0.7428170988086895
+random,1,morgan+logreg,Psychiatric disorders,0.6208617575585723,0.7968614281641548,0.7119831814996496
+random,1,morgan+logreg,Renal and urinary disorders,0.6469191432064365,0.7535599974093389,0.6384022424667134
+random,1,morgan+logreg,"Pregnancy, puerperium and perinatal conditions",0.5520333342405895,0.1466172009064371,0.0875963559915907
+random,1,morgan+logreg,Ear and labyrinth disorders,0.5973391129136083,0.5515323280929805,0.4618079887876664
+random,1,morgan+logreg,Cardiac disorders,0.6663134034161128,0.8012948164012883,0.6923615977575333
+random,1,morgan+logreg,Nervous system disorders,0.7173667368590811,0.9608411891377828,0.9138051857042748
+random,1,morgan+logreg,"Injury, poisoning and procedural complications",0.593967836204566,0.7382983799687166,0.6629292221443588
+random,1,morgan+rf,Hepatobiliary disorders,0.7462796543226405,0.7370461121276557,0.5206727400140154
+random,1,morgan+rf,Metabolism and nutrition disorders,0.6236901337930494,0.7816933568077197,0.6979677645409951
+random,1,morgan+rf,Product issues,0.5613616454217161,0.0259162184636443,0.0154169586545199
+random,1,morgan+rf,Eye disorders,0.6987128880783462,0.7714543183437026,0.613875262789068
+random,1,morgan+rf,Investigations,0.7023383336278725,0.9009461906073156,0.8065872459705676
+random,1,morgan+rf,Musculoskeletal and connective tissue disorders,0.6730252078463661,0.8182408470126848,0.6986685353889278
+random,1,morgan+rf,Gastrointestinal disorders,0.7868103649480399,0.9642142937679286,0.9096005606166784
+random,1,morgan+rf,Social circumstances,0.6596544565574958,0.3368678383324641,0.1758934828311142
+random,1,morgan+rf,Immune system disorders,0.6610707192216021,0.8312279331347682,0.7175893482831114
+random,1,morgan+rf,Reproductive system and breast disorders,0.7407081810073802,0.7666837845530055,0.5094604064470918
+random,1,morgan+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7113249165516335,0.5182888429735526,0.263489838822705
+random,1,morgan+rf,General disorders and administration site conditions,0.674811677877312,0.9496640984490148,0.905395935529082
+random,1,morgan+rf,Endocrine disorders,0.7018612261429444,0.4971578250993621,0.2263489838822705
+random,1,morgan+rf,Surgical and medical procedures,0.6392853346579163,0.2476443844262069,0.1492641906096706
+random,1,morgan+rf,Vascular disorders,0.6734452099093373,0.8735501992711188,0.7764540995094604
+random,1,morgan+rf,Blood and lymphatic system disorders,0.7289311932718916,0.8184831264806209,0.6201822004204625
+random,1,morgan+rf,Skin and subcutaneous tissue disorders,0.7027425602218633,0.9626352377715768,0.9236159775753328
+random,1,morgan+rf,"Congenital, familial and genetic disorders",0.635246049009482,0.3092459657353757,0.1772950245269796
+random,1,morgan+rf,Infections and infestations,0.6712844339670111,0.8285555083841256,0.7049754730203224
+random,1,morgan+rf,"Respiratory, thoracic and mediastinal disorders",0.664398227924167,0.8406588414540378,0.7428170988086895
+random,1,morgan+rf,Psychiatric disorders,0.6837547308560883,0.8280505745237798,0.7119831814996496
+random,1,morgan+rf,Renal and urinary disorders,0.6912063839185096,0.796714811853181,0.6384022424667134
+random,1,morgan+rf,"Pregnancy, puerperium and perinatal conditions",0.6106543407572095,0.1970850912037289,0.0875963559915907
+random,1,morgan+rf,Ear and labyrinth disorders,0.670547770860696,0.6489726271252194,0.4618079887876664
+random,1,morgan+rf,Cardiac disorders,0.7209954781801957,0.8478703524714101,0.6923615977575333
+random,1,morgan+rf,Nervous system disorders,0.7769868455505909,0.9723968285515452,0.9138051857042748
+random,1,morgan+rf,"Injury, poisoning and procedural complications",0.6351935353234376,0.7812532234603398,0.6629292221443588
+random,1,desc+rf,Hepatobiliary disorders,0.7406423932810926,0.7279640764814046,0.5206727400140154
+random,1,desc+rf,Metabolism and nutrition disorders,0.6594642867409096,0.8116189586340454,0.6979677645409951
+random,1,desc+rf,Product issues,0.5819178152096779,0.0308025139159617,0.0154169586545199
+random,1,desc+rf,Eye disorders,0.6908392251032435,0.777688148558692,0.613875262789068
+random,1,desc+rf,Investigations,0.6986836583254077,0.901337373743055,0.8065872459705676
+random,1,desc+rf,Musculoskeletal and connective tissue disorders,0.6757936002423494,0.8255522725002142,0.6986685353889278
+random,1,desc+rf,Gastrointestinal disorders,0.8081491154618992,0.9661760255776726,0.9096005606166784
+random,1,desc+rf,Social circumstances,0.6474334243166344,0.3124105601881427,0.1758934828311142
+random,1,desc+rf,Immune system disorders,0.6664500456521514,0.830826424067159,0.7175893482831114
+random,1,desc+rf,Reproductive system and breast disorders,0.7211580915681653,0.7398679308483075,0.5094604064470918
+random,1,desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7270741838541832,0.5158323357418273,0.263489838822705
+random,1,desc+rf,General disorders and administration site conditions,0.6317612067474748,0.9430007389650028,0.905395935529082
+random,1,desc+rf,Endocrine disorders,0.7109946493028916,0.4763003463201707,0.2263489838822705
+random,1,desc+rf,Surgical and medical procedures,0.6311611996905651,0.2543116185259819,0.1492641906096706
+random,1,desc+rf,Vascular disorders,0.656703282468062,0.8621750299422267,0.7764540995094604
+random,1,desc+rf,Blood and lymphatic system disorders,0.7318967745456952,0.8162549676894401,0.6201822004204625
+random,1,desc+rf,Skin and subcutaneous tissue disorders,0.6546851679185213,0.9559028874344226,0.9236159775753328
+random,1,desc+rf,"Congenital, familial and genetic disorders",0.6075152914497692,0.3042118913134436,0.1772950245269796
+random,1,desc+rf,Infections and infestations,0.6859934180732614,0.8401510881798953,0.7049754730203224
+random,1,desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6684792513301507,0.8379385218352533,0.7428170988086895
+random,1,desc+rf,Psychiatric disorders,0.6825467488952525,0.8309454685833249,0.7119831814996496
+random,1,desc+rf,Renal and urinary disorders,0.6846112244233341,0.7904343795745682,0.6384022424667134
+random,1,desc+rf,"Pregnancy, puerperium and perinatal conditions",0.627520005743049,0.2095607464731931,0.0875963559915907
+random,1,desc+rf,Ear and labyrinth disorders,0.6689474675011915,0.6431486752637922,0.4618079887876664
+random,1,desc+rf,Cardiac disorders,0.7193167833106622,0.8423195403472035,0.6923615977575333
+random,1,desc+rf,Nervous system disorders,0.7544249888364754,0.9664202432439494,0.9138051857042748
+random,1,desc+rf,"Injury, poisoning and procedural complications",0.6296325750567154,0.7768401166372945,0.6629292221443588
+random,1,morgan+desc+rf,Hepatobiliary disorders,0.7439364320497097,0.7321778281985336,0.5206727400140154
+random,1,morgan+desc+rf,Metabolism and nutrition disorders,0.6550996512785228,0.8097122163075612,0.6979677645409951
+random,1,morgan+desc+rf,Product issues,0.6126950156130572,0.0278479165092254,0.0154169586545199
+random,1,morgan+desc+rf,Eye disorders,0.6902486420160604,0.7779239297651952,0.613875262789068
+random,1,morgan+desc+rf,Investigations,0.7031780130632055,0.9040082898433792,0.8065872459705676
+random,1,morgan+desc+rf,Musculoskeletal and connective tissue disorders,0.6750741882551099,0.8256410297090268,0.6986685353889278
+random,1,morgan+desc+rf,Gastrointestinal disorders,0.7908785849358887,0.964080103549624,0.9096005606166784
+random,1,morgan+desc+rf,Social circumstances,0.6623215037107453,0.3268909911197129,0.1758934828311142
+random,1,morgan+desc+rf,Immune system disorders,0.6709945663312499,0.8338503369188521,0.7175893482831114
+random,1,morgan+desc+rf,Reproductive system and breast disorders,0.7347481920509,0.7541831282272407,0.5094604064470918
+random,1,morgan+desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7372445992950599,0.5277864973012116,0.263489838822705
+random,1,morgan+desc+rf,General disorders and administration site conditions,0.644930572442439,0.9405635560052812,0.905395935529082
+random,1,morgan+desc+rf,Endocrine disorders,0.7164905409249912,0.4962021482290775,0.2263489838822705
+random,1,morgan+desc+rf,Surgical and medical procedures,0.6333137287006497,0.2498176709012774,0.1492641906096706
+random,1,morgan+desc+rf,Vascular disorders,0.6706958926220082,0.8687353992068466,0.7764540995094604
+random,1,morgan+desc+rf,Blood and lymphatic system disorders,0.7389271489043046,0.8210797533781461,0.6201822004204625
+random,1,morgan+desc+rf,Skin and subcutaneous tissue disorders,0.657249017614098,0.9546778360676932,0.9236159775753328
+random,1,morgan+desc+rf,"Congenital, familial and genetic disorders",0.6237185599086474,0.3117751469876396,0.1772950245269796
+random,1,morgan+desc+rf,Infections and infestations,0.6844563985087528,0.8391156065426918,0.7049754730203224
+random,1,morgan+desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6736103992871152,0.8412274235049271,0.7428170988086895
+random,1,morgan+desc+rf,Psychiatric disorders,0.6930924982297662,0.8372316482738797,0.7119831814996496
+random,1,morgan+desc+rf,Renal and urinary disorders,0.6869399261783535,0.7935645648149784,0.6384022424667134
+random,1,morgan+desc+rf,"Pregnancy, puerperium and perinatal conditions",0.6559640966153022,0.2221964004271435,0.0875963559915907
+random,1,morgan+desc+rf,Ear and labyrinth disorders,0.6719704916048457,0.6505070489750479,0.4618079887876664
+random,1,morgan+desc+rf,Cardiac disorders,0.7222445295892818,0.8481201516272373,0.6923615977575333
+random,1,morgan+desc+rf,Nervous system disorders,0.7735672264254159,0.9701964361109816,0.9138051857042748
+random,1,morgan+desc+rf,"Injury, poisoning and procedural complications",0.6381661496247413,0.7816319195245933,0.6629292221443588
+random,1,morgan+desc+rf-multi,Hepatobiliary disorders,0.7035858068071005,0.6933690016633054,0.5206727400140154
+random,1,morgan+desc+rf-multi,Metabolism and nutrition disorders,0.6366459272904046,0.794078200657877,0.6979677645409951
+random,1,morgan+desc+rf-multi,Product issues,0.6120607078560913,0.0310218485782346,0.0154169586545199
+random,1,morgan+desc+rf-multi,Eye disorders,0.6595205708827319,0.7412773615259716,0.613875262789068
+random,1,morgan+desc+rf-multi,Investigations,0.6839844362143565,0.8934089902376685,0.8065872459705676
+random,1,morgan+desc+rf-multi,Musculoskeletal and connective tissue disorders,0.6661002091681409,0.8202558568689045,0.6986685353889278
+random,1,morgan+desc+rf-multi,Gastrointestinal disorders,0.7730559566731545,0.961327381095668,0.9096005606166784
+random,1,morgan+desc+rf-multi,Social circumstances,0.6599755590965193,0.3187714615765557,0.1758934828311142
+random,1,morgan+desc+rf-multi,Immune system disorders,0.6404051283733813,0.8118617570292521,0.7175893482831114
+random,1,morgan+desc+rf-multi,Reproductive system and breast disorders,0.7142631057945552,0.73401850069689,0.5094604064470918
+random,1,morgan+desc+rf-multi,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6682115748434564,0.4493385608921261,0.263489838822705
+random,1,morgan+desc+rf-multi,General disorders and administration site conditions,0.6027376654660346,0.9318988184971112,0.905395935529082
+random,1,morgan+desc+rf-multi,Endocrine disorders,0.6766744630587677,0.4338288277138066,0.2263489838822705
+random,1,morgan+desc+rf-multi,Surgical and medical procedures,0.626565940051717,0.2414755466746934,0.1492641906096706
+random,1,morgan+desc+rf-multi,Vascular disorders,0.6637648476892364,0.8587107761976881,0.7764540995094604
+random,1,morgan+desc+rf-multi,Blood and lymphatic system disorders,0.7036358401145829,0.7902192259124852,0.6201822004204625
+random,1,morgan+desc+rf-multi,Skin and subcutaneous tissue disorders,0.6754229824102034,0.9563118955972828,0.9236159775753328
+random,1,morgan+desc+rf-multi,"Congenital, familial and genetic disorders",0.6021299185496126,0.2756058775514686,0.1772950245269796
+random,1,morgan+desc+rf-multi,Infections and infestations,0.6634578875100281,0.8241576921120177,0.7049754730203224
+random,1,morgan+desc+rf-multi,"Respiratory, thoracic and mediastinal disorders",0.646235855539653,0.8153018510742708,0.7428170988086895
+random,1,morgan+desc+rf-multi,Psychiatric disorders,0.6775588316007273,0.8258606433428426,0.7119831814996496
+random,1,morgan+desc+rf-multi,Renal and urinary disorders,0.6712450131994501,0.7725994176502845,0.6384022424667134
+random,1,morgan+desc+rf-multi,"Pregnancy, puerperium and perinatal conditions",0.6394058717506474,0.2129154880487869,0.0875963559915907
+random,1,morgan+desc+rf-multi,Ear and labyrinth disorders,0.6196666716404674,0.578569629390327,0.4618079887876664
+random,1,morgan+desc+rf-multi,Cardiac disorders,0.702906365676602,0.8246539365626904,0.6923615977575333
+random,1,morgan+desc+rf-multi,Nervous system disorders,0.75946506901063,0.9658569500627792,0.9138051857042748
+random,1,morgan+desc+rf-multi,"Injury, poisoning and procedural complications",0.6053011092866636,0.7512442695214748,0.6629292221443588
+random,1,morgan+desc+lgbm,Hepatobiliary disorders,0.7319139600783545,0.7212821718894785,0.5206727400140154
+random,1,morgan+desc+lgbm,Metabolism and nutrition disorders,0.6295678898504047,0.7891324256946471,0.6979677645409951
+random,1,morgan+desc+lgbm,Product issues,0.5601211052719302,0.0329671568900609,0.0154169586545199
+random,1,morgan+desc+lgbm,Eye disorders,0.6726695953745955,0.746072514082899,0.613875262789068
+random,1,morgan+desc+lgbm,Investigations,0.696617718102933,0.9009479788833168,0.8065872459705676
+random,1,morgan+desc+lgbm,Musculoskeletal and connective tissue disorders,0.6726835147864392,0.821424964791593,0.6986685353889278
+random,1,morgan+desc+lgbm,Gastrointestinal disorders,0.8000571067728618,0.9673655988530112,0.9096005606166784
+random,1,morgan+desc+lgbm,Social circumstances,0.6495277236028605,0.3126772079526155,0.1758934828311142
+random,1,morgan+desc+lgbm,Immune system disorders,0.644914118519661,0.8200680683964992,0.7175893482831114
+random,1,morgan+desc+lgbm,Reproductive system and breast disorders,0.7366078125522448,0.7516132452060231,0.5094604064470918
+random,1,morgan+desc+lgbm,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7310973286490642,0.5170375310124983,0.263489838822705
+random,1,morgan+desc+lgbm,General disorders and administration site conditions,0.6485688647892663,0.9425526798816048,0.905395935529082
+random,1,morgan+desc+lgbm,Endocrine disorders,0.7149416259782283,0.4977702190209242,0.2263489838822705
+random,1,morgan+desc+lgbm,Surgical and medical procedures,0.6254275157869531,0.2378154386993073,0.1492641906096706
+random,1,morgan+desc+lgbm,Vascular disorders,0.6456725472303826,0.8532571471556011,0.7764540995094604
+random,1,morgan+desc+lgbm,Blood and lymphatic system disorders,0.726926926273165,0.8161086124447774,0.6201822004204625
+random,1,morgan+desc+lgbm,Skin and subcutaneous tissue disorders,0.6171868388184212,0.9459921876030972,0.9236159775753328
+random,1,morgan+desc+lgbm,"Congenital, familial and genetic disorders",0.6181883400248976,0.3020446556387621,0.1772950245269796
+random,1,morgan+desc+lgbm,Infections and infestations,0.6703131508777437,0.8297589643224287,0.7049754730203224
+random,1,morgan+desc+lgbm,"Respiratory, thoracic and mediastinal disorders",0.6536746008240142,0.8317720571720946,0.7428170988086895
+random,1,morgan+desc+lgbm,Psychiatric disorders,0.6819238393010252,0.826004329731561,0.7119831814996496
+random,1,morgan+desc+lgbm,Renal and urinary disorders,0.685583698659965,0.7917533172850834,0.6384022424667134
+random,1,morgan+desc+lgbm,"Pregnancy, puerperium and perinatal conditions",0.6075959931278303,0.2140696967353444,0.0875963559915907
+random,1,morgan+desc+lgbm,Ear and labyrinth disorders,0.6672212537137366,0.6547941064620774,0.4618079887876664
+random,1,morgan+desc+lgbm,Cardiac disorders,0.7080699110985402,0.832625909249319,0.6923615977575333
+random,1,morgan+desc+lgbm,Nervous system disorders,0.7452650978269536,0.9662922186045692,0.9138051857042748
+random,1,morgan+desc+lgbm,"Injury, poisoning and procedural complications",0.6332492389856161,0.7807949697075631,0.6629292221443588
+random,2,prior,Hepatobiliary disorders,0.5,0.5207995764398203,0.5206727400140154
+random,2,prior,Metabolism and nutrition disorders,0.5,0.6978585202060812,0.6979677645409951
+random,2,prior,Product issues,0.5,0.0154498110290793,0.0154169586545199
+random,2,prior,Eye disorders,0.5,0.6139582402692159,0.613875262789068
+random,2,prior,Investigations,0.5,0.8065011174462395,0.8065872459705676
+random,2,prior,Musculoskeletal and connective tissue disorders,0.5,0.6986412266595193,0.6986685353889278
+random,2,prior,Gastrointestinal disorders,0.5,0.9095035215462044,0.9096005606166784
+random,2,prior,Social circumstances,0.5,0.1759402420073151,0.1758934828311142
+random,2,prior,Immune system disorders,0.5,0.7175466538881172,0.7175893482831114
+random,2,prior,Reproductive system and breast disorders,0.5,0.5096333815236255,0.5094604064470918
+random,2,prior,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5,0.2636059232095817,0.263489838822705
+random,2,prior,General disorders and administration site conditions,0.5,0.9054272996651044,0.905395935529082
+random,2,prior,Endocrine disorders,0.5,0.2264126354675135,0.2263489838822705
+random,2,prior,Surgical and medical procedures,0.5,0.1493080632105022,0.1492641906096706
+random,2,prior,Vascular disorders,0.5,0.7763842356830162,0.7764540995094604
+random,2,prior,Blood and lymphatic system disorders,0.5,0.6201713767262549,0.6201822004204625
+random,2,prior,Skin and subcutaneous tissue disorders,0.5,0.9236770648051136,0.9236159775753328
+random,2,prior,"Congenital, familial and genetic disorders",0.5,0.1772651501614916,0.1772950245269796
+random,2,prior,Infections and infestations,0.5,0.7050397434543777,0.7049754730203224
+random,2,prior,"Respiratory, thoracic and mediastinal disorders",0.5,0.7426759994747799,0.7428170988086895
+random,2,prior,Psychiatric disorders,0.5,0.7119870914992866,0.7119831814996496
+random,2,prior,Renal and urinary disorders,0.5,0.6385140063188844,0.6384022424667134
+random,2,prior,"Pregnancy, puerperium and perinatal conditions",0.5,0.0876567741201887,0.0875963559915907
+random,2,prior,Ear and labyrinth disorders,0.5,0.4619533515265222,0.4618079887876664
+random,2,prior,Cardiac disorders,0.5,0.6923705968827919,0.6923615977575333
+random,2,prior,Nervous system disorders,0.5,0.9138139841188622,0.9138051857042748
+random,2,prior,"Injury, poisoning and procedural complications",0.5,0.6630020623008428,0.6629292221443588
+random,2,size+logreg,Hepatobiliary disorders,0.4714220721945578,0.4794580006202,0.5206727400140154
+random,2,size+logreg,Metabolism and nutrition disorders,0.5462615270154775,0.7313194398129734,0.6979677645409951
+random,2,size+logreg,Product issues,0.6757909814890855,0.0380157259874873,0.0154169586545199
+random,2,size+logreg,Eye disorders,0.497994183885946,0.5921510101431506,0.613875262789068
+random,2,size+logreg,Investigations,0.6102062847464557,0.8530526781009804,0.8065872459705676
+random,2,size+logreg,Musculoskeletal and connective tissue disorders,0.597857171369362,0.7579986065550319,0.6986685353889278
+random,2,size+logreg,Gastrointestinal disorders,0.5820234433558469,0.9288980693423684,0.9096005606166784
+random,2,size+logreg,Social circumstances,0.5124002503597571,0.1823568483388744,0.1758934828311142
+random,2,size+logreg,Immune system disorders,0.6081731388881013,0.7862725111311388,0.7175893482831114
+random,2,size+logreg,Reproductive system and breast disorders,0.4409100627195027,0.4589588515427,0.5094604064470918
+random,2,size+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.5274376498368575,0.298923688744639,0.263489838822705
+random,2,size+logreg,General disorders and administration site conditions,0.54363377685131,0.915951764380986,0.905395935529082
+random,2,size+logreg,Endocrine disorders,0.4938217460286312,0.2264751441956377,0.2263489838822705
+random,2,size+logreg,Surgical and medical procedures,0.5163996574137852,0.1496045735598843,0.1492641906096706
+random,2,size+logreg,Vascular disorders,0.5545716104400441,0.807832665878875,0.7764540995094604
+random,2,size+logreg,Blood and lymphatic system disorders,0.4781330614709324,0.5926184469961171,0.6201822004204625
+random,2,size+logreg,Skin and subcutaneous tissue disorders,0.672770233981303,0.950344781648399,0.9236159775753328
+random,2,size+logreg,"Congenital, familial and genetic disorders",0.4914827373057709,0.175052300054328,0.1772950245269796
+random,2,size+logreg,Infections and infestations,0.6190653968463466,0.7756204926777842,0.7049754730203224
+random,2,size+logreg,"Respiratory, thoracic and mediastinal disorders",0.5876163743117957,0.7911987704826096,0.7428170988086895
+random,2,size+logreg,Psychiatric disorders,0.501434063806142,0.6964556953911833,0.7119831814996496
+random,2,size+logreg,Renal and urinary disorders,0.5655547672709289,0.6786107411348672,0.6384022424667134
+random,2,size+logreg,"Pregnancy, puerperium and perinatal conditions",0.5274713414519081,0.1121704147591681,0.0875963559915907
+random,2,size+logreg,Ear and labyrinth disorders,0.507185057845478,0.4632529742889953,0.4618079887876664
+random,2,size+logreg,Cardiac disorders,0.5639134208184294,0.7352449842616353,0.6923615977575333
+random,2,size+logreg,Nervous system disorders,0.6558900203064837,0.945988867179171,0.9138051857042748
+random,2,size+logreg,"Injury, poisoning and procedural complications",0.5544380304292473,0.7091553676299921,0.6629292221443588
+random,2,knn5 tanimoto,Hepatobiliary disorders,0.7185594326562577,0.7029845786279724,0.5206727400140154
+random,2,knn5 tanimoto,Metabolism and nutrition disorders,0.6001751875095429,0.7546168948314372,0.6979677645409951
+random,2,knn5 tanimoto,Product issues,0.5138148561801972,0.0204077615752651,0.0154169586545199
+random,2,knn5 tanimoto,Eye disorders,0.6497292521589891,0.7080240237040079,0.613875262789068
+random,2,knn5 tanimoto,Investigations,0.6661778116655197,0.8689603116132488,0.8065872459705676
+random,2,knn5 tanimoto,Musculoskeletal and connective tissue disorders,0.6456601588806677,0.7826720581888539,0.6986685353889278
+random,2,knn5 tanimoto,Gastrointestinal disorders,0.6935779409977452,0.9436442514602544,0.9096005606166784
+random,2,knn5 tanimoto,Social circumstances,0.5990314203459898,0.2487071704914845,0.1758934828311142
+random,2,knn5 tanimoto,Immune system disorders,0.6000759236122697,0.7671972693325542,0.7175893482831114
+random,2,knn5 tanimoto,Reproductive system and breast disorders,0.7195101256786942,0.701537458971379,0.5094604064470918
+random,2,knn5 tanimoto,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6866704401057662,0.4311293235042468,0.263489838822705
+random,2,knn5 tanimoto,General disorders and administration site conditions,0.6131677164451317,0.9263365704565184,0.905395935529082
+random,2,knn5 tanimoto,Endocrine disorders,0.712117668576637,0.4407865418463491,0.2263489838822705
+random,2,knn5 tanimoto,Surgical and medical procedures,0.6043463187517226,0.2045039491115632,0.1492641906096706
+random,2,knn5 tanimoto,Vascular disorders,0.6536066593536645,0.84002612636799,0.7764540995094604
+random,2,knn5 tanimoto,Blood and lymphatic system disorders,0.7060402921072042,0.773495088775431,0.6201822004204625
+random,2,knn5 tanimoto,Skin and subcutaneous tissue disorders,0.6177163284146001,0.9407457206041542,0.9236159775753328
+random,2,knn5 tanimoto,"Congenital, familial and genetic disorders",0.5787029382423172,0.2637787405868874,0.1772950245269796
+random,2,knn5 tanimoto,Infections and infestations,0.626941154655902,0.7756553794348797,0.7049754730203224
+random,2,knn5 tanimoto,"Respiratory, thoracic and mediastinal disorders",0.591958418673462,0.7858339893165186,0.7428170988086895
+random,2,knn5 tanimoto,Psychiatric disorders,0.6590027560075336,0.7963172780204056,0.7119831814996496
+random,2,knn5 tanimoto,Renal and urinary disorders,0.6607381077972265,0.7423706698272537,0.6384022424667134
+random,2,knn5 tanimoto,"Pregnancy, puerperium and perinatal conditions",0.6125714837855243,0.1264567043249502,0.0875963559915907
+random,2,knn5 tanimoto,Ear and labyrinth disorders,0.6267620563143901,0.5648301599038744,0.4618079887876664
+random,2,knn5 tanimoto,Cardiac disorders,0.6619663518703134,0.7810030994361462,0.6923615977575333
+random,2,knn5 tanimoto,Nervous system disorders,0.6255870766672348,0.9349423753278806,0.9138051857042748
+random,2,knn5 tanimoto,"Injury, poisoning and procedural complications",0.5906609180243485,0.7195959408494772,0.6629292221443588
+random,2,morgan+logreg,Hepatobiliary disorders,0.6777777771103437,0.6755152258144866,0.5206727400140154
+random,2,morgan+logreg,Metabolism and nutrition disorders,0.6026063568305243,0.7634701443383715,0.6979677645409951
+random,2,morgan+logreg,Product issues,0.3825671416995354,0.0269852397953443,0.0154169586545199
+random,2,morgan+logreg,Eye disorders,0.6410309006707887,0.7274212423468215,0.613875262789068
+random,2,morgan+logreg,Investigations,0.6766315849122707,0.8875054215152538,0.8065872459705676
+random,2,morgan+logreg,Musculoskeletal and connective tissue disorders,0.6339021588282828,0.7922324920080156,0.6986685353889278
+random,2,morgan+logreg,Gastrointestinal disorders,0.7427407728929742,0.9611449812104356,0.9096005606166784
+random,2,morgan+logreg,Social circumstances,0.620921337520113,0.2674988903546264,0.1758934828311142
+random,2,morgan+logreg,Immune system disorders,0.6105733947144377,0.7907706705489673,0.7175893482831114
+random,2,morgan+logreg,Reproductive system and breast disorders,0.6876530002524811,0.7090246405160812,0.5094604064470918
+random,2,morgan+logreg,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6489029521022613,0.4341974261285862,0.263489838822705
+random,2,morgan+logreg,General disorders and administration site conditions,0.6306853396509845,0.9341044124767516,0.905395935529082
+random,2,morgan+logreg,Endocrine disorders,0.6707823676253328,0.4139330001035695,0.2263489838822705
+random,2,morgan+logreg,Surgical and medical procedures,0.6357252459654852,0.2604913168419716,0.1492641906096706
+random,2,morgan+logreg,Vascular disorders,0.6417084037705241,0.8434304063841876,0.7764540995094604
+random,2,morgan+logreg,Blood and lymphatic system disorders,0.6738837383220573,0.7603149739544162,0.6201822004204625
+random,2,morgan+logreg,Skin and subcutaneous tissue disorders,0.6540091202870608,0.95003408011837,0.9236159775753328
+random,2,morgan+logreg,"Congenital, familial and genetic disorders",0.5834918617516369,0.2682808066179939,0.1772950245269796
+random,2,morgan+logreg,Infections and infestations,0.652071583093879,0.8138960486109648,0.7049754730203224
+random,2,morgan+logreg,"Respiratory, thoracic and mediastinal disorders",0.6311708243070349,0.8238197074873185,0.7428170988086895
+random,2,morgan+logreg,Psychiatric disorders,0.6492734227407526,0.8067889569262843,0.7119831814996496
+random,2,morgan+logreg,Renal and urinary disorders,0.6460294859250233,0.7578534318045539,0.6384022424667134
+random,2,morgan+logreg,"Pregnancy, puerperium and perinatal conditions",0.5711522005733848,0.1765106313621294,0.0875963559915907
+random,2,morgan+logreg,Ear and labyrinth disorders,0.607939172206101,0.5636379179585951,0.4618079887876664
+random,2,morgan+logreg,Cardiac disorders,0.6737886956435688,0.8085826053087534,0.6923615977575333
+random,2,morgan+logreg,Nervous system disorders,0.7334542668481278,0.960485187679355,0.9138051857042748
+random,2,morgan+logreg,"Injury, poisoning and procedural complications",0.5812542801298759,0.7284395961880398,0.6629292221443588
+random,2,morgan+rf,Hepatobiliary disorders,0.7522952537340546,0.7603899927429374,0.5206727400140154
+random,2,morgan+rf,Metabolism and nutrition disorders,0.6258492672435637,0.7840758331646559,0.6979677645409951
+random,2,morgan+rf,Product issues,0.6355800849573974,0.0447530644358113,0.0154169586545199
+random,2,morgan+rf,Eye disorders,0.68893662078235,0.7734090270316326,0.613875262789068
+random,2,morgan+rf,Investigations,0.7164573047710278,0.9087154711539972,0.8065872459705676
+random,2,morgan+rf,Musculoskeletal and connective tissue disorders,0.669871062576685,0.8177531658855312,0.6986685353889278
+random,2,morgan+rf,Gastrointestinal disorders,0.7755572317380196,0.96388760213429,0.9096005606166784
+random,2,morgan+rf,Social circumstances,0.6444015013113514,0.3352891336693072,0.1758934828311142
+random,2,morgan+rf,Immune system disorders,0.6662180315423856,0.8371809856464892,0.7175893482831114
+random,2,morgan+rf,Reproductive system and breast disorders,0.7423167168136984,0.7646999147854107,0.5094604064470918
+random,2,morgan+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7179683946317422,0.5212899989146814,0.263489838822705
+random,2,morgan+rf,General disorders and administration site conditions,0.6593276219515722,0.94390542568688,0.905395935529082
+random,2,morgan+rf,Endocrine disorders,0.7211866262476258,0.5135892194964666,0.2263489838822705
+random,2,morgan+rf,Surgical and medical procedures,0.6487334105306702,0.2613475688338776,0.1492641906096706
+random,2,morgan+rf,Vascular disorders,0.6892805002267076,0.8836020949570524,0.7764540995094604
+random,2,morgan+rf,Blood and lymphatic system disorders,0.7330149651800668,0.8249099691617034,0.6201822004204625
+random,2,morgan+rf,Skin and subcutaneous tissue disorders,0.7115014020955119,0.9626476207298048,0.9236159775753328
+random,2,morgan+rf,"Congenital, familial and genetic disorders",0.6084586475231613,0.3035093173194885,0.1772950245269796
+random,2,morgan+rf,Infections and infestations,0.6722059437443261,0.8301536456383223,0.7049754730203224
+random,2,morgan+rf,"Respiratory, thoracic and mediastinal disorders",0.6707739495745777,0.8466019022443844,0.7428170988086895
+random,2,morgan+rf,Psychiatric disorders,0.6883212020908361,0.8366458999353628,0.7119831814996496
+random,2,morgan+rf,Renal and urinary disorders,0.6985978189178748,0.797420914435451,0.6384022424667134
+random,2,morgan+rf,"Pregnancy, puerperium and perinatal conditions",0.6050145874384864,0.2085879238275288,0.0875963559915907
+random,2,morgan+rf,Ear and labyrinth disorders,0.6609598660617262,0.6309013233260965,0.4618079887876664
+random,2,morgan+rf,Cardiac disorders,0.7122839974025811,0.8474855437319023,0.6923615977575333
+random,2,morgan+rf,Nervous system disorders,0.7979363907518042,0.9751375653570344,0.9138051857042748
+random,2,morgan+rf,"Injury, poisoning and procedural complications",0.6281044428325557,0.7729658737008555,0.6629292221443588
+random,2,desc+rf,Hepatobiliary disorders,0.7479032207079112,0.7458681766886306,0.5206727400140154
+random,2,desc+rf,Metabolism and nutrition disorders,0.6512077125466238,0.8018087424696663,0.6979677645409951
+random,2,desc+rf,Product issues,0.7020297243165251,0.0366315390485164,0.0154169586545199
+random,2,desc+rf,Eye disorders,0.664953003816418,0.7545998424735281,0.613875262789068
+random,2,desc+rf,Investigations,0.7029396875612538,0.9031603849073708,0.8065872459705676
+random,2,desc+rf,Musculoskeletal and connective tissue disorders,0.6716129983215681,0.8200258470151912,0.6986685353889278
+random,2,desc+rf,Gastrointestinal disorders,0.776283061280496,0.961895074165167,0.9096005606166784
+random,2,desc+rf,Social circumstances,0.637235844571283,0.3158328590460059,0.1758934828311142
+random,2,desc+rf,Immune system disorders,0.6481010018629195,0.825494457601885,0.7175893482831114
+random,2,desc+rf,Reproductive system and breast disorders,0.7167751857573463,0.7370298629485164,0.5094604064470918
+random,2,desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7424892079031518,0.5471520993155751,0.263489838822705
+random,2,desc+rf,General disorders and administration site conditions,0.5921336208194234,0.9236352716474204,0.905395935529082
+random,2,desc+rf,Endocrine disorders,0.7325452542975507,0.4900241328128244,0.2263489838822705
+random,2,desc+rf,Surgical and medical procedures,0.6051838963975674,0.2521771784212677,0.1492641906096706
+random,2,desc+rf,Vascular disorders,0.674925388147438,0.8682530398747955,0.7764540995094604
+random,2,desc+rf,Blood and lymphatic system disorders,0.7290981032576946,0.8242856635204554,0.6201822004204625
+random,2,desc+rf,Skin and subcutaneous tissue disorders,0.6601624207421484,0.951787057597736,0.9236159775753328
+random,2,desc+rf,"Congenital, familial and genetic disorders",0.6056077706909473,0.3092201620716436,0.1772950245269796
+random,2,desc+rf,Infections and infestations,0.687221621646557,0.8427600654365879,0.7049754730203224
+random,2,desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6675805374619085,0.8411063765675463,0.7428170988086895
+random,2,desc+rf,Psychiatric disorders,0.6833295926240975,0.8319591982216611,0.7119831814996496
+random,2,desc+rf,Renal and urinary disorders,0.6809893162195594,0.785863850675244,0.6384022424667134
+random,2,desc+rf,"Pregnancy, puerperium and perinatal conditions",0.6289873152812798,0.208164402344246,0.0875963559915907
+random,2,desc+rf,Ear and labyrinth disorders,0.626206274293964,0.5908161410624477,0.4618079887876664
+random,2,desc+rf,Cardiac disorders,0.7230942800292379,0.8501750054405652,0.6923615977575333
+random,2,desc+rf,Nervous system disorders,0.7628252136344609,0.9695620222935812,0.9138051857042748
+random,2,desc+rf,"Injury, poisoning and procedural complications",0.6184808232660268,0.7739788247375624,0.6629292221443588
+random,2,morgan+desc+rf,Hepatobiliary disorders,0.7549283888840098,0.7513613917981784,0.5206727400140154
+random,2,morgan+desc+rf,Metabolism and nutrition disorders,0.6416908158936154,0.7969171446393828,0.6979677645409951
+random,2,morgan+desc+rf,Product issues,0.6450772413543012,0.0337699992834577,0.0154169586545199
+random,2,morgan+desc+rf,Eye disorders,0.6768885167636625,0.7635700933401764,0.613875262789068
+random,2,morgan+desc+rf,Investigations,0.7058943509379934,0.9049032331488422,0.8065872459705676
+random,2,morgan+desc+rf,Musculoskeletal and connective tissue disorders,0.6816704255031842,0.8278677640568537,0.6986685353889278
+random,2,morgan+desc+rf,Gastrointestinal disorders,0.7903992897982737,0.9682790826754896,0.9096005606166784
+random,2,morgan+desc+rf,Social circumstances,0.6477719067521334,0.3148456099526137,0.1758934828311142
+random,2,morgan+desc+rf,Immune system disorders,0.660402737385757,0.8319390078583808,0.7175893482831114
+random,2,morgan+desc+rf,Reproductive system and breast disorders,0.7247047787374269,0.7507557648393708,0.5094604064470918
+random,2,morgan+desc+rf,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7454846202003814,0.5479568249034118,0.263489838822705
+random,2,morgan+desc+rf,General disorders and administration site conditions,0.6077806084403393,0.931028764314328,0.905395935529082
+random,2,morgan+desc+rf,Endocrine disorders,0.7466992803664907,0.512821401266112,0.2263489838822705
+random,2,morgan+desc+rf,Surgical and medical procedures,0.6238554595298955,0.2509905874388365,0.1492641906096706
+random,2,morgan+desc+rf,Vascular disorders,0.6783742092947778,0.8740658034002313,0.7764540995094604
+random,2,morgan+desc+rf,Blood and lymphatic system disorders,0.7402554261732608,0.83032498252614,0.6201822004204625
+random,2,morgan+desc+rf,Skin and subcutaneous tissue disorders,0.6687157699734059,0.9538727947438856,0.9236159775753328
+random,2,morgan+desc+rf,"Congenital, familial and genetic disorders",0.6197107017781041,0.303477867279136,0.1772950245269796
+random,2,morgan+desc+rf,Infections and infestations,0.6957005363219275,0.8464372591758871,0.7049754730203224
+random,2,morgan+desc+rf,"Respiratory, thoracic and mediastinal disorders",0.6781049948847786,0.8478161290990307,0.7428170988086895
+random,2,morgan+desc+rf,Psychiatric disorders,0.6875276110985025,0.8349060825276331,0.7119831814996496
+random,2,morgan+desc+rf,Renal and urinary disorders,0.6906736390436644,0.7950075061472532,0.6384022424667134
+random,2,morgan+desc+rf,"Pregnancy, puerperium and perinatal conditions",0.6337330929463076,0.2179753826706996,0.0875963559915907
+random,2,morgan+desc+rf,Ear and labyrinth disorders,0.6425023343367443,0.6162038218758822,0.4618079887876664
+random,2,morgan+desc+rf,Cardiac disorders,0.7180540656455707,0.8484020927546135,0.6923615977575333
+random,2,morgan+desc+rf,Nervous system disorders,0.7663025296864332,0.9686825135286724,0.9138051857042748
+random,2,morgan+desc+rf,"Injury, poisoning and procedural complications",0.636851076161355,0.7797948054271588,0.6629292221443588
+random,2,morgan+desc+rf-multi,Hepatobiliary disorders,0.7183560130452683,0.7069217844546848,0.5206727400140154
+random,2,morgan+desc+rf-multi,Metabolism and nutrition disorders,0.6432812747948509,0.7950398005130739,0.6979677645409951
+random,2,morgan+desc+rf-multi,Product issues,0.5905494754112943,0.03139512956582212,0.015416958654519973
+random,2,morgan+desc+rf-multi,Eye disorders,0.6618685418861501,0.748378285564848,0.613875262789068
+random,2,morgan+desc+rf-multi,Investigations,0.6913401321954478,0.8938891178895357,0.8065872459705676
+random,2,morgan+desc+rf-multi,Musculoskeletal and connective tissue disorders,0.673369155777611,0.8177546385700893,0.6986685353889278
+random,2,morgan+desc+rf-multi,Gastrointestinal disorders,0.762909175480958,0.96110447590927,0.9096005606166784
+random,2,morgan+desc+rf-multi,Social circumstances,0.6478815263345542,0.29215711280263446,0.17589348283111422
+random,2,morgan+desc+rf-multi,Immune system disorders,0.6310891608446788,0.8094748964783488,0.7175893482831114
+random,2,morgan+desc+rf-multi,Reproductive system and breast disorders,0.7112445372583102,0.723588107862036,0.5094604064470918
+random,2,morgan+desc+rf-multi,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.6842046759424247,0.4538535296491039,0.263489838822705
+random,2,morgan+desc+rf-multi,General disorders and administration site conditions,0.6133627073909065,0.9297675613810231,0.905395935529082
+random,2,morgan+desc+rf-multi,Endocrine disorders,0.6975733389166111,0.46335392080664406,0.2263489838822705
+random,2,morgan+desc+rf-multi,Surgical and medical procedures,0.6314954086024909,0.25378371166608293,0.14926419060967064
+random,2,morgan+desc+rf-multi,Vascular disorders,0.6746944380878052,0.8638430657153785,0.7764540995094604
+random,2,morgan+desc+rf-multi,Blood and lymphatic system disorders,0.7175386145215821,0.8051135368344573,0.6201822004204625
+random,2,morgan+desc+rf-multi,Skin and subcutaneous tissue disorders,0.6994794057895766,0.9588623692020077,0.9236159775753329
+random,2,morgan+desc+rf-multi,"Congenital, familial and genetic disorders",0.6091921717086761,0.2841081586712927,0.17729502452697968
+random,2,morgan+desc+rf-multi,Infections and infestations,0.6787227429872619,0.8312236246308162,0.7049754730203224
+random,2,morgan+desc+rf-multi,"Respiratory, thoracic and mediastinal disorders",0.6713090076497363,0.8396527048302748,0.7428170988086895
+random,2,morgan+desc+rf-multi,Psychiatric disorders,0.6874364537798181,0.8303079549749267,0.7119831814996496
+random,2,morgan+desc+rf-multi,Renal and urinary disorders,0.6658048273394173,0.7695486430032699,0.6384022424667134
+random,2,morgan+desc+rf-multi,"Pregnancy, puerperium and perinatal conditions",0.650893204912733,0.21579660907564452,0.08759635599159075
+random,2,morgan+desc+rf-multi,Ear and labyrinth disorders,0.6117206811287328,0.5660402371335427,0.46180798878766643
+random,2,morgan+desc+rf-multi,Cardiac disorders,0.7036691703325962,0.8286253337471592,0.6923615977575333
+random,2,morgan+desc+rf-multi,Nervous system disorders,0.7604796169729201,0.9678683151945482,0.9138051857042747
+random,2,morgan+desc+rf-multi,"Injury, poisoning and procedural complications",0.6043166278838437,0.744032001427691,0.6629292221443588
+random,2,morgan+desc+lgbm,Hepatobiliary disorders,0.7549817235301316,0.7439174531063798,0.5206727400140154
+random,2,morgan+desc+lgbm,Metabolism and nutrition disorders,0.6327374776056723,0.7856868509062005,0.6979677645409951
+random,2,morgan+desc+lgbm,Product issues,0.6667028597260926,0.03453332889263812,0.015416958654519973
+random,2,morgan+desc+lgbm,Eye disorders,0.6644374216523987,0.7473663653580616,0.613875262789068
+random,2,morgan+desc+lgbm,Investigations,0.6946140083312481,0.9000104936774422,0.8065872459705676
+random,2,morgan+desc+lgbm,Musculoskeletal and connective tissue disorders,0.6772599581338592,0.8230439203322988,0.6986685353889278
+random,2,morgan+desc+lgbm,Gastrointestinal disorders,0.783422601547357,0.9655533678908144,0.9096005606166784
+random,2,morgan+desc+lgbm,Social circumstances,0.6343229509041058,0.3007967597320733,0.17589348283111422
+random,2,morgan+desc+lgbm,Immune system disorders,0.6376769468101269,0.8228322860880333,0.7175893482831114
+random,2,morgan+desc+lgbm,Reproductive system and breast disorders,0.7264702465107689,0.7507798658580161,0.5094604064470918
+random,2,morgan+desc+lgbm,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",0.7548536234738141,0.5454025595144226,0.263489838822705
+random,2,morgan+desc+lgbm,General disorders and administration site conditions,0.6253551522528761,0.9365337430140054,0.905395935529082
+random,2,morgan+desc+lgbm,Endocrine disorders,0.7443100916469947,0.5238063137491449,0.2263489838822705
+random,2,morgan+desc+lgbm,Surgical and medical procedures,0.606115406056883,0.2391356316217496,0.14926419060967064
+random,2,morgan+desc+lgbm,Vascular disorders,0.6705344126763277,0.8681525613069386,0.7764540995094604
+random,2,morgan+desc+lgbm,Blood and lymphatic system disorders,0.7307057643170524,0.8198239133922722,0.6201822004204625
+random,2,morgan+desc+lgbm,Skin and subcutaneous tissue disorders,0.62956625676157,0.9465832681909166,0.9236159775753329
+random,2,morgan+desc+lgbm,"Congenital, familial and genetic disorders",0.6131599590194778,0.31113929026851606,0.17729502452697968
+random,2,morgan+desc+lgbm,Infections and infestations,0.6755237332976598,0.829613653228914,0.7049754730203224
+random,2,morgan+desc+lgbm,"Respiratory, thoracic and mediastinal disorders",0.6615425081618497,0.8442842895351254,0.7428170988086895
+random,2,morgan+desc+lgbm,Psychiatric disorders,0.692100017702111,0.8444529975662924,0.7119831814996496
+random,2,morgan+desc+lgbm,Renal and urinary disorders,0.684948600976044,0.7824218925054262,0.6384022424667134
+random,2,morgan+desc+lgbm,"Pregnancy, puerperium and perinatal conditions",0.6088927125491911,0.2116650338462593,0.08759635599159075
+random,2,morgan+desc+lgbm,Ear and labyrinth disorders,0.6273328859986689,0.6112355945032877,0.46180798878766643
+random,2,morgan+desc+lgbm,Cardiac disorders,0.7066960420953352,0.8365003777705693,0.6923615977575333
+random,2,morgan+desc+lgbm,Nervous system disorders,0.7519253590098776,0.9659272042925903,0.9138051857042747
+random,2,morgan+desc+lgbm,"Injury, poisoning and procedural complications",0.6270522618665588,0.7746608489554581,0.6629292221443588
