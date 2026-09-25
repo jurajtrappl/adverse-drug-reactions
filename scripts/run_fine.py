@@ -108,6 +108,7 @@ def main():
                          for t, p, r, q in zip(terms, prev, roc, pr)]
             print(f"seed={seed} {name:28s} ROC-AUC={roc.mean():.3f} ({rows[-1]['seconds']}s)", flush=True)
     runs, pt = pd.DataFrame(rows), pd.DataFrame(per_term)
+    RES.mkdir(exist_ok=True)
     runs.to_csv(RES / "phase4_runs.csv", index=False)
     pt.to_csv(RES / "phase4_per_term.csv", index=False)
     write_report(runs, pt, Y, terms, df)

@@ -12,6 +12,10 @@ neural / pretrained models (Phase 2), pharmacology features plus analyses of the
 
 ## Results
 
+> **Numbers to be refreshed.** The scaffold folds changed (ring-free drugs no longer share
+> one fold), so the result files were removed and the numbers below are from the previous
+> folds. Rerun the pipeline (see Running) to regenerate `results/`; expect small shifts.
+
 Mean ROC-AUC over the 27 ADRs, scaffold split (no shared Murcko scaffold between train and
 test), 5-fold CV, 3 seeds, same folds for every model. Full tables:
 [`results/REPORT.md`](results/REPORT.md); analyses of the problem itself:
@@ -120,19 +124,27 @@ legacy/                 2023 autoencoder notebook, script and checkpoints, kept 
 
 ## Running
 
+Needs Python 3.11 or 3.12 (Chemprop 2 requires 3.11+). On macOS, LightGBM also needs
+OpenMP: `brew install libomp`. Times are for a laptop with 8 cores.
+
 ```bash
-python -m venv .venv && source .venv/bin/activate
+python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-pytest -q tests
-python scripts/run_benchmark.py --set phase1   # ~25 min on 4 cores
-python scripts/run_benchmark.py --set phase2   # ~1.5 h on 2 cores, mostly Chemprop
-python scripts/run_benchmark.py --set phase3   # ~40 min; downloads ATC + indications
-python scripts/make_report.py                   # rerun any benchmark to resume if interrupted
-# add --fresh (and --models/--seeds) to recompute selected runs; other results are kept
-python scripts/analyze.py                       # ~15 min
-python scripts/run_fine.py                      # ~25 min; downloads SIDER side-effect terms
-python scripts/plot_results.py
+pytest -q tests                                  # ~1 min
+
+python scripts/run_benchmark.py --set phase1     # ~15 min  classic baselines, both splits
+python scripts/run_benchmark.py --set phase2     # ~1 h     MLP, Mol2vec, Chemprop
+python scripts/run_benchmark.py --set phase3     # ~20 min  ATC + indications (downloads)
+python scripts/make_report.py                    # -> results/REPORT.md
+python scripts/analyze.py                        # ~10 min  -> results/ANALYSIS.md
+python scripts/run_fine.py                       # ~15 min  -> results/FINE_LABELS.md
+python scripts/plot_results.py                   # -> results/leaderboard.png
 ```
+
+Each benchmark saves after every model and caches every fold's predictions in `.cache/`,
+so an interrupted run resumes where it stopped: just run the same command again. To
+recompute something on purpose, add `--fresh` (optionally with `--models`, `--seeds`,
+`--splits`); other saved results are kept.
 
 ## Data cleaning notes
 
@@ -142,14 +154,11 @@ python scripts/plot_results.py
   such as levodopa in carbidopa/levodopa.
 - After cleaning, 28 molecules appear more than once (e.g. sodium and calcium acetate),
   and their labels agree only 79% of the time. Such duplicates are always put in the same fold.
+- The 156 drugs without rings have an empty Murcko scaffold. Each counts as its own
+  scaffold for the split; otherwise all of them would share one test fold.
 
 ## Known limitations
 
-- **Acyclic drugs form one scaffold.** The 156 drugs without rings share the empty Murcko
-  scaffold, so the scaffold split puts all of them in the same test fold, and because the
-  largest scaffold groups are placed first, that is fold 0 for every seed. The three seeds
-  therefore vary less than fully independent splits would; `± std` understates the spread.
-  Treating each acyclic drug as its own scaffold would fix this but changes every fold.
 - **Indications and labels come from the same package inserts.** In Phase 4, indication
   columns whose MedDRA term is also a side-effect label are dropped (117 of 262 terms; this
   lowered the pharmacology score by about 0.02). In Phase 3 the labels are organ classes,

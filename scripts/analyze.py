@@ -199,6 +199,7 @@ def main():
     near_twins(df, Y, labels, out)
     documentation_flags(df, Y, out)
     learning_curves(df, Y, out)
+    RES.mkdir(exist_ok=True)
     (RES / "ANALYSIS.md").write_text("\n".join(out) + "\n")
     print("\n".join(out))
 

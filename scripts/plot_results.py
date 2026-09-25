@@ -56,6 +56,7 @@ def main():
     ax.set_title("What predicts a drug's side effects?", loc="left", fontsize=12, color=INK,
                  fontweight="bold", pad=12)
     fig.tight_layout()
+    RES.mkdir(exist_ok=True)
     fig.savefig(RES / "leaderboard.png", facecolor=SURFACE)
     print("wrote", RES / "leaderboard.png")
 
