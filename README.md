@@ -7,8 +7,8 @@ structure alone, on the [SIDER](http://sideeffects.embl.de/) dataset (1,427 drug
 Started in 2023 as a NAIL107 (Machine learning in Bioinformatics, MFF UK) term project by
 Julian Krumm and Juraj Trappl. Revisited in 2026: the original evaluation leaked test data,
 so this repo now has an honest evaluation pipeline: classic baselines (Phase 1),
-neural / pretrained models (Phase 2) and pharmacology features plus analyses of the labels
-(Phase 3), all scored on the same scaffold folds.
+neural / pretrained models (Phase 2), pharmacology features plus analyses of the labels
+(Phase 3) and specific side-effect terms (Phase 4), all scored on the same scaffold folds.
 
 ## Results
 
@@ -43,7 +43,17 @@ test), 5-fold CV, 3 seeds, same folds for every model. Full tables:
 | Structure + ATC + indications in one forest | 0.664 |
 | **Structure forest and pharmacology forest, averaged** | **0.728** |
 
-What the three phases show:
+**Specific side effects** (579 MedDRA terms instead of 27 organ classes, Phase 4, details in
+[`results/FINE_LABELS.md`](results/FINE_LABELS.md)):
+
+| Model | Scaffold split |
+| --- | --- |
+| "How well documented is the drug" (3 numbers) | 0.622 |
+| Structure forest | 0.665 |
+| Pharmacology forest | 0.709 |
+| **Both, averaged** | **0.735** |
+
+What the four phases show:
 
 - **Structure has a ceiling around 0.65.** No neural or pretrained model beats a fingerprint
   forest on 1,427 drugs, and the learning curve rises slowly (+0.02 from 456 to 1,142
@@ -55,6 +65,12 @@ What the three phases show:
   Pharmacology alone reaches 0.71; averaged with the structure forest, 0.73. Mixing both
   into one forest does worse (0.66): the 2,265 structure columns drown the ~370
   pharmacology columns at each split.
+- **Specific terms tell the same story, with a twist.** Pharmacology still wins overall,
+  but structure beats it on 97 of 579 terms, and its best terms look like drug-class
+  effects: antipsychotics (neuroleptic malignant syndrome 0.88, akathisia 0.85),
+  anticholinergics (accommodation disorder 0.86, paralytic ileus 0.84), antibiotics
+  (pseudomembranous colitis 0.91), steroid hormones (irregular menstruation 0.84). The
+  27 organ classes average these away.
 - Caveat: indications are text-mined from the same package inserts as the labels, and both
   sources exist only for approved drugs. They explain ADRs; they don't predict them for a
   new molecule.
@@ -83,12 +99,14 @@ adr/                    pipeline package
   models.py             baselines, forests, LightGBM, logistic regression, ensembles,
                         two-stage ADR-count model, structure/pharma late fusion
   pharma.py             ATC classes and SIDER indications per drug (Phase 3)
+  fine_labels.py        579 specific side-effect terms per drug from SIDER 4.1 (Phase 4)
   nn.py                 multi-task MLP and Chemprop D-MPNN (Phase 2, needs torch)
   evaluate.py           cross-validation with per-ADR ROC-AUC / PR-AUC, per-fold caching
 scripts/
   run_benchmark.py      run every model x split x seed of a set (resumable)
   make_report.py        results/*.csv -> results/REPORT.md
   analyze.py            label structure, near-identical drugs, learning curves -> ANALYSIS.md
+  run_fine.py           Phase 4 benchmark on specific terms -> FINE_LABELS.md
   plot_results.py       results/*.csv -> results/leaderboard.png
 tests/                  leakage, fold and model sanity checks
 data/
@@ -96,7 +114,7 @@ data/
   sider_clean.csv       cleaned SMILES, scaffold and group per drug (generated)
   splits/               fold assignment per split and seed, reuse these to compare models
   pubchem_fetch.csv     PubChem ids, names and properties per drug (used by adr/pharma.py)
-results/                per-run and per-ADR CSVs, REPORT.md, ANALYSIS.md, leaderboard.png
+results/                per-run CSVs, REPORT.md, ANALYSIS.md, FINE_LABELS.md, leaderboard.png
 legacy/                 2023 autoencoder notebook, script and checkpoints, kept for reference
 ```
 
@@ -111,6 +129,7 @@ python scripts/run_benchmark.py --set phase2   # ~1.5 h on 2 cores, mostly Chemp
 python scripts/run_benchmark.py --set phase3   # ~40 min; downloads ATC + indications
 python scripts/make_report.py                   # rerun any benchmark to resume if interrupted
 python scripts/analyze.py                       # ~15 min
+python scripts/run_fine.py                      # ~25 min; downloads SIDER side-effect terms
 python scripts/plot_results.py
 ```
 
@@ -125,8 +144,8 @@ python scripts/plot_results.py
 
 ## Ideas not done yet
 
-- Finer labels: SIDER has thousands of MedDRA side-effect terms and frequency information;
-  the 27 organ classes are coarse (5 of them are listed for over 80% of drugs)
+- Side-effect frequency: SIDER also records how often each side effect occurs; predicting
+  "common" vs "rare" would separate real signal from long-insert noise
 - Protein targets (DrugBank, ChEMBL mechanisms) as another pharmacology source
 - Predict "ADR given the drug is well documented": model the count factor explicitly,
   e.g. a hierarchical model with a per-drug documentation effect
@@ -135,7 +154,8 @@ python scripts/plot_results.py
 ## Data sources and licences
 
 - SIDER via DeepChem (`data/sider.csv`); SIDER is CC BY-NC-SA 4.0.
-- Phase 3 downloads into `.cache/` (not committed): SIDER 4.1 indications from the
+- Phases 3-4 download into `.cache/` (not committed): SIDER 4.1 indications and side-effect
+  terms from the
   [dhimmel/SIDER4](https://github.com/dhimmel/SIDER4) mirror, and the WHO ATC index scraped
   by [fabkury/atcd](https://github.com/fabkury/atcd) (WHO ATC terms of use apply).
 - Mol2vec pretrained model from [samoturk/mol2vec](https://github.com/samoturk/mol2vec).
