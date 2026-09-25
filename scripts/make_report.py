@@ -108,7 +108,7 @@ def main():
     cols = [BASELINE] if best == BASELINE else [best, BASELINE]
     t = pd.concat({m: per.loc[m] for m in cols}, axis=1).sort_values((cols[0], "roc"), ascending=False)
     head = " | ".join(f"ROC-AUC `{m}`" for m in cols)
-    lines += ["", f"## Per ADR, scaffold split", "",
+    lines += ["", "## Per ADR, scaffold split", "",
               f"| ADR | Positive drugs | {head} | PR-AUC `{cols[0]}` |",
               "| --- | --- | " + " | ".join("---" for _ in cols) + " | --- |"]
     for adr_name, r in t.iterrows():

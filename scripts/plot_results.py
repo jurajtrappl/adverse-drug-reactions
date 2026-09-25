@@ -29,12 +29,12 @@ INK, INK2, SURFACE, GRID = "#0b0b0b", "#52514e", "#fcfcfb", "#e4e3dd"
 
 def main():
     runs = pd.concat([pd.read_csv(p) for p in sorted(RES.glob("phase*_runs.csv"))])
-    auc = runs[runs.split == "scaffold"].groupby("model")["roc_auc"].agg(["mean", "std"])
+    auc = runs[runs.split == "scaffold"].groupby("model")["roc_auc"].agg(["mean"])
 
     fig, ax = plt.subplots(figsize=(8, 4.6), dpi=150, facecolor=SURFACE)
     ax.set_facecolor(SURFACE)
     for y, (model, label, kind) in enumerate(SHOWN):
-        m, s = auc.loc[model, "mean"], auc.loc[model, "std"]
+        m = auc.loc[model, "mean"]
         ax.plot([0.5, m], [y, y], color=GRID, lw=2, zorder=1, solid_capstyle="round")
         ax.scatter(m, y, s=70, color=COLORS[kind], edgecolor=SURFACE, linewidth=2, zorder=3)
         ax.text(m + 0.006, y, f"{m:.3f}", va="center", ha="left", fontsize=9, color=INK)

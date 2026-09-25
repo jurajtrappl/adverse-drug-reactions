@@ -49,9 +49,9 @@ test), 5-fold CV, 3 seeds, same folds for every model. Full tables:
 | Model | Scaffold split |
 | --- | --- |
 | "How well documented is the drug" (3 numbers) | 0.622 |
-| Structure forest | 0.665 |
-| Pharmacology forest | 0.709 |
-| **Both, averaged** | **0.735** |
+| Structure forest (one multi-output forest) | 0.665 |
+| Pharmacology forest (indication terms that are also labels removed) | 0.689 |
+| **Both, averaged** | **0.726** |
 
 What the four phases show:
 
@@ -66,11 +66,11 @@ What the four phases show:
   into one forest does worse (0.66): the 2,265 structure columns drown the ~370
   pharmacology columns at each split.
 - **Specific terms tell the same story, with a twist.** Pharmacology still wins overall,
-  but structure beats it on 97 of 579 terms, and its best terms look like drug-class
-  effects: antipsychotics (neuroleptic malignant syndrome 0.88, akathisia 0.85),
-  anticholinergics (accommodation disorder 0.86, paralytic ileus 0.84), antibiotics
-  (pseudomembranous colitis 0.91), steroid hormones (irregular menstruation 0.84). The
-  27 organ classes average these away.
+  but structure beats it on 163 of 579 terms, and its best terms look like drug-class
+  effects: antibiotics (pseudomembranous colitis 0.91), antipsychotics (neuroleptic
+  malignant syndrome 0.88, akathisia 0.85), anticholinergics (accommodation disorder 0.86,
+  paralytic ileus 0.84), nephrotoxic drugs (toxic nephropathy 0.86), steroid hormones
+  (irregular menstruation 0.84). The 27 organ classes average these away.
 - Caveat: indications are text-mined from the same package inserts as the labels, and both
   sources exist only for approved drugs. They explain ADRs; they don't predict them for a
   new molecule.
@@ -128,6 +128,7 @@ python scripts/run_benchmark.py --set phase1   # ~25 min on 4 cores
 python scripts/run_benchmark.py --set phase2   # ~1.5 h on 2 cores, mostly Chemprop
 python scripts/run_benchmark.py --set phase3   # ~40 min; downloads ATC + indications
 python scripts/make_report.py                   # rerun any benchmark to resume if interrupted
+# add --fresh (and --models/--seeds) to recompute selected runs; other results are kept
 python scripts/analyze.py                       # ~15 min
 python scripts/run_fine.py                      # ~25 min; downloads SIDER side-effect terms
 python scripts/plot_results.py
@@ -141,6 +142,22 @@ python scripts/plot_results.py
   such as levodopa in carbidopa/levodopa.
 - After cleaning, 28 molecules appear more than once (e.g. sodium and calcium acetate),
   and their labels agree only 79% of the time. Such duplicates are always put in the same fold.
+
+## Known limitations
+
+- **Acyclic drugs form one scaffold.** The 156 drugs without rings share the empty Murcko
+  scaffold, so the scaffold split puts all of them in the same test fold, and because the
+  largest scaffold groups are placed first, that is fold 0 for every seed. The three seeds
+  therefore vary less than fully independent splits would; `± std` understates the spread.
+  Treating each acyclic drug as its own scaffold would fix this but changes every fold.
+- **Indications and labels come from the same package inserts.** In Phase 4, indication
+  columns whose MedDRA term is also a side-effect label are dropped (117 of 262 terms; this
+  lowered the pharmacology score by about 0.02). In Phase 3 the labels are organ classes,
+  so an indication like "Neoplasm malignant" can still overlap with the "Neoplasms" class;
+  without the (licensed) MedDRA hierarchy this can't be filtered exactly.
+- **Feature vocabularies use all drugs.** Which indication terms are kept (>= 5 drugs) and
+  which side-effect terms become labels (>= 50 drugs) is decided on the whole dataset, not
+  per training fold. No labels are involved, so the effect should be negligible.
 
 ## Ideas not done yet
 
